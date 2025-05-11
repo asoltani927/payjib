@@ -1,35 +1,36 @@
 <template>
     <!-- steps -->
-    <div class="tw-w-full tw-flex tw-flex-col tw-items-center tw-pt-12 tw-pb-8 lg:tw-pb-[113px] lg:tw-pt-[80px] tw-gap-12 tw-bg-[#f0f2f5]">
-        <span class="tw-text-[#0F1114] tw-text-lg tw-text-center lg:tw-text-[30px] tw-font-bold">در سه قدم ساده کار با پی جیب را شروع کنید</span>
-        <div class="tw-flex tw-flex-col lg:tw-flex-row tw-items-center tw-gap-6 lg:tw-gap-[98.33px]">
-            <div class="tw-flex tw-flex-col lg:tw-flex-row tw-items-center tw-gap-4">
-                <img class="tw-w-16 tw-h-16" src="/img/home/payjibSteos1.svg">
-                <div class="tw-flex tw-flex-col tw-gap-1">
-                    <span class="tw-text-[24px] lg:tw-text-3xl tw-text-[#2626BF] tw-font-bold">1. ثبت نام</span>
-                    <span class="tw-text-[14px] lg:tw-text-xl tw-text-[#71757A] tw-font-bold">توضیحات</span>
-                </div>
+    <div class="w-full flex flex-col items-center pt-12 pb-8 lg:pb-[113px] lg:pt-[80px] gap-12 bg-[#f0f2f5]">
+        <span class="text-[#0F1114] text-lg text-center lg:text-[30px] font-bold">
+            با سه قدم ساده در پی‌جیب تبادل ارز انجام بده
+        </span>
+        <div class="flex flex-col lg:flex-row items-center gap-6 lg:gap-10">
+            <div class="flex flex-col items-center gap-4">
+                <img class="w-[64px] h-[64px]" src="/img/home/payjibSteos1.svg">
+                <span class="text-[24px] lg:text-3xl text-wrap text-[#2626BF] font-bold text-center">۱. ثبت‌نام<br
+                        class="hidden lg:block" />
+                    سریع</span>
+                <span class="text-sm text-[#71757A] text-center">
+                    یک حساب کاربری بسازید و جزئیات معامله (مقدار<br /> ارز، نوع معامله و مقصد) رو ثبت کنید.
+                </span>
             </div>
-            <div class="tw-flex tw-flex-col lg:tw-flex-row tw-items-center tw-gap-4">
-                <img class="tw-w-16 tw-h-16" src="/img/home/payjibSteos2.svg">
-                <div class="tw-flex tw-flex-col  tw-gap-1">
-                    <span class="tw-text-[24px] lg:tw-text-3xl tw-text-[#2626BF] tw-font-bold">2. مچ شدن</span>
-                    <span class="tw-text-[14px] lg:tw-text-xl tw-text-[#71757A] tw-font-bold">توضیحات</span>
-                </div>
+            <div class="flex flex-col items-center gap-4 text-center">
+                <img class="w-[64px] h-[64px]" src="/img/home/payjibSteos2.svg">
+                <span class="text-[24px] lg:text-3xl text-[#2626BF] font-bold">۲. انتخاب پیشنهاد<br
+                        class="hidden lg:block" /> مناسب</span>
+                <span class="text-sm text-[#71757A]">بین پیشنهادهای موجود، مناسب‌ترین گزینه رو<br /> انتخاب کنید</span>
             </div>
-            <div class="tw-flex tw-flex-col lg:tw-flex-row tw-items-center tw-gap-4">
-                <img class="tw-w-16 tw-h-16" src="/img/home/payjibSteps3.svg">
-                <div class="tw-flex tw-flex-col  tw-gap-1">
-                    <span class="tw-text-[24px] lg:tw-text-3xl tw-text-[#2626BF] tw-font-bold">3. انجام تراکنش</span>
-                    <span class="tw-text-[14px] lg:tw-text-xl tw-text-[#71757A] tw-font-bold">توضیحات</span>
-                </div>
+            <div class="flex flex-col items-center gap-4 text-center">
+                <img class="w-[64px] h-[64px]" src="/img/home/payjibSteps3.svg">
+                <span class="text-[24px] lg:text-3xl text-[#2626BF] font-bold">۳. تایید و<br class="hidden lg:block" />
+                    انتقال</span>
+                <span class="text-sm text-[#71757A]">مبلغ رو واریز و رسید رو آپلود
+                    کنید.<br />تبریک!تراکنش شما با موفقیت انجام شد</span>
             </div>
+        </div>
+        <div class="hidden lg:flex items-center gap-2">
+            <img src="/img/home/video-octagon.svg" />
+            <span class="text-lg font-bold text-[#2E2EE5]">مشاهده ویدئو</span>
         </div>
     </div>
 </template>
-
-<script>
-export default {
-    name: 'StepsSection'
-}
-</script>

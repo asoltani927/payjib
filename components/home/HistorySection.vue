@@ -1,30 +1,24 @@
 <template>
     <!-- history -->
-    <div class="tw-w-full tw-flex tw-flex-col tw-items-center tw-py-8 lg:tw-py-[60px] tw-bg-[#2626BF]">
-        <span class="tw-text-[#FFBF00] tw-font-bold tw-text-[24px] lg:tw-text-[30px]">پی جیب در هفته‌ای که گذشت</span>
-        <span class="tw-text-white tw-text-[13px] lg:tw-text-[15px]">آپدیت شده در 10/10/1372</span>
-        <div class="tw-mt-16 tw-flex tw-flex-col lg:tw-flex-row tw-gap-6 lg:tw-gap-0 tw-items-center">
-            <div class="tw-w-[301px] tw-h-[176px] tw-flex tw-flex-col tw-items-center">
-                <img class="tw-w-[70px] tw-h-[70px]" src="/img/home/history1.svg">
-                <span class="tw-text-[#FFBF00] tw-font-black tw-text-[24px] lg:tw-text-[28px] tw-mt-4">۱۵۹.۸۰۲.۳۳</span>
-                <span class="tw-text-[14px] lg:tw-text-[22px] tw-text-white">کاربر فعال</span>
+    <div class="w-full flex flex-col items-center py-8 lg:py-[60px] bg-[#2626BF]">
+        <span class="text-[#FFBF00] font-bold text-[24px] lg:text-[30px]">پی جیب در هفته‌ای که گذشت</span>
+        <span class="text-white text-[13px] lg:text-[15px]">آپدیت شده در 10/10/1372</span>
+        <div class="mt-16 flex flex-col lg:flex-row gap-6 lg:gap-0 items-center">
+            <div class="w-[301px] h-[176px] flex flex-col items-center">
+                <img class="w-[70px] h-[70px]" src="/img/home/history1.svg">
+                <span class="text-[#FFBF00] font-black text-[24px] lg:text-[28px] mt-4">۱۰۰ +</span>
+                <span class="text-[14px] lg:text-[22px] text-white">تعداد افراد ثبت نامی</span>
             </div>
-            <div class="tw-w-[301px] tw-h-[208px] tw-flex tw-flex-col tw-items-center ">
-                <img class="tw-w-[70px] tw-h-[70px] lg:tw-w-[110px] lg:tw-h-[110px]" src="/img/home/history2.svg">
-                <span class="tw-text-[#FFBF00] tw-font-black tw-text-[24px] lg:tw-text-[40px] tw-mt-4">۱۵۹.۸۰۲.۳۳</span>
-                <span class="tw-text-[14px] lg:tw-text-[22px] tw-text-white">تراکنش انجام شده</span>
+            <div class="w-[301px] h-[208px] flex flex-col items-center ">
+                <img class="w-[70px] h-[70px] lg:w-[110px] lg:h-[110px]" src="/img/home/history2.svg">
+                <span class="text-[#FFBF00] font-black text-[24px] lg:text-[40px] mt-4">420</span>
+                <span class="text-[14px] lg:text-[22px] text-white">تعداد تراکنش‌های انجام شده</span>
             </div>
-            <div class="tw-w-[301px] tw-h-[176px] tw-flex tw-flex-col tw-items-center">
-                <img class="tw-w-[70px] tw-h-[70px]" src="/img/home/history3.svg">
-                <span class="tw-text-[#FFBF00] tw-font-black tw-text-[24px] lg:tw-text-[28px] tw-mt-4">۱۵۹.۸۰۲.۳۳</span>
-                <span class="tw-text-[14px] lg:tw-text-[22px] tw-text-white">درخواست ثبت شده</span>
+            <div class="w-[301px] h-[176px] flex flex-col items-center">
+                <img class="w-[70px] h-[70px]" src="/img/home/history3.svg">
+                <span class="text-[#FFBF00] font-black text-[24px] lg:text-[28px] mt-4">۵۰۰ +</span>
+                <span class="text-[14px] lg:text-[22px] text-white">تعداد درخواست تراکنش</span>
             </div>
         </div>
     </div>
 </template>
-
-<script>
-export default {
-    name: 'HistorySection'
-}
-</script>

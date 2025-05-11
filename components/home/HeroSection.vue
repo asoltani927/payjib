@@ -1,20 +1,23 @@
 <template>
     <!-- hero -->
-    <div class="tw-bg-[#2626BF]">
-        <div class=" tw-flex tw-flex-col lg:tw-flex-row lg:tw-px-[139px] tw-items-center tw-justify-between tw-pb-[120px] tw-gap-8 lg:tw-gap-28 tw-w-full tw-h-full tw-bg-[url(~/assets/img/home/bghero.svg)] tw-bg-cover tw-bg-no-repeat tw-pt-[145px] lg:tw-pt-[185px]">
-            <div class="lg:tw-w-[444px] lg:tw-h-[445px] tw-flex tw-flex-col tw-items-center lg:tw-items-start tw-text-[#E5E5E5]">
-                <img class="tw-mt-8 tw-w-[129px] tw-h-[74px] lg:tw-w-[258px] lg:tw-h-[149px]" src="/img/home/payjib-text.svg">
+    <div class="bg-[#2626BF]">
+        <div
+            class=" flex flex-col lg:flex-row lg:px-[139px] items-center justify-between pb-12 lg:pb-[120px] gap-4 lg:gap-28 w-full h-full bg-[url(/img/home/Hero-Bg-Blue.png)] bg-cover bg-no-repeat pt-[70px] lg:pt-[185px]">
+            <div class="lg:w-[444px] lg:h-[445px] flex flex-col items-center lg:items-start text-[#E5E5E5]">
+                <img class="mt-8 w-[129px] h-[74px] lg:w-[258px] lg:h-[149px]" src="/img/home/payjib-text.svg">
                 <!-- <span>img</span> -->
-                <p class="tw-text-[14px] lg:tw-text-xl">
-                    در پی‌جیب، با نرخ توافقی و مطمئن،<br>از ایران پول دریافت یا به خارج از کشور ارسال
-                    کنید.
+                <p class="text-[14px] lg:text-xl pb-6 lg:pb-0">
+                    تبادل، انتقال و حواله ارز راحت و سریع با کمترین کارمزد
                 </p>
-                <button class="tw-hidden lg:tw-flex  tw-items-center tw-justify-center tw-mt-8 tw-rounded-full tw-w-[158px] tw-h-[61px] tw-bg-[#FFBF00] tw-font-bold tw-text-xl tw-text-[#0F1114]">
+                <button
+                    class="hidden lg:flex  items-center justify-center mt-8 rounded-full w-[158px] h-[61px] bg-[#FFBF00] font-bold text-xl text-[#0F1114]">
                     ثبت نام
                     کنید
                 </button>
-                <span class="tw-hidden lg:tw-flex tw-mt-12">از هرجایی که هستید!</span>
-                <div class="tw-hidden lg:tw-flex tw-items-center tw-gap-6 tw-mt-4">
+                <span class="hidden lg:flex mt-12">
+                    از هر جای دنیا که هستید
+                </span>
+                <div class="hidden lg:flex items-center gap-6 mt-4">
                     <img src="/img/home/103-canada.svg">
                     <img src="/img/home/070-united-states-of-america.svg">
                     <img src="/img/home/036-european-union.svg">
@@ -22,78 +25,104 @@
                     <img src="/img/home/015-australia.svg">
                 </div>
             </div>
-            <div class="tw-bg-white tw-w-full lg:tw-w-[536px] lg:tw-rounded-3xl tw-shadow-lg lg:tw-border-2 tw-border-[#D5DDEA] tw-p-8 tw-pb-8 tw-flex tw-flex-col">
-                <span class="tw-text-[14px] lg:tw-text-[22px]">در پی جیب می‌خواهم...</span>
-                <div class="tw-w-full tw-flex tw-items-center tw-justify-between tw-mb-4 tw-mt-5">
-                    <div @click="selectOption('receive')" class="tw-cursor-pointer tw-flex tw-items-center tw-gap-2">
-                        <div :class="{'tw-bg-[#A5ABB2]': selectedOption !== 'receive', 'tw-bg-[#F0F2F5]': selectedOption === 'receive'}" class="tw-w-4 tw-h-4 tw-rounded-full tw-flex tw-items-center tw-justify-center">
-                            <div :class="{'tw-bg-white tw-w-2 tw-h-2': selectedOption !== 'receive', 'tw-bg-[#2626BF] tw-w-3 tw-h-3': selectedOption === 'receive'}" class="tw-rounded-full">
+            <div
+                class="bg-white w-full lg:w-[536px] lg:rounded-3xl shadow-lg lg:border-2 border-[#D5DDEA] p-8 pb-8 flex flex-col">
+                <span class="text-[14px] lg:text-[22px]">می‌خواهم پولم را</span>
+                <div class="w-full flex items-center gap-6 mb-4 mt-5">
+                    <div @click="selectOption('receive')" class="cursor-pointer flex items-center gap-2">
+                        <div :class="{ 'bg-[#A5ABB2]': selectedOption !== 'receive', 'bg-[#F0F2F5]': selectedOption === 'receive' }"
+                            class="w-4 h-4 rounded-full flex items-center justify-center">
+                            <div :class="{ 'bg-white w-2 h-2': selectedOption !== 'receive', 'bg-[#2626BF] w-3 h-3': selectedOption === 'receive' }"
+                                class="rounded-full">
                                 <!-- circle -->
                             </div>
                         </div>
-                        <span :class="{'tw-text-[14px] lg:tw-text-[18px] tw-font-medium tw-text-[#A5ABB2]': selectedOption !== 'receive', 'tw-text-[14px] lg:tw-text-[18px] tw-text-[#2626BF] tw-font-bold': selectedOption === 'receive'}">پول در ایران دریافت کنم</span>
+                        <span
+                            :class="{ 'text-[14px] lg:text-[18px] font-medium text-[#A5ABB2]': selectedOption !== 'receive', 'text-[14px] lg:text-[18px] text-[#2626BF] font-bold': selectedOption === 'receive' }">
+                            در ایران دریافت کنم
+                        </span>
                     </div>
-                    <div @click="selectOption('send')" class="tw-cursor-pointer tw-flex tw-items-center tw-gap-2">
-                        <div :class="{'tw-bg-[#A5ABB2]': selectedOption !== 'send', 'tw-bg-[#F0F2F5]': selectedOption === 'send'}" class="tw-w-4 tw-h-4 tw-rounded-full tw-flex tw-items-center tw-justify-center">
-                            <div :class="{'tw-bg-white tw-w-2 tw-h-2': selectedOption !== 'send', 'tw-bg-[#2626BF] tw-w-3 tw-h-3': selectedOption === 'send'}" class="tw-rounded-full">
+                    <div @click="selectOption('send')" class="cursor-pointer flex items-center gap-2">
+                        <div :class="{ 'bg-[#A5ABB2]': selectedOption !== 'send', 'bg-[#F0F2F5]': selectedOption === 'send' }"
+                            class="w-4 h-4 rounded-full flex items-center justify-center">
+                            <div :class="{ 'bg-white w-2 h-2': selectedOption !== 'send', 'bg-[#2626BF] w-3 h-3': selectedOption === 'send' }"
+                                class="rounded-full">
                                 <!-- circle  -->
                             </div>
                         </div>
-                        <span :class="{'tw-text-[14px] lg:tw-text-[18px] tw-font-medium tw-text-[#A5ABB2]': selectedOption !== 'send', 'tw-text-[14px] lg:tw-text-[18px] tw-text-[#2626BF] tw-font-bold': selectedOption === 'send'}">پول به خارج از ایران ارسال کنم</span>
+                        <span
+                            :class="{ 'text-[14px] lg:text-[18px] font-medium text-[#A5ABB2]': selectedOption !== 'send', 'text-[14px] lg:text-[18px] text-[#2626BF] font-bold': selectedOption === 'send' }">
+                            در خارج از ایران دریافت کنم</span>
                     </div>
                 </div>
-                <div class="tw-mb-8 tw-p-2 tw-text-[10px] lg:tw-text-[12px] tw-bg-[#F0F2F5] tw-text-[#2626BF] tw-rounded-full tw-w-full tw-flex tw-items-center tw-gap-2">
+                <div
+                    class="mb-8 p-2 text-[10px] lg:text-[12px] bg-[#F0F2F5] text-[#2626BF] rounded-full w-full flex items-center gap-2">
                     <img src="/img/home/blue-info.svg">
-                    <span>فروش ارز در خارج از کشور و دریافت معادل ریالی در ایران</span>
+                    <span>ارزی که انتخاب کردید در خارج از ایران دریافت خواهید کرد.</span>
                 </div>
                 <!-- form -->
-                <div class="tw-flex tw-flex-col lg:tw-flex-row tw-gap-8 lg:tw-gap-4 tw-w-full">
+                <div class="flex flex-col lg:flex-row gap-8 lg:gap-4 w-full">
                     <!-- select  -->
-                    <div class="tw-relative tw-flex tw-flex-col tw-w-full lg:tw-w-[30%]">
-                        <label for="currency" class="tw-absolute tw-z-10 tw-right-[17px] tw-top-[-10px] tw-flex tw-items-center tw-justify-center tw-bg-white tw-w-[36px] tw-h-[21px] tw-text-[#71757A] tw-text-[10px] tw-font-medium mb-2">نوع ارز</label>
-                        <div class="tw-relative">
-                            <select id="currency" name="currency" class="inputs-style tw-block tw-w-full tw-border  tw-text-lg tw-font-semibold tw-px-6 tw-pr-10 tw-appearance-none tw-cursor-pointer tw-border-[#D5DDEA] tw-rounded-xl tw-bg-white tw-h-[48px] tw-ps-5 tw-placeholder:text-[13px] tw-text-[13px] tw-placeholder:text-[#33373D] tw-text-[#33373D] tw-placeholder:font-semibold">
+                    <div class="relative flex flex-col w-full lg:w-[30%]">
+                        <label for="currency"
+                            class="absolute z-10 right-[17px] top-[-10px] flex items-center justify-center bg-white w-[36px] h-[21px] text-[#71757A] text-[10px] font-medium mb-2">نوع
+                            ارز</label>
+                        <div class="relative">
+                            <select id="currency" name="currency"
+                                class="inputs-style block w-full border font-medium  px-6 pr-10 appearance-none cursor-pointer border-[#D5DDEA] rounded-xl bg-white h-[48px] ps-5 placeholder:text-[13px] text-[13px] placeholder:text-[#33373D] text-[#33373D] placeholder:font-medium">
                                 <option>یورو</option>
                                 <option>دلار</option>
                                 <option>پوند</option>
                             </select>
-                            <img class="tw-absolute tw-top-1/2 tw-left-4 tw--translate-y-1/2  tw-pointer-events-none" src="/img/home/Vector.svg">
+                            <img class="absolute top-1/2 left-4 -translate-y-1/2  pointer-events-none"
+                                src="/img/home/Vector.svg">
                         </div>
                     </div>
                     <!-- inputs  -->
-                    <div class="tw-flex tw-flex-col tw-w-full lg:tw-w-[35%]">
+                    <div class="flex flex-col w-full lg:w-[35%]">
                         <!-- <label for="transaction-volume" class="text-[#2626BF] text-base mb-2">حجم تراکنش</label> -->
-                        <input id="transaction-volume" name="transaction-volume" type="text" placeholder="حجم تراکنش" class="inputs-style tw-border tw-border-[#D5DDEA] tw-rounded-xl tw-bg-white tw-h-[48px] tw-ps-5 tw-placeholder:text-[13px] tw-placeholder:text-[#33373D] tw-placeholder:font-semibold">
-                        <div class="tw-flex tw-items-center tw-gap-1 tw-text-[#71757A] tw-text-[10px] tw-mt-0.5 tw-font-medium">
+                        <input id="transaction-volume" name="transaction-volume" type="text" placeholder="حجم تراکنش"
+                            class="inputs-style border border-[#D5DDEA] rounded-xl bg-white h-[48px] ps-5 placeholder:text-[13px] placeholder:text-[#33373D] placeholder:font-medium">
+                        <div class="flex items-center gap-1 text-[#71757A] text-[10px] mt-0.5 font-medium">
                             <img src="/img/home/gray-info.svg">
-                            مبلغ مورد نظر در ارز مبدا
+                            مثلا ۱۰۰۰ تا
                         </div>
                     </div>
 
-                    <div class="tw-flex tw-flex-col tw-w-full lg:tw-w-[35%]">
+                    <div class="flex flex-col w-full lg:w-[35%]">
                         <!-- <label for="exchange-rate" class="text-[#2626BF] text-base mb-2">نرخ تبدیل پیشنهادی</label> -->
-                        <input id="exchange-rate" name="exchange-rate" type="text" placeholder="نرخ تبدیل پیشنهادی" class="inputs-style tw-border tw-border-[#D5DDEA] tw-rounded-xl tw-bg-white tw-h-[48px] tw-ps-5 tw-placeholder:text-[13px] tw-placeholder:text-[#33373D] tw-placeholder:font-semibold">
-                        <div class="tw-flex tw-items-center gap-1 tw-text-[#71757A] tw-text-[10px] tw-mt-0.5 tw-font-medium">
+                        <input id="exchange-rate" name="exchange-rate" type="text" placeholder="نرخ تبدیل پیشنهادی"
+                            class="inputs-style border border-[#D5DDEA] rounded-xl bg-white h-[48px] ps-5 placeholder:text-[13px] placeholder:text-[#33373D] placeholder:font-medium">
+                        <div class="flex items-center gap-1 text-[#71757A] text-[10px] mt-0.5 font-medium">
                             <img src="/img/home/gray-info.svg">
-                            معادل ریالی ارز مبدا
+                            مثلا ۹۵.۰۰۰ تومان
                         </div>
                     </div>
                 </div>
-                <div class="tw-mt-8 tw-p-2 tw-text-xs tw-bg-[#F0F2F5] tw-text-[#2626BF] tw-rounded-xl tw-w-full tw-flex tw-items-center tw-gap-3">
-                    <img src="/img/home/card-img.png">
-                    <div class="tw-flex tw-flex-col tw-justify-between">
-                        <span class="tw-text-[10px] lg:tw-text-[12px]">مبلغ دریافتی در ایران</span>
-                        <span class="tw-text-[14px] lg:tw-text-xl tw-font-bold">۳۰۰.۰۰۰.۰۰۰ تومان</span>
+                <div
+                    class="mt-8 p-3 lg:p-2 text-xs bg-[#F0F2F5] text-[#2626BF] rounded-xl w-full flex items-center gap-3">
+                    <img class="hidden lg:block" src="/img/home/card-img.png">
+                    <div class="gap-1 lg:gap-0 flex flex-col justify-between">
+                        <span class="text-[14px] lg:text-lg font-bold">۳۰۰.۰۰۰.۰۰۰ تومان</span>
+                        <span class="text-[10px] lg:text-[12px]">به حساب پی‌جیب واریز می‌کنید.</span>
+                    </div>
+                    <div class="gap-1 lg:gap-0  flex flex-col justify-between">
+                        <span class="text-[14px] lg:text-lg font-bold">۲.۵٪ کارمزد</span>
+                        <span class="text-[10px] lg:text-[12px]">پی‌جیب برای این درخواست دریافت می‌کند.</span>
                     </div>
                 </div>
             </div>
-            <div class="tw-px-6 tw-w-full tw-flex lg:tw-hidden tw-flex-col tw-items-center tw-text-[#E5E5E5]">
-                <button class="tw-flex tw-items-center tw-justify-center tw-mt-8 tw-rounded-full tw-w-[152px] tw-h-[41px] tw-bg-[#FFBF00] tw-font-bold tw-text-[#0F1114]">
+            <div class="px-6 w-full flex lg:hidden flex-col items-center text-[#E5E5E5]">
+
+                <span class="flex mt-6 text-[14px]">
+                    از هر جای دنیا که هستید
+                </span>
+                <button
+                    class="flex items-center justify-center mt-4 mb-3 rounded-full w-[152px] h-[41px] bg-[#FFBF00] font-bold text-[#0F1114]">
                     ثبت نام
                     کنید
                 </button>
-                <span class="tw-flex tw-mt-6 tw-text-[14px]">از هرجایی که هستید!</span>
-                <div class="tw-flex tw-items-center tw-gap-7 tw-mt-4">
+                <div class="flex items-center gap-7 mt-4">
                     <img src="/img/home/103-canada.svg">
                     <img src="/img/home/070-united-states-of-america.svg">
                     <img src="/img/home/036-european-union.svg">
@@ -107,7 +136,6 @@
 
 <script>
 export default {
-    name: 'HeroSection',
     data() {
         return {
             selectedOption: 'send'
