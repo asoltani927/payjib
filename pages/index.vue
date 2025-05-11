@@ -1,7 +1,7 @@
 <template>
     <div class="tw-w-full tw-h-full tw-overflow-x-hidden">
         <div class="rtl tw-w-full">
-            <HomeHeroSection />
+            <!-- <HomeHeroSection />
             <HomeSocialMediaSection />
             <HomeStepsSection />
             <HomeServicesSection />
@@ -13,7 +13,7 @@
             <HomeCounselingSection />
             <HomeQuestionsSection />
             <HomeSecondRegistrationSection />
-            <BaseFooter />
+            <BaseFooter /> -->
         </div>
     </div>
 </template>

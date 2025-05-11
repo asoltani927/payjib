@@ -4,6 +4,7 @@ import { appEnv } from "./configs/app-env";
 import { defineNuxtConfig } from 'nuxt/config';
 import { getPackage } from "./utils/get-package.util";
 import { isProduction } from "./utils/is-production.util";
+import { getApiBase } from "./utils/get-api-base.util";
 
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
