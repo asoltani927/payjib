@@ -15,7 +15,7 @@
                     class="cursor-pointer  border-[#F0F2F5] py-4 lg:py-6 px-6 flex gap-4 items-center"
                     :class="{ 'border-b-2': !item.isOpen }">
                     <img v-if="item.isOpen" class="" src="/img/home/minus-cirlce.svg">
-                    <img v-else class="" src="/img/home/Plus, Add.svg">
+                    <img v-else class="" src="/img/home/plus-add.svg">
                     <span class="lg:text-[21px] font-semibold text-[#0F1114]"
                         :class="{ 'text-[#2E2EE5]': item.isOpen }">{{
                             item.question }}</span>
@@ -30,42 +30,36 @@
         </div>
     </div>
 </template>
+<script setup>
+import { ref } from 'vue'
 
-<script>
-export default {
-    data() {
-        return {
-            questions: [
-                {
-                    question: 'درخواست خرید یا فروش دقیقاً به چه معناست؟',
-                    answer: 'در این بخش، خرید و فروش از طریق سیستم‌های غیرمتمرکز انجام می‌شود...',
-                    isOpen: false
-                },
-                {
-                    question: 'نرخ تبادل ارز توسط چه کسی مشخص می‌شود؟',
-                    answer: 'نرخ تبادل ارز به صورت خودکار توسط سیستم پی جیب تعیین می‌شود...',
-                    isOpen: false
-                },
-                {
-                    question: 'کارمزد پی جیب در هر تراکنش چقدر است؟',
-                    answer: 'کارمزد تراکنش‌ها بستگی به نوع ارز و میزان تراکنش دارد...',
-                    isOpen: false
-                }
-            ]
-        }
+const questions = ref([
+    {
+        question: 'درخواست خرید یا فروش دقیقاً به چه معناست؟',
+        answer: 'در این بخش، خرید و فروش از طریق سیستم‌های غیرمتمرکز انجام می‌شود...',
+        isOpen: false
     },
-    methods: {
-        toggleAnswer(index) {
-            // Toggle the answer visibility
-            this.questions[index].isOpen = !this.questions[index].isOpen
-
-            // Close other answers when a new question is clicked
-            this.questions.forEach((item, idx) => {
-                if (idx !== index) {
-                    item.isOpen = false
-                }
-            })
-        }
+    {
+        question: 'نرخ تبادل ارز توسط چه کسی مشخص می‌شود؟',
+        answer: 'نرخ تبادل ارز به صورت خودکار توسط سیستم پی جیب تعیین می‌شود...',
+        isOpen: false
+    },
+    {
+        question: 'کارمزد پی جیب در هر تراکنش چقدر است؟',
+        answer: 'کارمزد تراکنش‌ها بستگی به نوع ارز و میزان تراکنش دارد...',
+        isOpen: false
     }
+])
+
+function toggleAnswer(index) {
+    // Toggle the answer visibility
+    questions.value[index].isOpen = !questions.value[index].isOpen
+
+    // Close other answers when a new question is clicked
+    questions.value.forEach((item, idx) => {
+        if (idx !== index) {
+            item.isOpen = false
+        }
+    })
 }
 </script>

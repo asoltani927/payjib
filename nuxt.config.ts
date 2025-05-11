@@ -1,26 +1,29 @@
 import { appConfig } from "./configs/app-config";
 // import tailwindcss from "@tailwindcss/vite";
 // import { appEnv } from "./configs/app-env";
-import { defineNuxtConfig } from 'nuxt/config';
+import { defineNuxtConfig } from "nuxt/config";
 import { getPackage } from "./utils/get-package.util";
 import { isProduction } from "./utils/is-production.util";
 
 export default defineNuxtConfig({
-  compatibilityDate: '2024-11-01',
+  compatibilityDate: "2024-11-01",
   devtools: { enabled: !isProduction() },
-    postcss: {
+
+  postcss: {
     plugins: {
       tailwindcss: {},
       autoprefixer: {},
     },
   },
+
+  components: true,
   // modules: ['@nuxt/content', '@nuxt/eslint'],
-  modules: ['@nuxtjs/tailwindcss', '@nuxt/eslint', '@nuxtjs/i18n'],
+  modules: ["@nuxtjs/tailwindcss", "@nuxt/eslint", "@nuxtjs/i18n"],
   app: {
     head: appConfig.head
   },
 
-  css: ['~/assets/css/main.css'],
+  css: ["~/assets/css/main.css"],
 
   // vite: {
   //   plugins: [
@@ -32,7 +35,7 @@ export default defineNuxtConfig({
     public: {
       appName: getPackage().name,
       appVersion: getPackage().version,
-    }
+    },
   },
 
   i18n: {
@@ -67,10 +70,22 @@ export default defineNuxtConfig({
     //     fa: '/'
     //   }
     // }
-  }
+  },
 
   // TODO
   //   googleAnalytics: {
   //     id: 'G-2DF34W9FX3'
   // },
-})
+
+  router: {
+    // middleware: ['auth'],
+    // base: appEnv.NUXT_BASE_URL,
+    // trailingSlash: true,
+  },
+
+  routeRules: {
+    "/": { prerender: isProduction(), static: isProduction() },
+    "/current-exchange/[]": { prerender: true, static: true },
+    // "/:pathMatch(.*)": { static: true, swr: true },
+  },
+});

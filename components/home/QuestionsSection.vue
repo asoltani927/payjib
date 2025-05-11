@@ -13,7 +13,7 @@
                 <!-- Question -->
                 <div class="cursor-pointer  border-[#F0F2F5] py-4 lg:py-6 px-6 flex gap-4 items-center" :class="{ 'border-b-2': index !== isOpenAnswer }" @click="toggleAnswer(index)">
                     <img v-if="index === isOpenAnswer" class="" src="/img/home/minus-cirlce.svg">
-                    <img v-else class="" src="/img/home/Plus, Add.svg">
+                    <img v-else class="" src="/img/home/plus-add.svg">
                     <span class="lg:text-[21px] font-semibold text-[#0F1114]" :class="{ 'text-[#2E2EE5]': index === isOpenAnswer }">{{
                             item.question }}</span>
                 </div>
@@ -29,7 +29,6 @@
 
 <script setup>
 import { ref } from 'vue';
-console.log('work in script');
 
 const isOpenAnswer = ref(-1);
 
