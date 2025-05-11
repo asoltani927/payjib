@@ -21,7 +21,7 @@ export class MemoryLRUCache<T> {
     this._logEnabled = log ?? !isProduction();
   }
 
-  private log(...args: any[]) {
+  private log(...args: unknown[]) {
     if (this._logEnabled) console.log("[MemoryLRUCache]", ...args);
   }
 

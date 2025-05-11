@@ -21,13 +21,13 @@ export function useApi() {
   const get = <T>(url: string, options = {}) =>
     request<T>(url, { method: "GET", ...options });
 
-  const post = <T>(url: string, body: any, options = {}) =>
+  const post = <T>(url: string, body: unknown, options = {}) =>
     request<T>(url, { method: "POST", body, ...options });
 
-  const put = <T>(url: string, body: any, options = {}) =>
+  const put = <T>(url: string, body: unknown, options = {}) =>
     request<T>(url, { method: "PUT", body, ...options });
 
-  const patch = <T>(url: string, body: any, options = {}) =>
+  const patch = <T>(url: string, body: unknown, options = {}) =>
     request<T>(url, { method: "PATCH", body, ...options });
 
   const del = <T>(url: string, options = {}) =>

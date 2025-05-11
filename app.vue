@@ -1,13 +1,10 @@
 <template>
   <div>
-    <!-- <NuxtLayout /> -->
-     {{ currencies }}
+    <NuxtLayout />
   </div>
 </template>
 
 <script setup>
-import { useCurrencies } from './composables/useCurrencies'
-
 const { locale, locales } = useI18n()
 const currentDir = computed(() =>
   locales.value.find(l => l.code === locale.value)?.dir || 'ltr'
@@ -18,6 +15,5 @@ useHead({
   }
 })
 
-const currencies = await useCurrencies();
 </script>
 

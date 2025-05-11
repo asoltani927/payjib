@@ -4,7 +4,7 @@ import type { Currency } from "~/typings/currency.typing";
 import type { ApiV1Response } from "~/typings/responses.typing";
 
 export const useCurrencies = async (): Promise<
-  Ref<ApiV1Response<Currency[]> | null>
+  Ref<Currency[]>
 > => {
   const currencies = useState<ApiV1Response<Currency[]> | null>(
     "currencies-cache",
@@ -15,5 +15,5 @@ export const useCurrencies = async (): Promise<
     const response = await fetchCurrencies();
     currencies.value = response ?? null;
   }
-  return currencies;
+  return ref(currencies.value?.data ?? []);
 };
