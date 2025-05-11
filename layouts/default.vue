@@ -1,8 +1,8 @@
 <template>
     <div class="rtl">
-        <!-- <BaseHeader /> -->
+        <BaseHeader />
         <NuxtPage />
-        <!-- <BaseFooter /> -->
+        <BaseFooter />
     </div>
 </template>
 

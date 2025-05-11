@@ -3,7 +3,7 @@
     <div class="bg-[#2626BF]">
         <div
             class=" flex flex-col lg:flex-row lg:px-[139px] items-center justify-between pb-12 lg:pb-[120px] gap-4 lg:gap-28 w-full h-full bg-[url(/img/home/Hero-Bg-Blue.png)] bg-cover bg-no-repeat pt-[70px] lg:pt-[185px]">
-            <div class="lg:w-[444px] lg:h-[445px] flex flex-col items-center lg:items-start text-[#E5E5E5]">
+            <div class="lg:w-[45%] lg:h-[445px] flex flex-col items-center lg:items-start text-[#E5E5E5]">
                 <img class="mt-8 w-[129px] h-[74px] lg:w-[258px] lg:h-[149px]" src="/img/home/payjib-text.svg">
                 <!-- <span>img</span> -->
                 <p class="text-[14px] lg:text-xl pb-6 lg:pb-0">
@@ -26,7 +26,7 @@
                 </div>
             </div>
             <div
-                class="bg-white w-full lg:w-[536px] lg:rounded-3xl shadow-lg lg:border-2 border-[#D5DDEA] p-8 pb-8 flex flex-col">
+                class="bg-white w-full lg:w-[55%] lg:rounded-3xl shadow-lg lg:border-2 border-[#D5DDEA] p-8 pb-8 flex flex-col">
                 <span class="text-[14px] lg:text-[22px]">می‌خواهم پولم را</span>
                 <div class="w-full flex items-center gap-6 mb-4 mt-5">
                     <div @click="selectOption('receive')" class="cursor-pointer flex items-center gap-2">

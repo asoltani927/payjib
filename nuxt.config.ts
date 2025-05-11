@@ -1,6 +1,6 @@
 import { appConfig } from "./configs/app-config";
 // import tailwindcss from "@tailwindcss/vite";
-import { appEnv } from "./configs/app-env";
+// import { appEnv } from "./configs/app-env";
 import { defineNuxtConfig } from 'nuxt/config';
 import { getPackage } from "./utils/get-package.util";
 import { isProduction } from "./utils/is-production.util";

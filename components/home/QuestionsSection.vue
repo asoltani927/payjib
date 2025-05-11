@@ -1,7 +1,7 @@
 <template>
     <!-- Questions Section -->
     <div class="w-full flex flex-col items-center gap-[53px] py-8 lg:py-[96px] px-6 lg:px-[139px] bg-white">
-        <div class="flex flex-col items-center gap-2">
+        <div @click="console.log('worked! with @ click')" class="flex flex-col items-center gap-2">
             <span class="text-[#2626BF] font-bold text-lg lg:text-[40px] mb-4">سوالات متداول راجع به انتقال ارز</span>
             <span class="text-[#0F1114] font-medium  text-[12px] lg:text-lg">در این بخش می‌توانید راهنمایی‌های لازم را
                 پیدا
@@ -28,6 +28,8 @@
 </template>
 
 <script setup>
+import { ref } from 'vue';
+console.log('work in script');
 
 const isOpenAnswer = ref(-1);
 

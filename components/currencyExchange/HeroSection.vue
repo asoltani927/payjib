@@ -3,7 +3,7 @@
     <div class="bg-[#2626BF]">
         <div
             class=" flex flex-col lg:flex-row lg:px-[139px] items-center lg:items-start justify-between pb-12 lg:pb-[100px] gap-10 lg:gap-28 w-full h-full bg-[url(/img/home/Hero-Bg-Blue.png)] bg-cover bg-no-repeat pt-[120px] lg:pt-[200px]">
-            <div class="lg:w-[444px] flex flex-col items-center lg:items-start text-[#E5E5E5]">
+            <div class="lg:w-1/2 flex flex-col items-center lg:items-start text-[#E5E5E5]">
                 <div class="flex flex-col text-white items-center lg:items-start gap-3.5">
                     <img class="w-[56px] h-[56px] lg:w-[72px] lg:h-[72px] mb-1 " src="/img/home/germany.svg" />
                     <span class=" text-sm lg:text-3xl">انتقال ارز از/به</span>
@@ -24,7 +24,7 @@
                 </button>
             </div>
             <div
-                class="bg-white w-full lg:w-[536px] lg:rounded-3xl shadow-lg lg:border-2 border-[#D5DDEA] p-8 pb-8 flex flex-col">
+                class="bg-white w-full lg:w-1/2 lg:rounded-3xl shadow-lg lg:border-2 border-[#D5DDEA] p-8 pb-8 flex flex-col">
                 <span class="text-[14px] lg:text-[22px]">می‌خواهم پولم را</span>
                 <div class="w-full flex items-center gap-6 mb-4 mt-5">
                     <div @click="selectOption('receive')" class="cursor-pointer flex items-center gap-2">
