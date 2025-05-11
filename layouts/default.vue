@@ -1,7 +1,8 @@
 <template>
-    <div>
+    <div class="rtl">
         <BaseHeader />
         <NuxtPage />
+        <BaseFooter />
     </div>
 </template>
 
@@ -10,13 +11,7 @@
 // import ErrorDialog from '~/components/ErrorDialog'
 // import EventGtmService from '~/services/EventGtmService'
 
-onMounted(async () => {
-    // try {
-    //     await EventGtmService(useNuxtApp().$axios).handlePendingGtmTransactions()
-    // } catch (error) {
-    //     console.error('Error while handling pending GTM transactions', error)
-    // }
-})
+
 </script>
 
 <style>

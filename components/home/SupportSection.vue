@@ -1,32 +1,22 @@
 <template>
     <!-- support -->
-    <div id="support" class="tw-flex tw-flex-col lg:tw-flex-row w-items-center tw-justify-between lg:tw-gap-[93px] tw-py-12 lg:tw-py-[96px] tw-px-6 lg:tw-px-[139px] tw-bg-[#f0f2f5]">
-        <div class="tw-flex tw-flex-col lg:tw-h-[337px] tw-items-center lg:tw-items-start">
-            <span class="tw-text-center lg:tw-text-right tw-font-black tw-text-[32px] lg:tw-text-[60px] tw-text-[#2626BF]">همیشه پاسخگوییم</span>
-            <span class="tw-mt-2 lg:tw-mt-0 tw-text-center lg:tw-text-right tw-text-[14px] lg:tw-text-[28px] tw-font-medium">پشتیبانان ما آماده ی پاسخگویی<br>به شما هستند</span>
-            <img class="tw-block lg:tw-hidden tw-w-full tw-h-auto tw-rounded-xl tw-py-6" src="/img/home/Rectangle 6296.png">
-            <span class="tw-hidden lg:tw-block tw-text-[14px] tw-text-[#71757A] tw-mt-4 tw-mb-2 tw-font-medium">تماس با ما</span>
-            <div class="tw-w-full tw-flex tw-flex-col tw-items-start tw-gap-2 tw-text-[#2626BF] tw-font-bold">
-                <div class="tw-flex tw-items-center tw-gap-4">
-                    <img class="" src="/img/home/sms-blue.svg">
-                    <span>info@payjib.ir</span>
-                </div>
-                <div class="tw-flex tw-items-center tw-gap-4">
-                    <img class="" src="/img/home/call-blue.svg">
-                    <span>+۹۸ ۲۱ ۸۸۱۲ ۹۲۸۷ - +۹۸ ۲۱ ۸۸۱۲ ۹۲۸۷</span>
-                </div>
-                <div class="tw-flex tw-items-center tw-gap-4">
-                    <img class="" src="/img/home/whatsapp-blue.svg">
-                    <span>+۹۸ ۲۱ ۸۸۱۲ ۹۲۸۷ - +۹۸ ۲۱ ۸۸۱۲ ۹۲۸۷</span>
-                </div>
-            </div>
+    <div id="support"
+        class="flex flex-col lg:flex-row w-items-center justify-between lg:gap-[93px] py-12 lg:py-[96px] px-6 lg:px-[139px] bg-[#f0f2f5]">
+        <div class="flex flex-col  items-center justify-center lg:items-start">
+            <span class="text-center lg:text-right font-black text-[32px] lg:text-[60px] text-[#2626BF]">همیشه
+                پاسخگوییم</span>
+            <span class="hidden lg:block mt-2 mb-3 text-center lg:text-right text-[14px] lg:text-[28px] font-">پشتیبانان
+                ما آماده ی پاسخگویی<br>به شما هستند</span>
+            <span class="block lg:hidden mt-2 mb-3 text-center lg:text-right text-[14px] lg:text-[28px] font-">در
+                پی‌جیب، با نرخ توافقی و مطمئن،<br />
+                از ایران پول دریافت یا به خارج از کشور ارسال کنید.</span>
+            <img class="block lg:hidden w-full h-auto rounded-xl py-6" src="/img/home/support2-mobile.png">
+            <NuxtLink to="/"
+                class="w-[189px] h-[56px] text-lg font-bold text-[#2ED06E] border-2 border-[#2ED06E] bg-[#2ED06E1A] rounded-full flex items-center justify-start ps-2 gap-2">
+                <img src="/img/home/whatsapp2.svg" />
+                پیام در واتساپ
+            </NuxtLink>
         </div>
-        <img class="tw-hidden lg:tw-block tw-w-[536px] tw-h-[337px] tw-rounded-xl" src="/img/home/Rectangle 6296.png">
+        <img class="hidden lg:block w-[536px] h-[337px] rounded-xl" src="/img/home/support2.png">
     </div>
 </template>
-
-<script>
-export default {
-    name: 'SupportSection'
-}
-</script>

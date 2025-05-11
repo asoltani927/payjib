@@ -118,30 +118,31 @@ export default {
 
 <template>
     <div>
-        <div class="tw-absolute tw-top-0 tw-z-[99] rtl tw-w-full tw-h-[65px] lg:tw-h-[105px] tw-flex tw-justify-between tw-px-6 lg:tw-px-[139px] tw-items-center tw-bg-none tw-border-b tw-border-[#9999BF]">
+        <div
+            class="absolute top-0 z-[99] rtl w-full h-[65px] lg:h-[105px] flex justify-between px-6 lg:px-[139px] items-center bg-none border-b border-[#9999BF]">
             <!-- start of header -->
-            <div class="tw-flex tw-items-center tw-justify-between">
-                <img src="/img/logos/ic-logo-new.svg" class="tw-ml-4 tw-hidden lg:tw-block" />
-                <img @click="openModal" src="/img/home/mobile-menu.svg" class="tw-block lg:tw-hidden" />
-                <img src="/img/home/logo-mobile.svg" class="tw-mr-2 tw-block lg:tw-hidden" />
-                <router-link :to="{ name: 'index' }" class="tw-hidden lg:tw-block active-item tw-px-3 tw-py-2">
-                    {{ $t('header.home') }}
+            <div class="flex items-center justify-between">
+                <img src="/img/logos/ic-logo-new.svg" class="ml-4 hidden lg:block">
+                <img class="block lg:hidden" src="/img/home/mobile-menu.svg" @click="openModal">
+                <img src="/img/home/logo-mobile.svg" class="mr-2 block lg:hidden">
+                <router-link :to="{ name: 'index' }" class="hidden lg:block active-item px-3 py-2 text-white">
+                    خانه
                 </router-link>
-                <router-link to="/#services" class="tw-hidden lg:tw-block tw-px-3 tw-py-2">
+                <router-link to="/#services" class="hidden lg:block px-3 py-2 text-white font-normal text-sm ">
                     خدمات
                 </router-link>
-                <router-link to="/#support" class="tw-hidden lg:tw-flex tw-px-3 tw-py-2 tw-items-center tw-gap-2.5">
+                <router-link to="/#support" class="hidden lg:flex px-3 py-2 items-center gap-2.5 text-white font-normal text-sm ">
                     پشتیبانی
-                    <img src="/img/home/arrow-square-down.svg" />
+                    <img src="/img/home/arrow-square-down.svg"/>
                 </router-link>
             </div>
             <!-- end of header -->
-            <div class="tw-flex tw-justify-start tw-items-center tw-gap-6">
-                <router-link to="/#aboutUs" class="tw-hidden lg:tw-block">
+            <div class="flex justify-start items-center gap-6">
+                <router-link to="/#aboutUs" class="hidden lg:block text-white font-normal text-sm ">
                     درباره پی جیب
                 </router-link>
-                <a href="https://payjib.com/blog/" target="_blank" class="tw-hidden lg:tw-block">
-                    {{ $t('header.blog') }}
+                <a href="https://payjib.com/blog/" target="_blank" class="hidden lg:block text-white font-normal text-sm">
+                    وبلاگ
                 </a>
                 <ul v-if="user" class="user-info pa-0">
                     <li class="d-flex text-center align-center">
@@ -154,12 +155,12 @@ export default {
                             <ul>
                                 <li>
                                     <router-link :to="{ name: 'profile' }">
-                                        {{ $t('header.profile') }}
+                                        پروفایل
                                     </router-link>
                                 </li>
                                 <li>
                                     <p @click="logout" class="mb-0">
-                                        {{ $t('header.exit') }}
+                                        خروج
                                     </p>
                                 </li>
                             </ul>
@@ -167,22 +168,10 @@ export default {
                     </li>
                 </ul>
 
-                <UiButton
-                    v-else
-                    id="btn-login-or-register"
-                    to="/auth/login"
-                    outlined
-                    :x-small="isMobile"
-                    :small="!isMobile"
-                    class="login-btn"
-                    width="118px"
-                    height="41px"
-                    style="color: red !important; border-color: #EBEDF0 !important; border-radius: 48px !important;"
-                >
-                    <span>
-                        {{ $t('header.login') }}
-                    </span>
-                </UiButton>
+                <Nuxt-link v-else id="btn-login-or-register" to="/" outlined :x-small="isMobile" :small="!isMobile"
+                    class="login-btn font-normal border-[#EBEDF0] border rounded-[48px] flex items-center justify-center text-sm w-[118px] h-[41px] text-white">
+                     ورود یا ثبت نام
+                </Nuxt-link>
             </div>
         </div>
 

@@ -1,22 +1,27 @@
 <template>
-    <div class="tw-w-full tw-h-full tw-overflow-x-hidden">
-        <div class="rtl tw-w-full">
-            <!-- <HomeHeroSection />
+    <div class="w-full h-full overflow-x-hidden">
+        <div class="rtl w-full">
+            <HomeHeroSection />
             <HomeSocialMediaSection />
             <HomeStepsSection />
             <HomeServicesSection />
-            <HomeHistorySection />
             <HomeCommentsSection />
+            <HomePayjibAudienceSection class="flex lg:hidden" />
             <HomeRegistrationSection />
-            <HomeBlogSection />
+            <HomeHistorySection />
+            <HomePayjibAudienceSection class="hidden lg:flex" />
             <HomeSupportSection />
             <HomeCounselingSection />
-            <HomeQuestionsSection />
+            <HomeBlogSection />
+            <HomeCurrencyExchangeSection />
             <HomeSecondRegistrationSection />
-            <BaseFooter /> -->
+            <HomeQuestionsSection />
         </div>
     </div>
 </template>
+
+<script setup>
+</script>
 
 <style scoped>
 .container {
