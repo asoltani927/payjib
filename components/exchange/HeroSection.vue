@@ -1,3 +1,13 @@
+
+<script setup lang="ts">
+
+const selectedOption = ref<'send' | 'receive'>('send')
+
+const selectOption = (option: 'send' | 'receive') => {
+  selectedOption.value = option
+}
+</script>
+
 <template>
     <!-- hero -->
     <div class="bg-[#2626BF]">
@@ -56,7 +66,9 @@
                 <div
                     class="mb-8 p-2 text-[10px] lg:text-[12px] bg-[#F0F2F5] text-[#2626BF] rounded-full w-full flex items-center gap-2">
                     <img src="/img/home/blue-info.svg">
-                    <span>ارزی که انتخاب کردید در خارج از ایران دریافت خواهید کرد.</span>
+                     <span>
+                        {{selectedOption === 'send' ? 'ارزی که انتخاب کردید در خارج از ایران دریافت خواهید کرد.':'معادل ریالی ارزی که انتخاب کردید در ایران دریافت خواهید کرد.'}}
+                    </span>
                 </div>
                 <!-- form -->
                 <div class="flex flex-col lg:flex-row gap-8 lg:gap-4 w-full">
@@ -130,17 +142,4 @@
     </div>
 </template>
 
-<script>
-export default {
-    data() {
-        return {
-            selectedOption: 'send'
-        }
-    },
-    methods: {
-        selectOption(option) {
-            this.selectedOption = option
-        }
-    }
-}
-</script>
+

@@ -1,120 +1,73 @@
-<script>
-import { ref, computed } from 'vue';
+<script setup lang="ts">
+import { ref, computed } from 'vue'
 
-export default {
-    name: 'Header',
-    props: {
-        dashboard: {
-            type: Boolean,
-            default: false
-        },
-        landing: {
-            type: Boolean,
-            default: false
-        }
-    },
-    setup(props, { emit }) {
-        const isMenuOpen = ref(false);
+// Props
+const props = defineProps<{
+  dashboard?: boolean
+  landing?: boolean
+}>()
 
-        const blogUrl = computed(() => {
-            return import.meta.env.VITE_BLOG_URL; // Replace with your environment variable
-        });
+// Emits (در صورت نیاز، اگر هیچ رویدادی emit نمی‌شود، این خط لازم نیست)
+const emit = defineEmits<{}>()
 
-        const isExcludedRoute = computed(() => {
-            const excludedRoutes = ['/profile/requests/submitRequest'];
-            return excludedRoutes.some(route => window.location.pathname.startsWith(route));
-        });
+// Reactive states
+const isMenuOpen = ref(false)
 
-        const isLoggedIn = computed(() => {
-            // Replace with your Vuex store logic
-            return false; // Example value
-        });
+// Computed: Environment variable
+const blogUrl = computed(() => import.meta.env.VITE_BLOG_URL)
 
-        const isMobile = computed(() => {
-            // Replace with your Vuetify breakpoint logic
-            return false; // Example value
-        });
+// Computed: Excluded route
+const isExcludedRoute = computed(() => {
+  const excludedRoutes = ['/profile/requests/submitRequest']
+  return excludedRoutes.some(route =>
+    window.location.pathname.startsWith(route)
+  )
+})
 
-        const articles = computed(() => {
-            // Replace with your Vuex store logic
-            return []; // Example value
-        });
+// Computed: Fake login/user data (to be replaced with actual store usage)
+const isLoggedIn = computed(() => false)
+const isMobile = computed(() => false)
+const articles = computed(() => [])
+const user = computed<{ fullName: string } | null>(() => null)
+const userIsVerified = computed(() => false)
+const userIsPendingForVerification = computed(() => false)
+const userIsPendingForRegistration = computed(() => false)
 
-        const user = computed(() => {
-            // Replace with your Vuex store logic
-            return null; // Example value
-        });
+const isBankAccountPage = computed(() => {
+  const bankAccountPages = [
+    'profile-bank-accounts',
+    'profile-bank-accounts-new',
+    'profile-destination-bank-accounts',
+    'profile-destination-currency-accounts'
+  ]
+  return bankAccountPages.includes(window.location.pathname)
+})
 
-        const userIsVerified = computed(() => {
-            // Replace with your Vuex store logic
-            return false; // Example value
-        });
+const isDashboardPages = computed(() => {
+  const dashboardPages = ['profile-dashboard', 'profile-dashboard-discounts']
+  return dashboardPages.includes(window.location.pathname)
+})
 
-        const userIsPendingForVerification = computed(() => {
-            // Replace with your Vuex store logic
-            return false; // Example value
-        });
+// Methods
+const openModal = () => {
+  isMenuOpen.value = true
+}
 
-        const userIsPendingForRegistration = computed(() => {
-            // Replace with your Vuex store logic
-            return false; // Example value
-        });
+const goto = (refName: string | number) => {
+  isMenuOpen.value = false
+  window.scrollTo(100, Number(refName))
+  window.location.href = '/'
+}
 
-        const isBankAccountPage = computed(() => {
-            const bankAccountPages = [
-                'profile-bank-accounts',
-                'profile-bank-accounts-new',
-                'profile-destination-bank-accounts',
-                'profile-destination-currency-accounts'
-            ];
-            return bankAccountPages.includes(window.location.pathname);
-        });
+const logout = () => {
+  console.log('Logout') // Replace with real logic
+}
 
-        const isDashboardPages = computed(() => {
-            const dashboardPages = ['profile-dashboard', 'profile-dashboard-discounts'];
-            return dashboardPages.includes(window.location.pathname);
-        });
-
-        const openModal = () => {
-            isMenuOpen.value = true;
-        };
-
-        const goto = (refName) => {
-            isMenuOpen.value = false;
-            window.scrollTo(100, refName);
-            window.location.href = '/';
-        };
-
-        const logout = () => {
-            // Replace with your Vuex store dispatch logic
-            console.log('Logout');
-        };
-
-        const onChildClosed = () => {
-            isMenuOpen.value = false;
-        };
-
-        return {
-            isMenuOpen,
-            blogUrl,
-            isExcludedRoute,
-            isLoggedIn,
-            isMobile,
-            articles,
-            user,
-            userIsVerified,
-            userIsPendingForVerification,
-            userIsPendingForRegistration,
-            isBankAccountPage,
-            isDashboardPages,
-            openModal,
-            goto,
-            logout,
-            onChildClosed
-        };
-    }
-};
+const onChildClosed = () => {
+  isMenuOpen.value = false
+}
 </script>
+
 
 <template>
     <div>
@@ -122,12 +75,14 @@ export default {
             class="absolute top-0 z-[99] rtl w-full h-[65px] lg:h-[105px] flex justify-between px-6 lg:px-[139px] items-center bg-none border-b border-[#9999BF]">
             <!-- start of header -->
             <div class="flex items-center justify-between">
-                <img src="/img/logos/ic-logo-new.svg" class="ml-4 hidden lg:block">
+                <nuxt-link to="/">
+                    <img src="/img/logos/ic-logo-new.svg" class="ml-4 hidden lg:block">
+                </nuxt-link>
                 <img class="block lg:hidden" src="/img/home/mobile-menu.svg" @click="openModal">
                 <img src="/img/home/logo-mobile.svg" class="mr-2 block lg:hidden">
-                <router-link :to="{ name: 'index' }" class="hidden lg:block active-item px-3 py-2 text-white">
+                <nuxt-link to="/" class="hidden lg:block active-item px-3 py-2 text-white">
                     خانه
-                </router-link>
+                </nuxt-link>
                 <router-link to="/#services" class="hidden lg:block px-3 py-2 text-white font-normal text-sm ">
                     خدمات
                 </router-link>
