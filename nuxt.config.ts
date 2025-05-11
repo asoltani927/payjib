@@ -4,7 +4,7 @@ import { appConfig } from "./configs/app-config";
 import { defineNuxtConfig } from "nuxt/config";
 import { getPackage } from "./utils/get-package.util";
 import { isProduction } from "./utils/is-production.util";
-import { getApiBase } from "./utils/get-api-base.util";
+import Aura from "@primeuix/themes/aura";
 
 export default defineNuxtConfig({
   compatibilityDate: "2024-11-01",
@@ -19,9 +19,14 @@ export default defineNuxtConfig({
 
   components: true,
   // modules: ['@nuxt/content', '@nuxt/eslint'],
-  modules: ["@nuxtjs/tailwindcss", "@nuxt/eslint", "@nuxtjs/i18n"],
+  modules: [
+    "@nuxtjs/tailwindcss",
+    "@nuxt/eslint",
+    "@nuxtjs/i18n",
+    "@primevue/nuxt-module",
+  ],
   app: {
-    head: appConfig.head
+    head: appConfig.head,
   },
 
   css: ["~/assets/css/main.css"],
@@ -88,5 +93,16 @@ export default defineNuxtConfig({
     "/": { prerender: isProduction(), static: isProduction() },
     "/current-exchange/[]": { prerender: true, static: true },
     // "/:pathMatch(.*)": { static: true, swr: true },
+  },
+
+  primevue: {
+    options: {
+      theme: {
+        preset: Aura,
+      },
+    },
+    components: {
+      include: ["Button", "DataTable"],
+    },
   },
 });
