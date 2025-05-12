@@ -91,8 +91,6 @@ export default defineNuxtConfig({
 
   routeRules: {
     "/": { prerender: isProduction(), static: isProduction() },
-    "/current-exchange/[]": { prerender: true, static: true },
-    // "/:pathMatch(.*)": { static: true, swr: true },
   },
 
   primevue: {
