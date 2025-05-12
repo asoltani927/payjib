@@ -1,24 +1,32 @@
-# Use official Node.js Alpine image
-FROM node:20-alpine
+# Build Stage 1
 
-# Set the working directory inside the container
+FROM node:22-alpine AS build
 WORKDIR /app
 
-# Copy package files and install dependencies
-COPY package*.json ./
-RUN npm install
+# Copy package.json and your lockfile, here we add yarn.lock for illustration
+COPY package.json yarn.lock ./
 
-# Copy the full project
-COPY . .
+# Install dependencies
+RUN yarn install
 
-# Build the Vue 3 app
-RUN npm run build
+# Copy the entire project
+COPY . ./
 
-# Install a static server to serve the built app
-RUN npm install -g serve
+# Build the project
+RUN yarn build
 
-# Expose port
+# Build Stage 2
+
+FROM node:22-alpine
+WORKDIR /app
+
+# Only `.output` folder is needed from the build stage
+COPY --from=build /app/.output/ ./
+
+# Change the port and host
+ENV PORT 3000
+ENV HOST 0.0.0.0
+
 EXPOSE 3000
 
-# Serve the app
-CMD ["serve", "dist"]
+CMD ["node", "/app/server/index.mjs"]
