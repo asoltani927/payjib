@@ -1,11 +1,15 @@
+
+<script setup lang="ts">
+</script>
+
 <template>
   <!-- hero -->
   <div class="bg-[#2626BF]">
     <div
-      class="lg:px-[139px] items-center lg:items-start justify-between pb-12 lg:pb-[100px] gap-10 lg:gap-28 w-full h-full bg-[url(/img/home/Hero-Bg-Blue.png)] bg-cover bg-no-repeat pt-[120px] lg:pt-[200px]"
+      class="lg:px-16 items-center lg:items-start justify-between pb-12 lg:pb-[100px] gap-10 lg:gap-28 w-full h-full bg-[url(/img/home/Hero-Bg-Blue.png)] bg-cover bg-no-repeat pt-[120px] lg:pt-[200px]"
     >
       <BaseContainer>
-        <div class="flex flex-col lg:flex-row">
+        <div class="flex flex-col lg:flex-row gap-12 lg:gap-24">
           <div
             class="lg:w-1/2 flex flex-col items-center lg:items-start text-[#E5E5E5]"
           >
@@ -63,18 +67,3 @@
     </div>
   </div>
 </template>
-
-<script>
-export default {
-  data() {
-    return {
-      selectedOption: "send",
-    };
-  },
-  methods: {
-    selectOption(option) {
-      this.selectedOption = option;
-    },
-  },
-};
-</script>

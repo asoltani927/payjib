@@ -17,7 +17,7 @@ const currenciesOptions = computed(() => {
 
 <template>
   <div
-    class="bg-white w-full lg:w-[55%] lg:rounded-3xl shadow-lg lg:border-2 border-[#D5DDEA] p-8 pb-8 flex flex-col"
+    class="bg-white h-fit w-full lg:w-[55%] lg:rounded-3xl shadow-lg lg:border-2 border-[#D5DDEA] p-8 pb-8 flex flex-col"
   >
     <span class="text-[14px] lg:text-[22px]">می‌خواهم پولم را</span>
     <div class="w-full flex items-center gap-6 mb-4 mt-5">
@@ -155,7 +155,8 @@ const currenciesOptions = computed(() => {
     <div
       class="mt-8 p-3 lg:p-2 text-xs bg-[#F0F2F5] text-[#2626BF] rounded-xl w-full flex items-center gap-3"
     >
-      <img class="hidden lg:block" src="/img/home/card-img.png" >
+
+      <img class="hidden lg:block" src="/img/home/credit-card-2icon.svg" >
       <div class="gap-1 lg:gap-0 flex flex-col justify-between">
         <span class="text-[14px] lg:text-lg font-bold">۳۰۰.۰۰۰.۰۰۰ تومان</span>
         <span class="text-[10px] lg:text-[12px]"

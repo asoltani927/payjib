@@ -1,58 +1,130 @@
+<script setup lang="ts">
+const comments = [
+    {
+        name: 'حمیدرضا',
+        country: 'آمریکا',
+        flag: 'https://flagcdn.com/us.svg',
+        comment: `خیلی ممنونم از پلتفرم پی جیپ<br>جدا از <span class="font-bold">خدمات خوب و مطمئنشون</span>،
+    <span class="font-bold">پشتیبانی آن تایم، پیگیر و قابل اعتمادی</span> دارند و واقعا جابه‌جایی ارز رو آسون کردند.`,
+        audio: '',
+    },
+    {
+        name: 'حمیدرضا',
+        country: 'آمریکا',
+        flag: 'https://flagcdn.com/us.svg',
+        comment: `خیلی ممنونم از پلتفرم پی جیپ<br>جدا از <span class="font-bold">خدمات خوب و مطمئنشون</span>،
+    <span class="font-bold">پشتیبانی آن تایم، پیگیر و قابل اعتمادی</span> دارند و واقعا جابه‌جایی ارز رو آسون کردند.`,
+        audio: '',
+    },
+    {
+        name: 'حمیدرضا',
+        country: 'آمریکا',
+        flag: 'https://flagcdn.com/us.svg',
+        comment: `خیلی ممنونم از پلتفرم پی جیپ<br>جدا از <span class="font-bold">خدمات خوب و مطمئنشون</span>،
+    <span class="font-bold">پشتیبانی آن تایم، پیگیر و قابل اعتمادی</span> دارند و واقعا جابه‌جایی ارز رو آسون کردند.`,
+        audio: '',
+    },
+    {
+        name: 'حمیدرضا',
+        country: 'آمریکا',
+        flag: 'https://flagcdn.com/us.svg',
+        comment: `خیلی ممنونم از پلتفرم پی جیپ<br>جدا از <span class="font-bold">خدمات خوب و مطمئنشون</span>،
+    <span class="font-bold">پشتیبانی آن تایم، پیگیر و قابل اعتمادی</span> دارند و واقعا جابه‌جایی ارز رو آسون کردند.`,
+        audio: '',
+    },
+    {
+        name: 'حمیدرضا',
+        country: 'آمریکا',
+        flag: 'https://flagcdn.com/us.svg',
+        comment: `خیلی ممنونم از پلتفرم پی جیپ<br>جدا از <span class="font-bold">خدمات خوب و مطمئنشون</span>،
+    <span class="font-bold">پشتیبانی آن تایم، پیگیر و قابل اعتمادی</span> دارند و واقعا جابه‌جایی ارز رو آسون کردند.`,
+        audio: '',
+    },
+    {
+        name: 'حمیدرضا',
+        country: 'آمریکا',
+        flag: 'https://flagcdn.com/us.svg',
+        comment: `خیلی ممنونم از پلتفرم پی جیپ<br>جدا از <span class="font-bold">خدمات خوب و مطمئنشون</span>،
+    <span class="font-bold">پشتیبانی آن تایم، پیگیر و قابل اعتمادی</span> دارند و واقعا جابه‌جایی ارز رو آسون کردند.`,
+        audio: '',
+    },
+    {
+        name: 'حمیدرضا',
+        country: 'آمریکا',
+        flag: 'https://flagcdn.com/us.svg',
+        comment: `خیلی ممنونم از پلتفرم پی جیپ<br>جدا از <span class="font-bold">خدمات خوب و مطمئنشون</span>،
+    <span class="font-bold">پشتیبانی آن تایم، پیگیر و قابل اعتمادی</span> دارند و واقعا جابه‌جایی ارز رو آسون کردند.`,
+        audio: '',
+    },
+    {
+        name: 'حمیدرضا',
+        country: 'آمریکا',
+        flag: 'https://flagcdn.com/us.svg',
+        comment: `خیلی ممنونم از پلتفرم پی جیپ<br>جدا از <span class="font-bold">خدمات خوب و مطمئنشون</span>،
+    <span class="font-bold">پشتیبانی آن تایم، پیگیر و قابل اعتمادی</span> دارند و واقعا جابه‌جایی ارز رو آسون کردند.`,
+        audio: '',
+    },
+    // 4 تای بعدی مشابه همین، فقط مقادیر تغییر کنن
+];
+</script>
+
+
 <template>
     <!-- comments  -->
-    <div class="w-full flex flex-col items-center py-12 lg:py-[96px] bg-[#f0f2f5] lg:px-[139px]">
-        <h3 class="text-center text-[#2626BF] text-lg lg:text-[40px] mb-[80px] font-bold px-6 lg:px-0">
-            دیگران راجع به سرویس انتقال ارز با پی‌جیب
-            <br>
-            <div class="font-black text-[32px] lg:text-[55px] mt-4 lg:mt-10">
-                چه می‌گویند؟
-                <span class="font-black text-[32px] lg:text-[55px]">!
-                </span>
-            </div>
 
-        </h3>
-        <div class="w-full flex flex-col gap-12 items-center">
-            <div class="w-[99%]  flex items-center mx-auto overflow-x-auto notShowScrollbar gap-4">
-                <div v-for="i in 5" :key="i"
-                    class="mx-6 lg:mx-0 flex-shrink-0 min-w-[376px] w-[376px] p-3 rounded-2xl shadow-xl  bg-white flex flex-col gap-4">
-                    <!-- user info -->
-                    <div class="flex justify-between items-center">
-                        <!-- right: user name -->
-                        <div class="flex items-center gap-2">
-                            <img class="w-5 h-5" src="/img/home/profile-circle.svg">
-                            <span class="font-medium text-[14px] text-[#0F1114]">حمیدرضا</span>
-                        </div>
-
-                        <!-- left: country -->
-                        <div class="flex items-center gap-1 bg-[#F0F2F5] pe-1 ps-2 h-[26px] rounded-full">
-                            <img src="https://flagcdn.com/us.svg" alt="USA Flag" class="w-[18px] h-[18px] rounded-full">
-                            <span class="text-sm font-semibold text-[#0F1114]">آمریکا</span>
-                        </div>
+    <div class="w-full bg-[#f0f2f5] ">
+        <div class="w-full flex flex-col items-center py-12 lg:py-[96px] lg:px-16">
+            <BaseContainer>
+                <div class="w-full  text-center text-[#2626BF] text-lg lg:text-[40px] mb-[80px] font-bold px-6 lg:px-0">
+                    دیگران راجع به سرویس انتقال ارز با پی‌جیب
+                    <br>
+                    <div class="font-black text-[32px] lg:text-[55px] mt-4 lg:mt-10">
+                        چه می‌گویند؟
+                        <span class="font-black text-[32px] lg:text-[55px]">!
+                        </span>
                     </div>
 
-                    <!-- comment text -->
-                    <p class="text-[#33373D] text-sm leading-relaxed">
-                        خیلی ممنونم از پلتفرم پی جیپ<br>
-                        جدا از <span class="font-bold">خدمات خوب و مطمئنشون</span>، <span class="font-bold">پشتیبانی آن
-                            تایم، پیگیر و قابل اعتمادی</span> دارند و واقعا جابه‌جایی ارز رو برای مایی که خارج از ایران
-                        هستیم آسون‌تر کردند.
-                    </p>
-
-                    <!-- audio player -->
-                    <div class="flex items-center gap-3 w-full">
-                        <audio controls class="w-full direction-ltr bg-[#F0F2F5] rounded-xl overflow-hidden">
-                            <source src="" type="audio/mpeg">
-                            مرورگر شما از پخش صوت پشتیبانی نمی‌کند.
-                        </audio>
-                    </div>
                 </div>
-            </div>
-            <!-- pagination -->
-            <div class="flex items-center gap-0.5">
-                <div class="w-2 h-2 rounded-full bg-[#c9cbf2]"> <!-- img --></div>
-                <div class="w-[36px] h-2 rounded-full bg-[#2E2EE5]"> <!-- img --></div>
-                <div class="w-2 h-2 rounded-full bg-[#c9cbf2]"> <!-- img --></div>
-            </div>
+                <div class="w-full overflow-hidden">
+                    <!-- <div class="w-[99%]  flex items-center mx-auto overflow-x-auto notShowScrollbar gap-4"> -->
+                    <Carousel :value="comments" :numVisible="3" :numScroll="1" :responsiveOptions="[
+                        { breakpoint: '1400px', numVisible: 3, numScroll: 3 },
+                        { breakpoint: '1024px', numVisible: 2, numScroll: 2 },
+                        { breakpoint: '640px', numVisible: 1, numScroll: 1 }
+                    ]" :showIndicators="true" :showNavigators="true" :circular="true" class="w-full h-full" dir="rtl">
+                        <template #item="{ data }">
+                            <div
+                                class="mx-2 flex-shrink-0 lg:min-w-[90%] lg:w-[376px] p-3 rounded-2xl shadow-xl bg-white flex flex-col gap-4 m-4 mb-12">
+                                <!-- user info -->
+                                <div class="flex justify-between items-center">
+                                    <div class="flex items-center gap-2">
+                                        <img class="w-5 h-5" src="/img/home/profile-circle.svg" />
+                                        <span class="font-medium text-[14px] text-[#0F1114]">{{ data.name }}</span>
+                                    </div>
+
+                                    <div class="flex items-center gap-1 bg-[#F0F2F5] pe-1 ps-2 h-[26px] rounded-full">
+                                        <img :src="data.flag" class="w-[18px] h-[18px] rounded-full" />
+                                        <span class="text-sm font-semibold text-[#0F1114]">{{ data.country }}</span>
+                                    </div>
+                                </div>
+
+                                <!-- comment text -->
+                                <p class="text-[#33373D] text-sm leading-relaxed" v-html="data.comment"></p>
+
+                                <!-- audio player -->
+                                <div class="flex items-center gap-3 w-full">
+                                    <audio controls class="w-full direction-ltr overflow-hidden">
+                                        <source :src="data.audio" type="audio/mpeg" />
+                                        مرورگر شما از پخش صوت پشتیبانی نمی‌کند.
+                                    </audio>
+                                </div>
+                            </div>
+                        </template>
+                    </Carousel>
+                </div>
+            </BaseContainer>
         </div>
+
+
     </div>
 </template>

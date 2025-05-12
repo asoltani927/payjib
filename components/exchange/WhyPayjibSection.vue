@@ -1,11 +1,7 @@
 <template>
   <!-- services  -->
-  <div
-    id="services"
-    class="pt-10 pb-20 lg:py-8 lg:pt-[96px] lg:pb-[120px] lg:px-[139px]"
-  >
     <BaseContainer>
-      <div class="flex flex-col lg:items-center">
+      <div class="flex flex-col lg:items-center pt-10 pb-20 lg:py-8 lg:pt-[96px] lg:pb-[120px] lg:px-16">
         <h3
           class="ms-6 lg:ms-0 text-[#2626BF] text-[24px] lg:text-center lg:text-[40px] mb-6 lg:mb-[80px] font-bold"
         >
@@ -77,5 +73,4 @@
         </div>
       </div>
     </BaseContainer>
-  </div>
 </template>

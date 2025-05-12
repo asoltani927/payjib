@@ -1,5 +1,6 @@
 <template>
     <div class="w-full h-full overflow-x-hidden">
+     
         <div class="rtl w-full">
             <HomeHeroSection />
             <HomeSocialMediaSection />
@@ -17,11 +18,9 @@
             <HomeSecondRegistrationSection />
             <HomeQuestionsSection />
         </div>
+           <HomeConsultationRequestModal />
     </div>
 </template>
-
-<script setup>
-</script>
 
 <style scoped>
 .container {

@@ -8,8 +8,13 @@
 
 body {
     font-family: "IRANSans", sans-serif !important;
+    background-color: #ffffff;
+    color: #0F1114;
+    direction: rtl !important;
 }
-
+input{
+    background-color: #ffffff;
+}
 
 .rtl {
     direction: rtl !important;
