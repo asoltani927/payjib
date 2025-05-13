@@ -1,7 +1,9 @@
 <template>
     <!-- support -->
+     <div class="w-full bg-[#f0f2f5]">
+         <BaseContainer>
     <div id="support"
-        class="flex flex-col lg:flex-row w-items-center justify-between lg:gap-[93px] py-12 lg:py-[96px] px-6 lg:px-[139px] bg-[#f0f2f5]">
+        class="flex flex-col lg:flex-row w-items-center justify-between lg:gap-[93px] py-12 lg:py-[96px] px-6 lg:px-16 bg-[#f0f2f5]">
         <div class="flex flex-col  items-center justify-center lg:items-start">
             <span class="text-center lg:text-right font-black text-[32px] lg:text-[60px] text-[#2626BF]">همیشه
                 پاسخگوییم</span>
@@ -18,5 +20,8 @@
             </NuxtLink>
         </div>
         <img class="hidden lg:block w-[536px] h-[337px] rounded-xl" src="/img/home/support2.png">
-    </div>
+    </div></BaseContainer>
+     </div>
+    
+    
 </template>

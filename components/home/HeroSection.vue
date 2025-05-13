@@ -1,8 +1,11 @@
+<script setup lang="ts">
+
+</script>
 <template>
   <!-- hero -->
   <div class="bg-[#2626BF]">
     <div
-      class="lg:px-[139px] items-center justify-between pb-12 lg:pb-[120px] gap-4 lg:gap-28 w-full h-full bg-[url(/img/home/Hero-Bg-Blue.png)] bg-cover bg-no-repeat pt-[70px] lg:pt-[185px]"
+      class="lg:px-16 items-center justify-between pb-12 lg:pb-[120px] gap-4 lg:gap-28 w-full h-full bg-[url(/img/home/Hero-Bg-Blue.png)] bg-cover bg-no-repeat pt-[70px] lg:pt-[185px]"
     >
       <BaseContainer>
         <div class="flex flex-col lg:flex-row">

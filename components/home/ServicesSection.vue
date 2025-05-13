@@ -2,7 +2,7 @@
   <!-- services  -->
   <div
     id="services"
-    class="pt-10 pb-20 lg:py-8 lg:pt-[96px] lg:pb-[120px] lg:px-[139px]"
+    class="pt-10 pb-20 lg:py-8 lg:pt-[96px] lg:pb-[120px] lg:px-16"
   >
     <BaseContainer>
       <div class="flex flex-col lg:items-center">

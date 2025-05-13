@@ -1,32 +1,114 @@
-<template>
-    <!-- blog -->
-    <div class="w-full flex flex-col items-center pt-8 pb-6 lg:py-[80px] lg:px-[139px] bg-white">
-        <!-- title -->
-        <div class="w-full flex justify-between items-center mb-8 px-6 lg:px-0">
-            <h3 class="text-[#0F1114] text-lg lg:text-[28px] font-bold">آخرین مطالب مجله پی‌جیب</h3>
-            <nuxt-link to="https://payjib.com/blog/"
-                class="flex items-center gap-2 font-bold text-[14px] lg:text-lg cursor-pointer">
-                <span class="text-[#2E2EE5]">ادامه در وبلاگ</span>
-                <img src="/img/home/arrow-square-left.svg">
-            </nuxt-link>
-        </div>
+<script setup lang="ts">
+const blogItems = [
+    {
+        title: 'پرداخت دانشگاه‌های خارج از کشور',
+        desc: 'این روزها اهداف بسیاری از دانشجویان داخل ایران سفر به کشوری دیگر برای...',
+        img: '/img/Rectangle 6304.png',
+        link: 'https://payjib.com/blog/',
+    },
+    {
+        title: 'پرداخت دانشگاه‌های خارج از کشور',
+        desc: 'این روزها اهداف بسیاری از دانشجویان داخل ایران سفر به کشوری دیگر برای...',
+        img: '/img/Rectangle 6304.png',
+        link: 'https://payjib.com/blog/',
+    },
+    {
+        title: 'پرداخت دانشگاه‌های خارج از کشور',
+        desc: 'این روزها اهداف بسیاری از دانشجویان داخل ایران سفر به کشوری دیگر برای...',
+        img: '/img/Rectangle 6304.png',
+        link: 'https://payjib.com/blog/',
+    },
+    {
+        title: 'پرداخت دانشگاه‌های خارج از کشور',
+        desc: 'این روزها اهداف بسیاری از دانشجویان داخل ایران سفر به کشوری دیگر برای...',
+        img: '/img/Rectangle 6304.png',
+        link: 'https://payjib.com/blog/',
+    },
+    {
+        title: 'پرداخت دانشگاه‌های خارج از کشور',
+        desc: 'این روزها اهداف بسیاری از دانشجویان داخل ایران سفر به کشوری دیگر برای...',
+        img: '/img/Rectangle 6304.png',
+        link: 'https://payjib.com/blog/',
+    },
+    {
+        title: 'پرداخت دانشگاه‌های خارج از کشور',
+        desc: 'این روزها اهداف بسیاری از دانشجویان داخل ایران سفر به کشوری دیگر برای...',
+        img: '/img/Rectangle 6304.png',
+        link: 'https://payjib.com/blog/',
+    },
+    {
+        title: 'پرداخت دانشگاه‌های خارج از کشور',
+        desc: 'این روزها اهداف بسیاری از دانشجویان داخل ایران سفر به کشوری دیگر برای...',
+        img: '/img/Rectangle 6304.png',
+        link: 'https://payjib.com/blog/',
+    },
+];
+</script>
 
-        <!-- cards -->
-        <div class="w-[99%]  rtl flex items-center gap-4 mx-auto overflow-x-auto notShowScrollbar">
-            <!-- card  -->
-            <div v-for="i in 5" :key="i"
-                class="mx-6 lg:mx-0 flex-shrink-0 w-[312px] min-w-[312px] lg:w-[352px] lg:min-w-[352px] bg-white rounded-2xl p-4 ps-7 border-2 border-[#D5DDEA] flex flex-col items-start">
-                <div class="flex justify-between items-center w-full gap-3">
-                    <img cclass="w-[76px] h-[102px] rounded-lg me-3 bg-gray-400" src="/img/Rectangle 6304.png">
-                    <div class="flex flex-col">
-                        <h4 class="text-[#0F1114] font-semibold lg:text-lg mb-2">پرداخت دانشگاه‌های خارج از کشور</h4>
-                        <p class="text-[#0F1114] text-[12px] lg:text-sm">
-                            این روزها اهداف بسیاری از دانشجویان داخل ایران سفر
-                            به کشوری دیگر برای...
-                        </p>
-                    </div>
-                </div>
+<template>
+    <BaseContainer>
+        <div class="w-full flex flex-col items-center pt-8 pb-6 lg:py-[80px] lg:px-16 bg-white">
+            <!-- title -->
+            <div class="w-full flex justify-between items-center mb-10 px-6 lg:px-0">
+                <h3 class="text-[#0F1114] text-lg lg:text-[28px] font-bold">آخرین مطالب مجله پی‌جیب</h3>
+                <nuxt-link to="https://payjib.com/blog/"
+                    class="flex items-center gap-2 font-bold text-[14px] lg:text-lg cursor-pointer">
+                    <span class="text-[#2E2EE5]">ادامه در وبلاگ</span>
+                    <img src="/img/home/arrow-square-left.svg" />
+                </nuxt-link>
             </div>
+
+            <!-- carousel -->
+            <Carousel 
+            :value="[...blogItems].reverse()" 
+            :numVisible="3" 
+            :numScroll="1" 
+            :responsiveOptions="[
+                { breakpoint: '1400px', numVisible: 3, numScroll: 3 },
+                { breakpoint: '1024px', numVisible: 2, numScroll: 2 },
+                { breakpoint: '640px', numVisible: 1, numScroll: 1 }
+            ]" 
+            :showIndicators="true" 
+            :showNavigators="false"
+             :circular="true"
+              class="w-full"
+               dir="rtl">
+                <template #item="{ data }">
+                    <div
+                        class=" flex-shrink-0 w-[96%] lg:w-[98%] bg-white rounded-2xl p-4 pe-6 border-2 border-[#D5DDEA] flex flex-col items-start">
+                        <div class="flex w-full gap-3">
+                            <img class="w-[76px] h-[102px] rounded-lg me-3 bg-gray-400" :src="data.img" />
+                            <div class="flex flex-col">
+                                <h4 class="text-[#0F1114] font-semibold lg:text-lg mb-2">{{ data.title }}</h4>
+                                <p class="text-[#0F1114] text-[12px] lg:text-sm">
+                                    {{ data.desc }}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </template>
+            </Carousel>
         </div>
-    </div>
+    </BaseContainer>
+
 </template>
+
+<style>
+/* .p-carousel-item-list:dir(rtl){
+    flex-direction: row !important;
+} */
+
+.p-carousel-indicator .p-carousel-indicator-button {
+    background: #c9cbf2 !important;
+    background-color: #c9cbf2 !important;
+    border: 1px solid red !;
+    width: 8px !important;
+    height: 8px !important;
+}
+
+.p-carousel-indicator-active .p-carousel-indicator-button {
+    background-color: #2E2EE5 !important;
+    width: 56px !important;
+    height: 8px !important;
+}
+</style>

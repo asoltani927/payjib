@@ -100,7 +100,8 @@ export default defineNuxtConfig({
       },
     },
     components: {
-      include: ["Button", "DataTable"],
+
+      include: ["Button", "DataTable", "Dialog", "Carousel", "Drawer"],
     },
   },
 });

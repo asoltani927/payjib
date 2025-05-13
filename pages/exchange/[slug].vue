@@ -13,9 +13,6 @@
     </div>
 </template>
 
-<script setup>
-
-</script>
 <style scoped>
 .container {
     padding: 0;
