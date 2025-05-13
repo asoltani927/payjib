@@ -8,6 +8,16 @@ import Aura from "@primeuix/themes/aura";
 
 export default defineNuxtConfig({
   compatibilityDate: "2024-11-01",
+
+  nitro: {
+    prerender: {
+      routes: ['/'], // Add any pages you want to cache
+    },
+    routeRules: {
+      '/': { swr: 60 * 60 * 24 }, // Cache the homepage for 24 hours
+    },
+  },
+
   devtools: { enabled: !isProduction() },
 
   postcss: {
@@ -17,6 +27,8 @@ export default defineNuxtConfig({
     },
   },
 
+  plugins: [],
+
   components: true,
   // modules: ['@nuxt/content', '@nuxt/eslint'],
   modules: [
@@ -24,18 +36,25 @@ export default defineNuxtConfig({
     "@nuxt/eslint",
     "@nuxtjs/i18n",
     "@primevue/nuxt-module",
+    [
+      '@vee-validate/nuxt',
+      {
+        autoImports: false,
+        componentNames: {
+          Form: 'VeeForm',
+          Field: 'VeeField',
+          FieldArray: 'VeeFieldArray',
+          ErrorMessage: 'VeeErrorMessage',
+        },
+      },
+    ],
+    'nuxt-lucide-icons',
   ],
   app: {
     head: appConfig.head,
   },
 
   css: ["~/assets/css/main.css"],
-
-  // vite: {
-  //   plugins: [
-  //     tailwindcss(),
-  //   ],
-  // },
 
   runtimeConfig: {
     public: {
@@ -79,9 +98,9 @@ export default defineNuxtConfig({
   },
 
   // TODO
-  //   googleAnalytics: {
-  //     id: 'G-2DF34W9FX3'
-  // },
+    googleAnalytics: {
+      id: 'G-2DF34W9FX3'
+  },
 
   router: {
     // middleware: ['auth'],
@@ -100,8 +119,10 @@ export default defineNuxtConfig({
       },
     },
     components: {
-
       include: ["Button", "DataTable", "Dialog", "Carousel", "Drawer"],
     },
+  },
+  build: {
+    transpile: ['lucide-vue-next'], // Ensure lucide-vue-next is transpiled
   },
 });

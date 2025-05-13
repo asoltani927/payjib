@@ -1,53 +1,39 @@
-<template>
-    <button
-        :class="[
-            'px-4 py-2 rounded text-white font-semibold',
-            variantClass,
-            { 'opacity-50 cursor-not-allowed': disabled }
-        ]"
-        :disabled="disabled"
-        @click="handleClick"
-    >
-        <slot />
-    </button>
-</template>
 
-<script setup>
-import { computed } from "vue";
+<script setup lang="ts">
+import { defineProps } from "vue";
 
-const { variant } = defineProps({
-    variant: {
-        type: String,
-        default: "primary", // Options: primary, secondary, danger
-    },
-    disabled: {
-        type: Boolean,
-        default: false,
-    },
+const emits = defineEmits(["click"]);
+
+// type ButtonType = "submit" | "button" | "reset" | undefined
+defineProps({
+  // type: {
+  //     default: "submit"
+  // },
+  caption: {
+    type: String,
+    default: "ارسال",
+  },
+  loading: {
+    type: Boolean,
+    default: false,
+  },
 });
 
-const emit = defineEmits(["click"]);
-
-const variantClass = computed(() => {
-    switch (variant) {
-        case "secondary":
-            return "bg-gray-500 hover:bg-gray-600";
-        case "danger":
-            return "bg-red-500 hover:bg-red-600";
-        default:
-            return "bg-blue-500 hover:bg-blue-600";
-    }
-});
-
-const handleClick = (event) => {
-    if (!disabled) {
-        emit("click", event);
-    }
+const onClick = async (event: unknown) => {
+  emits("click", event);
 };
 </script>
 
-<style scoped>
-button {
-    transition: background-color 0.2s ease;
-}
-</style>
+<template>
+  <button
+    type="submit"
+    class="bg-[#FFBF00] text-[#0F1114] w-full lg:w-[151px] h-[48px] font-semibold rounded-full"
+    @click="onClick"
+  >
+    <div class="flex justify-center items-center gap-1">
+      <UiLoaderSpinner v-show="loading" />
+      <span v-show="!loading" class="font-bold">{{ caption }}</span>
+    </div>
+  </button>
+</template>
+

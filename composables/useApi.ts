@@ -1,18 +1,37 @@
 // composables/useApi.ts
+import { useToast } from "~/composables/useToast";
 export function useApi() {
+  const toast = useToast(); // assuming useToast is globally available
   // const config = useRuntimeConfig();
 
   const request = async <T>(
     url: string,
-    options: Omit<Parameters<typeof $fetch<T>>[1], "baseURL"> = {}
+    options: Omit<Parameters<typeof $fetch<T>>[1], "baseURL"> & {
+      method: "GET" | "PUT" | "DELETE" | "POST" | "PATCH";
+      toast?: {
+        title?: string;
+        message?: string;
+      };
+    } = { method: "GET", toast: {} }
   ): Promise<T> => {
     try {
-      return await $fetch<T>(url, {
-        baseURL: getApiBase('v1'),
+      const response = await $fetch<T>(url, {
+        baseURL: getApiBase("v1"),
         ...options,
       });
-    } catch (error) {
+      // Optional: Only show success toast for non-GET methods
+      if (options.method && options.method !== "GET" && options?.toast?.title && options?.toast?.message) {
+        toast.success(options.toast.message, options.toast.title);
+      }
+
+      return response;
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    } catch (error: any) {
       console.error("API error:", error);
+      // Display a meaningful error message
+      const message =
+        error?.data?.message || error?.message || "Something went wrong";
+      toast.error("error", message);
       throw error;
     }
   };
