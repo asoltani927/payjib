@@ -109,7 +109,7 @@ export default defineNuxtConfig({
   },
 
   routeRules: {
-    "/": { prerender: isProduction(), static: isProduction() },
+    "/": { prerender: isProduction(), static: isProduction(), ssr: true },
   },
 
   primevue: {
