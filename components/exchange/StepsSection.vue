@@ -1,9 +1,19 @@
+<script setup lang="ts">
+const props = defineProps({
+    countryName: {
+        type: String,
+        required : true
+    },
+});
+
+</script>
+
 <template>
     <!-- steps -->
     <div class="w-full flex flex-col items-center pt-12 pb-8 lg:pb-[113px] lg:pt-[80px] gap-12 bg-[#f0f2f5]">
-        <span class="text-[#0F1114] text-lg text-center lg:text-[30px] font-bold">
-            چرا پی‌جیب را برای حواله ارز آلمان انتخاب کنیم؟
-        </span>
+        <h2 class="text-[#0F1114] text-lg text-center lg:text-[30px] font-bold">
+            چرا پی‌جیب را برای حواله ارز {{ props.countryName }} انتخاب کنیم؟
+        </h2>
         <div class="flex flex-col lg:flex-row items-center gap-6 lg:gap-16">
             <div class="flex flex-col items-center gap-4">
                 <img class="w-[64px] h-[64px]" src="/img/home/whyCoose1.svg">
@@ -30,7 +40,8 @@
                     بدون واسطه
                 </span>
                 <p class="text-sm leading-6 text-[#71757A]">
-                    بدون نیاز به صرافی‌های فیزیکی یا واسطه‌های<br /> غیررسمی تبادل راز کامل می‌کنید.
+                    بدون نیاز به صرافی‌های فیزیکی یا واسطه‌های<br /> غیررسمی تبادل 
+                    ارز را کامل می‌کنید.
                 </p>
             </div>
         </div>

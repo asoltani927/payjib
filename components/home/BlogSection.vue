@@ -71,7 +71,7 @@ to="https://payjib.com/blog/"
             ]" 
             :show-indicators="true" 
             :show-navigators="false"
-             :circular="true"
+             circular :autoplayInterval="3000"
               class="w-full"
                dir="rtl">
                 <template #item="{ data }">

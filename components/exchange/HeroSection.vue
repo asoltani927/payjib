@@ -1,5 +1,22 @@
 <script setup lang="ts">
+defineProps<{
+  country: {
+    country_name: string
+    slug: string
+    flag_url: string
+    title: string
+    monetary_unit: string
+    meta_description: string
+    section: {
+      heading: string
+      content1: string
+      content2: string
+    }
+  }
+}>()
 </script>
+
+
 
 <template>
   <!-- hero -->
@@ -17,49 +34,31 @@
             >
               <img
                 class="w-[56px] h-[56px] lg:w-[72px] lg:h-[72px] mb-1"
-                src="/img/home/germany.svg"
+                :src="`/img/home/${country.flag_url}.svg`"
               />
               <span class="text-sm lg:text-3xl">انتقال ارز از/به</span>
-              <span class="font-bold text-[36px] lg:text-[57px]">آلمان</span>
+              <span class="font-bold text-[36px] lg:text-[57px]">{{ country.country_name }}</span>
             </div>
 
-            <p class="hidden text-start leading-8 lg:flex mt-4">
-              انتقال ارز بین ایران و آلمان یکی از نیازهای رایج مهاجران،
-              دانشجویان، فریلنسرها و خانواده‌هاست. اگر به‌دنبال راهی امن و سریع
-              برای ارسال یا دریافت یورو از آلمان هستید، یا می‌خواهید از ایران به
-              آلمان پرداخت ارزی مطمئن انجام دهید، پی‌جیب بهترین انتخاب برای
-              شماست. سرویس تبادل ارز پی‌جیب این امکان را فراهم می‌کند تا در
-              کمترین زمان و با کارمزدی بسیار پایین، انتقال ارز بین‌المللی خود را
-              انجام دهید. فقط کافی‌ست با چند کلیک ثبت نام خود را کامل کنید یا در
-              صورت نیاز به مشاوره، فرم زیر را پر کنید و مراحل انتقال را با
-              راهنمایی ما شروع کنید.
-            </p>
-            <button
+            <p class="hidden text-start leading-8 lg:flex mt-4">{{ country.section.content1 }}</p>
+            <p class="hidden text-start leading-8 lg:flex mt-2">{{ country.section.content2 }}</p>
+            <a href="https://payjib.com/auth/login"
               class="hidden lg:flex items-center justify-center mt-8 rounded-full w-[158px] h-[61px] bg-[#FFBF00] font-bold text-xl text-[#0F1114]"
             >
               شروع ثبت نام
-            </button>
+            </a>
           </div>
           <SharedExchangeCalculator />
           <div
             class="px-6 w-full flex lg:hidden flex-col items-center text-[#E5E5E5]"
           >
-            <p class="flex text-center leading-8 mt-6 text-[14px]">
-              انتقال ارز بین ایران و آلمان یکی از نیازهای رایج مهاجران،
-              دانشجویان، فریلنسرها و خانواده‌هاست. اگر به‌دنبال راهی امن و سریع
-              برای ارسال یا دریافت یورو از آلمان هستید، یا می‌خواهید از ایران به
-              آلمان پرداخت ارزی مطمئن انجام دهید، پی‌جیب بهترین انتخاب برای
-              شماست. سرویس تبادل ارز پی‌جیب این امکان را فراهم می‌کند تا در
-              کمترین زمان و با کارمزدی بسیار پایین، انتقال ارز بین‌المللی خود را
-              انجام دهید. فقط کافی‌ست با چند کلیک ثبت نام خود را کامل کنید یا در
-              صورت نیاز به مشاوره، فرم زیر را پر کنید و مراحل انتقال را با
-              راهنمایی ما شروع کنید.
-            </p>
-            <button
+              <p class="flex text-center leading-8 mt-6 text-[14px]">{{ country.section.content1 }}</p>
+            <p class="flex text-center leading-8 mt-2 text-[14px]">{{ country.section.content2 }}</p>
+            <a href="https://payjib.com/auth/login"
               class="flex items-center justify-center mt-4 mb-3 rounded-full w-[152px] h-[41px] bg-[#FFBF00] font-bold text-[#0F1114]"
             >
               شروع ثبت نام
-            </button>
+            </a>
           </div>
         </div>
       </BaseContainer>

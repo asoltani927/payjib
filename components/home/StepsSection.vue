@@ -1,9 +1,9 @@
 <template>
     <!-- steps -->
     <div class="w-full flex flex-col items-center pt-12 pb-8 lg:pb-[113px] lg:pt-[80px] gap-12 bg-[#f0f2f5]">
-        <span class="text-[#0F1114] text-lg text-center lg:text-[30px] font-bold">
+        <h2 class="text-[#0F1114] text-lg text-center lg:text-[30px] font-bold">
             با سه قدم ساده در پی‌جیب تبادل ارز انجام بده
-        </span>
+        </h2>
         <div class="flex flex-col lg:flex-row items-center gap-6 lg:gap-10">
             <div class="flex flex-col items-center gap-4">
                 <img class="w-[64px] h-[64px]" src="/img/home/payjibSteos1.svg">
