@@ -62,10 +62,13 @@ export function useToast() {
   });
 
   // Hide the current toast and show the next one
-  const hideToast = () => {
-    visible.value = false;
+const hideToast = () => {
+  visible.value = false;
+  setTimeout(() => {
+    currentToast.value = null;
     showNextToast();
-  };
+  }, 300);
+};
 
   // Add a new toast to the queue and show it
   const add = (toast: Toast) => {
