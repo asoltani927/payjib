@@ -17,7 +17,7 @@
               src="/img/home/payjib-text.svg"
             >
             <!-- <span>img</span> -->
-            <p class="text-[14px] lg:text-xl pb-6 lg:pb-0">
+            <p class="text-[14px] lg:text-xl pb-8 lg:pb-0">
               تبادل، انتقال و حواله ارز راحت و سریع با کمترین کارمزد
             </p>
             <a
@@ -27,7 +27,7 @@ href="https://payjib.com/auth/login"
               ثبت نام کنید
             </a>
             <span class="hidden lg:flex mt-12"> از هر جای دنیا که هستید </span>
-            <HomeFlagCarousel/>
+            <HomeFlagCarousel class="hidden lg:flex"/>
           </div>
           <SharedExchangeCalculator />
           <div
