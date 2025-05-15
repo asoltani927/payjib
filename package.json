@@ -20,6 +20,7 @@
     "@vee-validate/nuxt": "^4.15.0",
     "eslint": "^9.0.0",
     "nuxt": "^3.17.1",
+    "nuxt-gtag": "3.0.2",
     "nuxt-lucide-icons": "1.0.5",
     "primevue": "^4.3.4",
     "vee-validate": "^4.15.0",

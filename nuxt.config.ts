@@ -11,10 +11,10 @@ export default defineNuxtConfig({
 
   nitro: {
     prerender: {
-      routes: ['/'], // Add any pages you want to cache
+      routes: ["/"], // Add any pages you want to cache
     },
     routeRules: {
-      '/': { swr: 60 * 60 * 24 }, // Cache the homepage for 24 hours
+      "/": { swr: 60 * 60 * 24 }, // Cache the homepage for 24 hours
     },
   },
 
@@ -37,18 +37,19 @@ export default defineNuxtConfig({
     "@nuxtjs/i18n",
     "@primevue/nuxt-module",
     [
-      '@vee-validate/nuxt',
+      "@vee-validate/nuxt",
       {
         autoImports: false,
         componentNames: {
-          Form: 'VeeForm',
-          Field: 'VeeField',
-          FieldArray: 'VeeFieldArray',
-          ErrorMessage: 'VeeErrorMessage',
+          Form: "VeeForm",
+          Field: "VeeField",
+          FieldArray: "VeeFieldArray",
+          ErrorMessage: "VeeErrorMessage",
         },
       },
     ],
-    'nuxt-lucide-icons',
+    "nuxt-lucide-icons",
+    "nuxt-gtag",
   ],
   app: {
     head: appConfig.head,
@@ -97,10 +98,9 @@ export default defineNuxtConfig({
     // }
   },
 
-  // TODO
-    googleAnalytics: {
-      id: 'G-2DF34W9FX3'
-  },
+  gtag: isProduction() ? {
+    id: 'G-2DF34W9FX3'
+  } : undefined,
 
   router: {
     // middleware: ['auth'],
@@ -123,6 +123,6 @@ export default defineNuxtConfig({
     },
   },
   build: {
-    transpile: ['lucide-vue-next'], // Ensure lucide-vue-next is transpiled
+    transpile: ["lucide-vue-next"], // Ensure lucide-vue-next is transpiled
   },
 });

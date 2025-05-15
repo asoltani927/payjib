@@ -13,7 +13,8 @@
 // })
 
 // const isLoggedIn = computed(() => false)
-// const isMobile = computed(() => false)
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const isMobile = computed(() => false)
 // const articles = computed(() => [])
 // const user = computed(() => null)
 // const userIsVerified = computed(() => false)
