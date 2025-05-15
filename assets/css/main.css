@@ -6,7 +6,7 @@
 @tailwind utilities;
 
 body {
-    font-family: "IRANSans", sans-serif !important;
+    font-family: IRANSans, sans-serif !important;
     background-color: #ffffff;
     color: #0F1114;
     direction: rtl !important;
