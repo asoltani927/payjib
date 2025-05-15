@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { useSeoMeta } from '#app'
+
 useSeoMeta({
   title: "پی جیب تبادل ارز سریع و امن با کمترین کارمزد",
 });

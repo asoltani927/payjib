@@ -40,7 +40,7 @@ href="mailto:info@gmail.com"
                             </a>
                             <NuxtLink to="#" class="flex items-center gap-1 text-[14px] font-bold text-[#71757A]">
                                 <img class="" src="/img/home/call.svg">
-                                <div class="flex items-center gap-2 text-[#71757A] text-[13px] ">
+                                <div class="flex items-center gap-2 text-[#71757A] text-[13px] font-bold ">
                                     <a href="tel:02188129287" class="ltr">+98 21 8812 9287</a>
                                     -
                                     <a href="tel:02188129287" class="ltr">+98 21 8812 9287</a>

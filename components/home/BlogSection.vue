@@ -51,7 +51,7 @@ const articles = await useLatestArticles();
                   {{ article.title }}
                 </h4>
                 <p class="text-[#0F1114] text-[12px] lg:text-sm">
-                  {{ article.content }}
+                  {{ article.content.substr(0,75) + '...' }}
                 </p>
               </div>
             </div>
