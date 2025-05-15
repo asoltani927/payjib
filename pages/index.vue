@@ -3,7 +3,7 @@
      
         <div class="rtl w-full">
             <HomeHeroSection />
-            <HomeSocialMediaSection />
+            <BaseSocialMediaSection />
             <HomeStepsSection />
             <HomeServicesSection />
             <HomeCommentsSection />

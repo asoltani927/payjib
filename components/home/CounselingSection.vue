@@ -46,14 +46,14 @@ const onSubmit = async (values: { fullName: string; phone: string }) => {
               <div
                 class="w-full flex flex-col lg:flex-row flex-grow items-center gap-4"
               >
-                <div class="grid lg:grid-cols-2 gap-2">
+                <div class="w-full lg:w-fit flex-grow flex flex-col lg:grid lg:grid-cols-2 gap-2">
                   <UiInputText
                     name="fullName"
                     placeholder="نام و نام خانوادگی"
                   />
                   <UiInputText name="phone" placeholder="شماره موبایل" />
                 </div>
-                <div class="flex justify-end">
+                <div class="w-full lg:w-[150px] flex justify-end">
                   <UiButton :loading="isSubmitting" caption="ارسال" />
                 </div>
               </div>

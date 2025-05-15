@@ -19,11 +19,11 @@
                             <span>را با ما شروع کنید</span>
                         </div>
                     </div>
-                    <nuxt-link
-to="/"
+                    <a
+href="https://payjib.com/auth/login"
                         class="mt-8 w-[128px] h-[41px] lg:w-[167px] lg:h-[61px] text-white rounded-full bg-[#2E2EE5] flex items-center justify-center lg:text-xl font-bold">
                         شروع ثبت نام
-                    </nuxt-link>
+                    </a>
                 </div>
                 <div class="w-full h-auto bg-gray-200">
                     <img class="w-full h-full" src="/img/home/CurrencyExchange.png">

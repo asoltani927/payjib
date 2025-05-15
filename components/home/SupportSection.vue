@@ -14,12 +14,12 @@ id="support"
                 پی‌جیب، با نرخ توافقی و مطمئن،<br >
                 از ایران پول دریافت یا به خارج از کشور ارسال کنید.</span>
             <img class="block lg:hidden w-full h-auto rounded-xl py-6" src="/img/home/support2-mobile.png">
-            <NuxtLink
-to="/"
+            <a
+href="https://wa.me/989101369884"
                 class="w-[189px] h-[56px] text-lg font-bold text-[#2ED06E] border-2 border-[#2ED06E] bg-[#2ED06E1A] rounded-full flex items-center justify-start ps-2 gap-2">
                 <img src="/img/home/whatsapp2.svg" >
                 پیام در واتساپ
-            </NuxtLink>
+            </a>
         </div>
         <img class="hidden lg:block w-[536px] h-[337px] rounded-xl" src="/img/home/support2.png">
     </div></BaseContainer>

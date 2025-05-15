@@ -1,3 +1,16 @@
+<script setup lang="ts">
+defineProps({
+    countryName: {
+        type: String,
+        required: true
+    },
+    monetaryUnit: {
+        type: String,
+        required: true
+    },
+});
+
+</script>
 <template>
     <!-- services  -->
     <div class="bg-[#f0f2f5] w-full">
@@ -6,17 +19,17 @@
 id="services"
                 class="flex flex-col-reverse gap-12 lg:gap-[30px] items-center lg:flex-row lg:justify-between py-[72px] lg:py-[96px] px-6 lg:px-16">
                 <div class="w-full lg:w-[65%] flex flex-col items-center lg:items-start">
-                    <h3 class="ms-6 lg:ms-0 text-[#0F1114] text-center lg:text-start text-[23px]  font-bold">
-                        چرا پی‌جیب را برای حواله ارز آلمان انتخاب کنیم؟
-                    </h3>
+                    <h2 class="ms-6 lg:ms-0 text-[#0F1114] text-center lg:text-start text-[23px]  font-bold">
+                        فرآیند تبادل ارز در پی‌جیب چگونه انجام می‌شود؟
+                    </h2>
                     <p
                         class="mt-6 mb-8 custom-lineHeight leading-12 text-center text-[#2626BF] text-xl lg:text-3xl lg:text-start">
                         شما درخواست خود را برای
-                        <strong class="font-bold custom-lineHeight"> خرید یا فروش یورو</strong>
+                        <strong class="font-bold custom-lineHeight"> خرید یا فروش {{ monetaryUnit }}</strong>
                         ثبت می‌کنید. پی‌جیب، افراد دارای نیاز معکوس را به هم وصل کرده و
                         تبادل ارز را تحت نظارت و از طریق حساب‌های امن خود انجام می‌دهد. این یعنی بدون انتقال فیزیکی پول،
                         <strong class="font-bold custom-lineHeight"> حواله ارزی
-                            شما از ایران به آلمان یا از آلمان به ایران با اطمینان کامل انجام می‌شود.</strong>
+                            شما از ایران به {{countryName}} یا از {{ countryName }} به ایران با اطمینان کامل انجام می‌شود.</strong>
                     </p>
                     <div class="flex items-center gap-2">
                         <img src="/img/home/video-octagon.svg" >
