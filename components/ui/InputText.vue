@@ -48,7 +48,7 @@ const { name, type } = defineProps({
         :disabled="disabled"
         :type="type"
         :placeholder="placeholder"
-        class="inputs-style w-full h-[48px] rounded-xl ps-5 placeholder:text-[#33373D] border border-[#D5DDEA] focus:border-[#D5DDEA] appearance-none focus:ring-0 focus:outline-none"
+        class="inputs-style w-full h-[48px] rounded-xl ps-5 placeholder:text-[#33373D] text-[#33373D] border border-[#D5DDEA] focus:border-[#D5DDEA] appearance-none focus:ring-0 focus:outline-none"
       />
       <!-- <maz-icon v-if="icon" :src="icon" size="1.5rem" class="text-default-gray" /> -->
     </div>

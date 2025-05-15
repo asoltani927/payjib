@@ -2,7 +2,7 @@
   <div
     v-if="visible"
     :class="[
-      'fixed bottom-6 right-6 p-4 rounded-2xl shadow-lg flex items-center gap-4',
+      'fixed bottom-6 z-50 right-6 p-4 rounded-2xl shadow-lg flex items-center gap-4',
       toastClass,
     ]"
     @click="hideToast"
