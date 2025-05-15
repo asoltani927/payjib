@@ -1,6 +1,5 @@
-/* @import "tailwindcss"; */
 
-@import url("./fontface.css");
+@import "./fontface.css";
 
 @tailwind base;
 @tailwind components;
