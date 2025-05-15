@@ -1,5 +1,5 @@
 <script>
-import { ref, computed } from "vue";
+// import { ref, computed } from "vue";
 
 // const props = defineProps<Props>()
 
@@ -13,9 +13,9 @@ import { ref, computed } from "vue";
 // })
 
 // const isLoggedIn = computed(() => false)
-const isMobile = computed(() => false)
+// const isMobile = computed(() => false)
 // const articles = computed(() => [])
-const user = computed(() => null)
+// const user = computed(() => null)
 // const userIsVerified = computed(() => false)
 // const userIsPendingForVerification = computed(() => false)
 // const userIsPendingForRegistration = computed(() => false)
@@ -41,9 +41,9 @@ const user = computed(() => null)
 //   window.location.href = '/'
 // }
 
-const logout = () => {
-  console.log('Logout')
-}
+// const logout = () => {
+//   console.log('Logout')
+// }
 
 // const onChildClosed = () => {
 //   isMenuOpen.value = false
@@ -57,20 +57,21 @@ const logout = () => {
         <div class="flex justify-between items-center  h-[65px] lg:h-[105px] ">
           <!-- start of header -->
           <div class="flex items-center justify-between">
-            <img src="/img/logos/ic-logo-new.svg" class="ml-4 hidden lg:block" />
+            <img src="/img/logos/ic-logo-new.svg" class="ml-4 hidden lg:block" >
 
             <BaseMobileMenu class="block lg:hidden" />
-            <img src="/img/home/logo-mobile.svg" class="mr-2 block lg:hidden" />
+            <img src="/img/home/logo-mobile.svg" class="mr-2 block lg:hidden" >
             <nuxt-link :to="{ name: 'index' }" class="hidden lg:block active-item px-3 py-2 text-white">
               خانه
             </nuxt-link>
             <nuxt-link to="/#services" class="hidden lg:block px-3 py-2 text-white font-normal text-sm">
               خدمات
             </nuxt-link>
-            <nuxt-link to="/#support"
+            <nuxt-link
+to="/#support"
               class="hidden lg:flex px-3 py-2 items-center gap-2.5 text-white font-normal text-sm">
               پشتیبانی
-              <img src="/img/home/arrow-square-down.svg" />
+              <img src="/img/home/arrow-square-down.svg" >
             </nuxt-link>
           </div>
           <!-- end of header -->
@@ -101,7 +102,8 @@ const logout = () => {
               </li>
             </ul>
 
-            <nuxt-link v-else id="btn-login-or-register" to="/" outlined :x-small="isMobile" :small="!isMobile"
+            <nuxt-link
+v-else id="btn-login-or-register" to="/" outlined :x-small="isMobile" :small="!isMobile"
               class="login-btn font-normal border-[#EBEDF0] border rounded-[48px] flex items-center justify-center text-sm w-[118px] h-[41px] text-white">
               ورود یا ثبت نام
             </nuxt-link>

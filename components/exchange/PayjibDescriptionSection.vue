@@ -2,7 +2,8 @@
     <!-- services  -->
     <div class="bg-[#f0f2f5] w-full">
         <BaseContainer>
-            <div id="services"
+            <div
+id="services"
                 class="flex flex-col-reverse gap-12 lg:gap-[30px] items-center lg:flex-row lg:justify-between py-[72px] lg:py-[96px] px-6 lg:px-16">
                 <div class="w-full lg:w-[65%] flex flex-col items-center lg:items-start">
                     <h3 class="ms-6 lg:ms-0 text-[#0F1114] text-center lg:text-start text-[23px]  font-bold">
@@ -18,11 +19,11 @@
                             شما از ایران به آلمان یا از آلمان به ایران با اطمینان کامل انجام می‌شود.</strong>
                     </p>
                     <div class="flex items-center gap-2">
-                        <img src="/img/home/video-octagon.svg" />
+                        <img src="/img/home/video-octagon.svg" >
                         <span class="text-lg font-semibold text-[#2E2EE5]">مشاهده ویدئو</span>
                     </div>
                 </div>
-                <img class="w-[35%]" src="/img/home/payjibSteps3.svg" />
+                <img class="w-[35%]" src="/img/home/payjibSteps3.svg" >
             </div>
         </BaseContainer>
     </div>

@@ -17,7 +17,7 @@ const articles = await useLatestArticles();
           class="flex items-center gap-2 font-bold text-[14px] lg:text-lg cursor-pointer"
         >
           <span class="text-[#2E2EE5]">ادامه در وبلاگ</span>
-          <img src="/img/home/arrow-square-left.svg" />
+          <img src="/img/home/arrow-square-left.svg" >
         </nuxt-link>
       </div>
 
@@ -45,7 +45,7 @@ const articles = await useLatestArticles();
               <img
                 class="w-[76px] h-[102px] rounded-lg me-3 bg-gray-400"
                 :src="article.thumbnail"
-              />
+              >
               <div class="flex flex-col">
                 <h4 class="text-[#0F1114] font-semibold lg:text-lg mb-2">
                   {{ article.title }}

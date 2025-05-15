@@ -19,12 +19,12 @@
             <img
               class="w-full h-[220px] lg:h-[326px] rounded-xl bg-gray-400 mb-6"
               src="/img/home/why-payjib1.png"
-            />
+            >
             <div class="flex items-center gap-4">
               <img
                 class="w-8 h-8 lg:w-fit lg:h-auto"
                 src="/img/home/shield-security.svg"
-              />
+              >
               <div class="text-[#0F1114] text-xl lg:text-[28px] font-semibold">
                 جایی برای کلاهبرداری نیست
               </div>
@@ -40,12 +40,12 @@
             <img
               class="w-full h-[220px] lg:h-[326px] rounded-xl bg-gray-400 mb-6"
               src="/img/home/why-payjib2.png"
-            />
+            >
             <div class="flex items-center gap-4">
               <img
                 class="w-8 h-8 lg:w-fit lg:h-auto"
                 src="/img/home/finger-scan.svg"
-              />
+              >
               <div class="text-[#0F1114] text-xl lg:text-[28px] font-semibold">
                 احراز هویت دقیق
               </div>
@@ -60,12 +60,12 @@
             <img
               class="w-full h-[220px] lg:h-[326px] rounded-xl bg-gray-400 mb-6"
               src="/img/home/why-payjib3.png"
-            />
+            >
             <div class="flex items-center gap-4">
               <img
                 class="w-8 h-8 lg:w-fit lg:h-auto"
                 src="/img/home/security-time.svg"
-              />
+              >
               <div class="text-[#0F1114] text-xl lg:text-[28px] font-semibold">
                 کارمزد منصفانه، سرعت فوق‌العاده
               </div>
@@ -79,12 +79,12 @@
             <img
               class="w-full h-[220px] lg:h-[326px] rounded-xl bg-gray-400 mb-6"
               src="/img/home/why-payjib4.png"
-            />
+            >
             <div class="flex items-center gap-4">
               <img
                 class="w-8 h-8 lg:w-fit lg:h-auto"
                 src="/img/home/24-support.svg"
-              />
+              >
               <div class="text-[#0F1114] text-xl lg:text-[28px] font-semibold">
                 پشتیبانی همیشه آنلاین
               </div>
@@ -98,12 +98,12 @@
             <img
               class="w-full h-[220px] lg:h-[326px] rounded-xl bg-gray-400 mb-6"
               src="/img/home/why-payjib5.png"
-            />
+            >
             <div class="flex items-center gap-4">
               <img
                 class="w-8 h-8 lg:w-fit lg:h-auto"
                 src="/img/home/flag.svg"
-              />
+              >
               <div class="text-[#0F1114] text-xl lg:text-[28px] font-semibold">
                 مراحل شفاف
               </div>

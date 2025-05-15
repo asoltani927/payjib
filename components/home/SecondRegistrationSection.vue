@@ -19,7 +19,8 @@
                             <span>را با ما شروع کنید</span>
                         </div>
                     </div>
-                    <nuxt-link to="/"
+                    <nuxt-link
+to="/"
                         class="mt-8 w-[128px] h-[41px] lg:w-[167px] lg:h-[61px] text-white rounded-full bg-[#2E2EE5] flex items-center justify-center lg:text-xl font-bold">
                         شروع ثبت نام
                     </nuxt-link>

@@ -19,15 +19,15 @@ onMounted(() => {
     <Dialog
          v-model:visible="visible"
         class="bg-[#2626BF] consultation-dialog pt-4 pb-2 px-2 rounded-none lg:rounded-3xl" modal :closable="false"
-        dir="rtl" :dismissableMask="true" :closeOnEscape="true" :style="{ width: '740px' }">
+        dir="rtl" :dismissable-mask="true" :close-on-escape="true" :style="{ width: '740px' }">
         <div class="flex justify-between">
             <div class="flex flex-col lg:flex-row items-center gap-2">
-                <img class="lg:-ms-2" src="/img/home/headphone2.svg" />
+                <img class="lg:-ms-2" src="/img/home/headphone2.svg" >
 
                 <span class="text-[40px] font-bold text-[#FFBF00]">فرم درخواست مشاوره</span>
             </div>
-            <div @click="visible = false" class="cursor-pointer">
-                <img src="/img/home/icon-close.svg" />
+            <div class="cursor-pointer" @click="visible = false">
+                <img src="/img/home/icon-close.svg" >
             </div>
         </div>
         <div class="w-full rounded-xl bg-white flex flex-col p-6 gap-4 mt-10 lg:mt-6">

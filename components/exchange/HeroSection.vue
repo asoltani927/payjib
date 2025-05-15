@@ -18,7 +18,7 @@
               <img
                 class="w-[56px] h-[56px] lg:w-[72px] lg:h-[72px] mb-1"
                 src="/img/home/germany.svg"
-              />
+              >
               <span class="text-sm lg:text-3xl">انتقال ارز از/به</span>
               <span class="font-bold text-[36px] lg:text-[57px]">آلمان</span>
             </div>

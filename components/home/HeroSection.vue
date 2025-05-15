@@ -15,7 +15,7 @@
             <img
               class="mt-8 w-[129px] h-[74px] lg:w-[258px] lg:h-[149px]"
               src="/img/home/payjib-text.svg"
-            />
+            >
             <!-- <span>img</span> -->
             <p class="text-[14px] lg:text-xl pb-6 lg:pb-0">
               تبادل، انتقال و حواله ارز راحت و سریع با کمترین کارمزد
@@ -27,11 +27,11 @@
             </button>
             <span class="hidden lg:flex mt-12"> از هر جای دنیا که هستید </span>
             <div class="hidden lg:flex items-center gap-6 mt-4">
-              <img src="/img/home/103-canada.svg" />
-              <img src="/img/home/070-united-states-of-america.svg" />
-              <img src="/img/home/036-european-union.svg" />
-              <img src="/img/home/006-turkey.svg" />
-              <img src="/img/home/015-australia.svg" />
+              <img src="/img/home/103-canada.svg" >
+              <img src="/img/home/070-united-states-of-america.svg" >
+              <img src="/img/home/036-european-union.svg" >
+              <img src="/img/home/006-turkey.svg" >
+              <img src="/img/home/015-australia.svg" >
             </div>
           </div>
           <SharedExchangeCalculator />
@@ -45,11 +45,11 @@
               ثبت نام کنید
             </button>
             <div class="flex items-center gap-7 mt-4">
-              <img src="/img/home/103-canada.svg" />
-              <img src="/img/home/070-united-states-of-america.svg" />
-              <img src="/img/home/036-european-union.svg" />
-              <img src="/img/home/006-turkey.svg" />
-              <img src="/img/home/015-australia.svg" />
+              <img src="/img/home/103-canada.svg" >
+              <img src="/img/home/070-united-states-of-america.svg" >
+              <img src="/img/home/036-european-union.svg" >
+              <img src="/img/home/006-turkey.svg" >
+              <img src="/img/home/015-australia.svg" >
             </div>
           </div>
         </div>

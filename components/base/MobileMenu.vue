@@ -6,12 +6,13 @@ const visible = ref(false);
 
 <template>
     <div class="card flex justify-center">
-        <Drawer v-model:visible="visible" class="bg-[#2626BF] text-white rounded-b-3xl" :showCloseIcon="false" position="top"
+        <Drawer
+v-model:visible="visible" class="bg-[#2626BF] text-white rounded-b-3xl" :show-close-icon="false" position="top"
             style="height: auto">
             <div class="flex items-center justify-between pb-6 mb-6 border-b">
-                <img src="/img/home/logo-mobile.svg" class="mr-2 block lg:hidden" />
-                <div @click="visible = false" class="cursor-pointer">
-                    <img src="/img/home/icon-close.svg" />
+                <img src="/img/home/logo-mobile.svg" class="mr-2 block lg:hidden" >
+                <div class="cursor-pointer" @click="visible = false">
+                    <img src="/img/home/icon-close.svg" >
                 </div>
             </div>
             <div class="flex flex-col ">
@@ -35,6 +36,6 @@ const visible = ref(false);
                 </nuxt-link>
             </div>
         </Drawer>
-        <img @click="visible = true" class="block lg:hidden" src="/img/home/mobile-menu.svg" />
+        <img class="block lg:hidden" src="/img/home/mobile-menu.svg" @click="visible = true" >
     </div>
 </template>

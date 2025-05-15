@@ -154,7 +154,7 @@ watch(
     <div
       class="mb-8 p-2 text-[10px] lg:text-[12px] bg-[#F0F2F5] text-[#2626BF] rounded-full w-full flex items-center gap-2"
     >
-      <img src="/img/home/blue-info.svg" />
+      <img src="/img/home/blue-info.svg" >
       <span>ارزی که انتخاب کردید در خارج از ایران دریافت خواهید کرد.</span>
     </div>
     <!-- form -->
@@ -184,7 +184,7 @@ watch(
           <img
             class="absolute top-1/2 left-4 -translate-y-1/2 pointer-events-none"
             src="/img/home/Vector.svg"
-          />
+          >
         </div>
       </div>
       <!-- inputs  -->
@@ -197,11 +197,11 @@ watch(
           type="text"
           placeholder="حجم تراکنش"
           class="inputs-style border border-[#D5DDEA] rounded-xl bg-white h-[48px] ps-5 placeholder:text-[13px] placeholder:text-[#33373D] placeholder:font-medium"
-        />
+        >
         <div
           class="flex items-center gap-1 text-[#71757A] text-[10px] mt-0.5 font-medium"
         >
-          <img src="/img/home/gray-info.svg" />
+          <img src="/img/home/gray-info.svg" >
           مثلا ۱۰۰۰ تا
         </div>
       </div>
@@ -215,11 +215,11 @@ watch(
           type="text"
           placeholder="نرخ تبدیل پیشنهادی"
           class="inputs-style border border-[#D5DDEA] rounded-xl bg-white h-[48px] ps-5 placeholder:text-[13px] placeholder:text-[#33373D] placeholder:font-medium"
-        />
+        >
         <div
           class="flex items-center gap-1 text-[#71757A] text-[10px] mt-0.5 font-medium"
         >
-          <img src="/img/home/gray-info.svg" />
+          <img src="/img/home/gray-info.svg" >
           مثلا ۹۵.۰۰۰ تومان
         </div>
       </div>
@@ -227,7 +227,7 @@ watch(
     <div
       class="mt-8 p-3 lg:p-2 text-xs bg-[#F0F2F5] text-[#2626BF] rounded-xl w-full flex items-center gap-3"
     >
-      <img class="hidden lg:block" src="/img/home/credit-card-2icon.svg" />
+      <img class="hidden lg:block" src="/img/home/credit-card-2icon.svg" >
       <div class="gap-1 lg:gap-0 flex flex-col justify-between">
         <span v-if="!loading" class="text-[14px] lg:text-lg font-bold">{{
           invoiceAmount

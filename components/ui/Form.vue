@@ -2,8 +2,8 @@
 import { Form } from 'vee-validate';
 
 const { validationSchema, initialValues } = defineProps({
-    validationSchema: { type: Object, default: {} },
-    initialValues: { type: Object, default: {} }
+    validationSchema: { type: Object, default: () => ({}) },
+    initialValues: { type: Object, default: () => ({}) }
 })
 
 const emit = defineEmits(["submit"])

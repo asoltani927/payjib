@@ -15,7 +15,7 @@
             <img
               class="w-full h-[220px] lg:h-[260px] rounded-xl bg-gray-400 mb-6"
               src="/img/home/whyPayjibCurrency1.png"
-            />
+            >
             <div class="flex items-center gap-4">
               <div class="text-[#0F1114] text-xl lg:text-[22px] font-semibold">
                 پشتیبانی آنلاین
@@ -30,7 +30,7 @@
             <img
               class="w-full h-[220px] lg:h-[260px] rounded-xl bg-gray-400 mb-6"
               src="/img/home/whyPayjibCurrency2.png"
-            />
+            >
             <div class="flex items-center gap-4">
               <div class="text-[#0F1114] text-xl lg:text-[22px] font-semibold">
                 امنیت بالا
@@ -45,7 +45,7 @@
             <img
               class="w-full h-[220px] lg:h-[260px] rounded-xl bg-gray-400 mb-6"
               src="/img/home/whyPayjibCurrency3.png"
-            />
+            >
             <div class="flex items-center gap-4">
               <div class="text-[#0F1114] text-xl lg:text-[22px] font-semibold">
                 شفافیت کامل در فرآیند
@@ -60,7 +60,7 @@
             <img
               class="w-full h-[220px] lg:h-[260px] rounded-xl bg-gray-400 mb-6"
               src="/img/home/whyPayjibCurrency4.png"
-            />
+            >
             <div class="flex items-center gap-4">
               <div class="text-[#0F1114] text-xl lg:text-[22px] font-semibold">
                 احراز هویت دقیق و امن
