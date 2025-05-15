@@ -24,14 +24,15 @@ onMounted(() => {
 
 <template>
   <div class="card flex justify-center">
-    <Drawer v-model:visible="visible" class="!bg-[#2626BF] text-white rounded-b-3xl" :showCloseIcon="false"
+    <Drawer
+v-model:visible="visible" class="!bg-[#2626BF] text-white rounded-b-3xl" :show-close-icon="false"
       position="top" style="height: auto">
       <div class="flex items-center justify-between pb-6 mb-6 border-b">
         <nuxt-link to="/" class="mr-2 block lg:hidden">
-          <img src="/img/home/logo-mobile.svg" />
+          <img src="/img/home/logo-mobile.svg" >
         </nuxt-link>
-        <div @click="visible = false" class="cursor-pointer">
-          <img src="/img/home/icon-close.svg" />
+        <div class="cursor-pointer" @click="visible = false">
+          <img src="/img/home/icon-close.svg" >
         </div>
       </div>
 
@@ -40,19 +41,21 @@ onMounted(() => {
         <a href="https://payjib.com/blog/" class="px-3 py-2 text-white">وبلاگ</a>
 
         <div class="w-full flex flex-col gap-3 py-2 px-3">
-          <div class="cursor-pointer flex items-center gap-2.5 text-white font-normal text-sm"
+          <div
+class="cursor-pointer flex items-center gap-2.5 text-white font-normal text-sm"
             @click="isShowSubmenus = !isShowSubmenus">
             <span>پشتیبانی</span>
-            <img src="/img/home/arrow-square-down.svg" :class="isShowSubmenus ? 'rotate-180' : ''" />
+            <img src="/img/home/arrow-square-down.svg" :class="isShowSubmenus ? 'rotate-180' : ''" >
           </div>
-          <div v-if="isShowSubmenus"
+          <div
+v-if="isShowSubmenus"
             class="text-[#2626BF] bg-white rounded-xl shadow-lg px-4 p-3 mb-2 text-sm z-50 w-full">
             <a :href="randomTelegramLink" class="flex items-center gap-1 mb-4">
-              <img src="/img/telegram-2.svg" alt="telegram-icon" />
+              <img src="/img/telegram-2.svg" alt="telegram-icon" >
               تلگرام
             </a>
             <a :href="randomWhatsappLink" class="flex items-center gap-1">
-              <img src="/img/whatsapp2.svg" alt="whatsapp-icon" />
+              <img src="/img/whatsapp2.svg" alt="whatsapp-icon" >
               واتساپ
             </a>
           </div>
@@ -61,6 +64,6 @@ onMounted(() => {
         <a href="https://payjib.com/terms" class="px-3 py-2 text-white">قوانین پی‌جیب</a>
       </div>
     </Drawer>
-    <img src="/img/home/menu-burger-circle.svg" class="block lg:hidden" @click="visible = true" />
+    <img src="/img/home/menu-burger-circle.svg" class="block lg:hidden" @click="visible = true" >
   </div>
 </template>

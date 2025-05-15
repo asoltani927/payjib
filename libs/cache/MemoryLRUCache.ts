@@ -51,8 +51,8 @@ export class MemoryLRUCache<T> {
     if (this._maxSize && Object.keys(this._cache).length >= this._maxSize) {
       const lruKey = this._usageOrder.shift();
       if (lruKey) {
-        delete this._cache[lruKey];
-        delete this._expiresAt[lruKey];
+        this._cache[lruKey] = undefined as unknown as T;
+        this._expiresAt[lruKey] = undefined as unknown as number;
         this.log("Evicted LRU key:", lruKey);
       }
     }
@@ -67,8 +67,8 @@ export class MemoryLRUCache<T> {
   }
 
   public delete(key: string): void {
-    delete this._cache[key];
-    delete this._expiresAt[key];
+    this._cache[key] = undefined as unknown as T;
+    this._expiresAt[key] = undefined as unknown as number;
     this._usageOrder = this._usageOrder.filter((k) => k !== key);
     this.log("Deleted key:", key);
   }

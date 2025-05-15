@@ -50,13 +50,13 @@ onUnmounted(() => {
 <template>
   <div class="h-20 lg:flex items-center mt-4 overflow-hidden w-[calc(5*2.75rem+4*1.5rem)]">
     <Transition name="" mode="out-in">
-      <div class="flex gap-6" :key="startIndex">
+      <div :key="startIndex" class="flex gap-6">
         <img
           v-for="(flag, index) in visibleCountries"
           :key="`flag-${index}`"
           :src="`/img/home/${flag.IMG_URL}`"
           class="w-11 h-11"
-        />
+        >
       </div>
     </Transition>
   </div>

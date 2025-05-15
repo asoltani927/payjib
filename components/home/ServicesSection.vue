@@ -8,12 +8,12 @@
         </h2>
         <div
           class="w-full flex notShowScrollbar overflow-x-auto lg:overflow-x-hidden overflow-y-hidden lg:grid lg:grid-cols-2 gap-x-4 lg:gap-y-[64px] lg:justify-center">
-          <div class="hidden animate-triangle-motion"></div>
+          <div class="hidden animate-triangle-motion"/>
           <!-- card 1  -->
           <div class="shrink-0 ms-6 lg:ms-0 w-[312px] lg:w-full flex flex-col">
-            <img class="w-full h-[220px] lg:h-[326px] rounded-xl bg-gray-400 mb-6" src="/img/home/why-payjib1.png" />
+            <img class="w-full h-[220px] lg:h-[326px] rounded-xl bg-gray-400 mb-6" src="/img/home/why-payjib1.png" >
             <div class="flex items-center gap-5">
-              <img class="w-8 h-8 lg:w-fit lg:h-auto animate-triangle-motion" src="/img/home/shield-security.svg" />
+              <img class="w-8 h-8 lg:w-fit lg:h-auto animate-triangle-motion" src="/img/home/shield-security.svg" >
               <h3 class="text-[#0F1114] text-xl lg:text-[28px] font-semibold">
                 جایی برای کلاهبرداری نیست
               </h3>
@@ -26,9 +26,9 @@
           </div>
           <!-- card 2  -->
           <div class="shrink-0 w-[312px] lg:w-full flex flex-col">
-            <img class="w-full h-[220px] lg:h-[326px] rounded-xl bg-gray-400 mb-6" src="/img/home/why-payjib2.png" />
+            <img class="w-full h-[220px] lg:h-[326px] rounded-xl bg-gray-400 mb-6" src="/img/home/why-payjib2.png" >
             <div class="flex items-center gap-5">
-              <img class="w-8 h-8 lg:w-fit lg:h-auto  animate-triangle-motion" src="/img/home/finger-scan.svg" />
+              <img class="w-8 h-8 lg:w-fit lg:h-auto  animate-triangle-motion" src="/img/home/finger-scan.svg" >
               <h3 class="text-[#0F1114] text-xl lg:text-[28px] font-semibold">
                 احراز هویت دقیق
               </h3>
@@ -40,9 +40,9 @@
           </div>
           <!-- card 3  -->
           <div class="shrink-0 w-[312px] lg:w-full flex flex-col">
-            <img class="w-full h-[220px] lg:h-[326px] rounded-xl bg-gray-400 mb-6" src="/img/home/why-payjib3.png" />
+            <img class="w-full h-[220px] lg:h-[326px] rounded-xl bg-gray-400 mb-6" src="/img/home/why-payjib3.png" >
             <div class="flex items-center gap-4">
-              <img class="w-8 h-8 lg:w-fit lg:h-auto  animate-triangle-motion" src="/img/home/security-time.svg" />
+              <img class="w-8 h-8 lg:w-fit lg:h-auto  animate-triangle-motion" src="/img/home/security-time.svg" >
               <h3 class="text-[#0F1114] text-xl lg:text-[28px] font-semibold">
                 کارمزد منصفانه، سرعت فوق‌العاده
               </h3>
@@ -53,9 +53,9 @@
           </div>
           <!-- card 4  -->
           <div class="shrink-0 w-[312px] lg:w-full flex flex-col">
-            <img class="w-full h-[220px] lg:h-[326px] rounded-xl bg-gray-400 mb-6" src="/img/home/why-payjib4.png" />
+            <img class="w-full h-[220px] lg:h-[326px] rounded-xl bg-gray-400 mb-6" src="/img/home/why-payjib4.png" >
             <div class="flex items-center gap-4">
-              <img class="w-8 h-8 lg:w-fit lg:h-auto  animate-triangle-motion" src="/img/home/24-support.svg" />
+              <img class="w-8 h-8 lg:w-fit lg:h-auto  animate-triangle-motion" src="/img/home/24-support.svg" >
               <h3 class="text-[#0F1114] text-xl lg:text-[28px] font-semibold">
                 پشتیبانی همیشه آنلاین
               </h3>
@@ -66,9 +66,9 @@
           </div>
           <!-- card 5  -->
           <div class="shrink-0 w-[312px] lg:w-full me-6 lg:me-0 flex flex-col">
-            <img class="w-full h-[220px] lg:h-[326px] rounded-xl bg-gray-400 mb-6" src="/img/home/why-payjib5.png" />
+            <img class="w-full h-[220px] lg:h-[326px] rounded-xl bg-gray-400 mb-6" src="/img/home/why-payjib5.png" >
             <div class="flex items-center gap-4">
-              <img class="w-8 h-8 lg:w-fit lg:h-auto  animate-triangle-motion" src="/img/home/flag.svg" />
+              <img class="w-8 h-8 lg:w-fit lg:h-auto  animate-triangle-motion" src="/img/home/flag.svg" >
               <h3 class="text-[#0F1114] text-xl lg:text-[28px] font-semibold">
                 مراحل شفاف
               </h3>

@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/no-v-html -->
 <script setup lang="ts">
 const comments = [
     {
@@ -65,11 +66,12 @@ const comments = [
                 </div>
                 <div class="w-full overflow-hidden">
                     <!-- <div class="w-[99%]  flex items-center mx-auto overflow-x-auto notShowScrollbar gap-4"> -->
-                    <Carousel :value="comments" :numVisible="3" :numScroll="1" :responsiveOptions="[
+                    <Carousel
+:value="comments" :num-visible="3" :num-scroll="1" :responsive-options="[
                         { breakpoint: '1400px', numVisible: 3, numScroll: 3 },
                         { breakpoint: '1024px', numVisible: 2, numScroll: 2 },
                         { breakpoint: '640px', numVisible: 1, numScroll: 1 }
-                    ]" :showIndicators="true" :showNavigators="true" circular :autoplayInterval="3000"
+                    ]" :show-indicators="true" :show-navigators="true" circular :autoplay-interval="3000"
                         class="w-full h-full" dir="rtl">
                         <template #item="{ data }">
                             <div
@@ -78,13 +80,13 @@ const comments = [
                                     <!-- user info -->
                                     <div class="flex justify-between items-center">
                                         <div class="flex items-center gap-2">
-                                            <img class="w-5 h-5" src="/img/home/profile-circle.svg" />
+                                            <img class="w-5 h-5" src="/img/home/profile-circle.svg" >
                                             <span class="font-medium text-[14px] text-[#0F1114]">{{ data.name }}</span>
                                         </div>
 
                                         <div
                                             class="flex items-center justify-start gap-1 bg-[#0052B426] ps-1 pe-2 h-[26px] rounded-full">
-                                            <img :src="data.flag" class="w-[18px] h-[18px] rounded-full" />
+                                            <img :src="data.flag" class="w-[18px] h-[18px] rounded-full" >
                                             <span class="text-sm font-semibold text-[#0F1114]">{{ data.country }}</span>
                                         </div>
                                     </div>
@@ -96,7 +98,7 @@ const comments = [
                                 <!-- audio player -->
                                 <div class="flex items-center gap-3 w-full">
                                     <audio controls class="w-full direction-ltr overflow-hidden">
-                                        <source :src="data.audio" type="audio/mpeg" />
+                                        <source :src="data.audio" type="audio/mpeg" >
                                         مرورگر شما از پخش صوت پشتیبانی نمی‌کند.
                                     </audio>
                                 </div>

@@ -1,14 +1,16 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
+import { fetchAppStats } from '~/api/statistics';
 
-const registeredUsers = 100
-const completedTransactions = 420
-const requestedTransactions = 500
 
 const playAnimation = ref(false)
 
 const sectionRef = ref<HTMLElement | null>(null)
 
+const stats = await fetchAppStats()
+const registeredUsers = stats?.user_count ?? 0
+const completedTransactions = stats?.transaction_count ?? 0
+const requestedTransactions = stats?.requisition_count ?? 0
 onMounted(() => {
   const observer = new IntersectionObserver(
     ([entry]) => {
@@ -38,7 +40,7 @@ onMounted(() => {
         </span>
         <div class="mt-16 flex flex-col lg:flex-row gap-6 lg:gap-0 items-center">
           <div class="w-[301px] h-[176px] flex flex-col items-center">
-            <img class="w-[70px] h-[70px]" src="/img/home/history1.svg" />
+            <img class="w-[70px] h-[70px]" src="/img/home/history1.svg" >
             <span class="text-[#FFBF00] font-black text-[24px] lg:text-[33px] mt-4">
               <BaseAnimatedCounter
                 :to="registeredUsers"
@@ -50,7 +52,7 @@ onMounted(() => {
           </div>
 
           <div class="w-[301px] h-[208px] flex flex-col items-center">
-            <img class="w-[70px] h-[70px] lg:w-[110px] lg:h-[110px]" src="/img/home/history2.svg" />
+            <img class="w-[70px] h-[70px] lg:w-[110px] lg:h-[110px]" src="/img/home/history2.svg" >
             <span class="text-[#FFBF00] font-black text-[24px] lg:text-[42px] mt-4">
               <BaseAnimatedCounter
                 :to="completedTransactions"
@@ -61,7 +63,7 @@ onMounted(() => {
           </div>
 
           <div class="w-[301px] h-[176px] flex flex-col items-center">
-            <img class="w-[70px] h-[70px]" src="/img/home/history3.svg" />
+            <img class="w-[70px] h-[70px]" src="/img/home/history3.svg" >
             <span class="text-[#FFBF00] font-black text-[24px] lg:text-[33px] mt-4">
               <BaseAnimatedCounter
                 :to="requestedTransactions"

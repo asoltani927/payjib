@@ -32,7 +32,8 @@
                         </div>
                         <div class="flex flex-col items-start gap-1 lg:mt-5">
                             <div class="text-[13px] font-bold text-[#71757A] mb-1">تماس با پی جیب</div>
-                            <a href="mailto:info@gmail.com"
+                            <a
+href="mailto:info@gmail.com"
                                 class="flex items-center gap-1 text-[14px] font-bold text-[#71757A]">
                                 <img class="" src="/img/home/sms.svg">
                                 <span class="text-[#71757A] text-[13px] ">info@payjib.ir</span>
@@ -65,10 +66,12 @@
                     </div>
                 </div>
                 <div class="">
-                    <a referrerpolicy="origin" target="_blank"
+                    <a
+referrerpolicy="origin" target="_blank"
                         href="https://trustseal.enamad.ir/?id=609124&amp;Code=lvXgGFcJrtROzjxwsLye02tmeTgO9fRq"
                         data-v-23c55edc="">
-                        <img width="125px" height="125px" referrerpolicy="origin" src="/img/enamad.png" alt=""
+                        <img
+width="125px" height="125px" referrerpolicy="origin" src="/img/enamad.png" alt=""
                             code="lvXgGFcJrtROzjxwsLye02tmeTgO9fRq" style="cursor:pointer;" data-v-23c55edc="">
                     </a>
                 </div>

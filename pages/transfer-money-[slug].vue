@@ -26,10 +26,10 @@ useSeoMeta({
     <div class="w-full h-full overflow-x-hidden">
         <div class="rtl w-full">
             <ExchangeHeroSection :country="countryData" />
-            <ExchangeStepsSection :countryName="countryData.country_name"/>
+            <ExchangeStepsSection :country-name="countryData.country_name"/>
             <ExchangeWhyPayjibSection/>
-            <ExchangePayjibAudienceSection :countryName="countryData.country_name" :monetaryUnit="countryData.monetary_unit"/>
-            <ExchangePayjibDescriptionSection :countryName="countryData.country_name" :monetaryUnit="countryData.monetary_unit"/>
+            <ExchangePayjibAudienceSection :country-name="countryData.country_name" :monetary-unit="countryData.monetary_unit"/>
+            <ExchangePayjibDescriptionSection :country-name="countryData.country_name" :monetary-unit="countryData.monetary_unit"/>
             <ExchangeSecondRegistrationSection />
             <ExchangeQuestionsSection />
         </div>

@@ -12,7 +12,7 @@ interface Toast {
 const toastQueue = ref<Toast[]>([]);
 const visible = ref<boolean>(false);
 const currentToast = ref<Toast | null>(null);
-let icons: Record<string, any> = {}; // Record for dynamically imported icons
+let icons: Record<string, unknown> = {}; // Record for dynamically imported icons
 
 // Show the next toast from the queue
 function showNextToast() {
@@ -22,7 +22,7 @@ function showNextToast() {
     setTimeout(() => {
       visible.value = false;
       showNextToast();
-    }, currentToast?.duration || 3000); // Default to 3000ms if duration is not set
+    }, currentToast.value?.duration || 3000); // Default to 3000ms if duration is not set
   }
 }
 
