@@ -4,7 +4,7 @@
         <h2 class="text-[#0F1114] text-lg text-center lg:text-[30px] font-bold">
             با سه قدم ساده در پی‌جیب تبادل ارز انجام بده
         </h2>
-        <div class="flex flex-col lg:flex-row items-center gap-6 lg:gap-10">
+        <div class="flex flex-col lg:flex-row items-center gap-6 lg:gap-20">
             <div class="flex flex-col items-center gap-4">
                 <img class="w-[64px] h-[64px]" src="/img/home/payjibSteos1.svg">
                 <span class="text-[24px] lg:text-3xl text-wrap text-[#2626BF] font-bold text-center">۱. ثبت‌نام<br
