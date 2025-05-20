@@ -5,46 +5,46 @@ const comments = [
         name: 'مرتضی',
         country: 'بلژیک',
         flag: '/img/home/belgium.svg',
-        comment: 'انتقال ارز به سرعت انجام شد و خاطرجمع بودم',
+        comment: 'انتقال ارز <strong>به سرعت</strong> انجام شد و <strong>خاطرجمع</strong> بودم',
         audio: '/voice/morteza.ogg',
     },
     {
         name: 'سمانه',
         country: 'آلمان',
         flag: '/img/home/germany.svg',
-        comment: 'اول تردید داشتم اما همه‌چی به‌موقع‌، بی‌استرس و با پشتیبانی خوب انجام شد',
+        comment: 'اول تردید داشتم اما همه‌چی به موقع، <strong>بی‌استرس</strong> و با <strong>پشتیبانی خوب</strong> انجام شد',
         audio: '/voice/samaneh.ogg',
     },
     {
         name: 'شیما',
         country: 'ایران',
         flag: '/img/home/iran.svg',
-        comment: 'حتما از پلتفرم شما بابت پاسخگویی، نظم و قابل اعتماد بودن دوباره استفاده می‌کنم',
+        comment: 'حتما از پلتفرم شما بابت <strong>پاسخگویی</strong>، <strong>نظم</strong> و <strong>قابل اعتماد</strong> بودن دوباره استفاده می‌کنم',
         audio: '/voice/shima.ogg',
     },
     {
         name: 'محدثه',
         country: 'آلمان',
         flag: '/img/home/germany.svg',
-        comment: 'راضی بودم، پول کامل به حساب واریزشد و در سریع‌ترین زمان ممکن',
+        comment: 'راضی بودم،<strong> پول کامل</strong> به حساب واریز شد و در <strong>سریع‌ترین</strong> زمان ممکن',
         audio: '/voice/mohadeseh.ogg',
     },
     {
         name: 'فیروزه',
         country: 'فرانسه',
         flag: '/img/home/france.svg',
-        comment: 'حتما از پی‌جیب دوباره استفاده می‌کنم چون یک پلتفرم امن و سریع برای من بود',
+        comment: 'حتما از پی‌جیب دوباره استفاده می‌کنم چون یک <strong>پلتفرم امن و سریع</strong> برای من بود',
         audio: '/voice/firozeh.ogg',
     },
     {
         name: 'ماجده',
         country: 'آلمان',
         flag: '/img/home/germany.svg',
-        comment: 'پی‌جیب کارم رو ساده‌تر کرد و همه چی در این پلتفرم قابل پیگیریه و استرس نمی‌گیرم',
+        comment: 'پی‌جیب کارم رو ساده‌تر کرد و همه چی در این پلتفرم <strong>قابل پیگیریه</strong> و <strong>استرس نمی‌گیرم</strong>',
         audio: '/voice/majedeh.ogg',
     },
-
 ];
+
 </script>
 
 
@@ -66,13 +66,11 @@ const comments = [
                 </div>
                 <div class="w-full overflow-hidden">
                     <!-- <div class="w-[99%]  flex items-center mx-auto overflow-x-auto notShowScrollbar gap-4"> -->
-                    <Carousel
-:value="comments" :num-visible="3" :num-scroll="1" :responsive-options="[
+                    <Carousel :value="comments" :num-visible="3" :num-scroll="1" :responsive-options="[
                         { breakpoint: '1400px', numVisible: 3, numScroll: 3 },
                         { breakpoint: '1024px', numVisible: 2, numScroll: 2 },
                         { breakpoint: '640px', numVisible: 1, numScroll: 1 }
-                    ]" :show-indicators="true" :show-navigators="true" circular :autoplay-interval="3000"
-                        class="w-full h-full" dir="rtl">
+                    ]" :show-indicators="true" :show-navigators="true" class="w-full h-full" dir="rtl">
                         <template #item="{ data }">
                             <div
                                 class="mx-2 flex-shrink-0 lg:min-w-[90%] lg:w-[376px] h-[200px] p-3 rounded-2xl shadow-xl bg-white flex flex-col justify-between gap-4 m-4 mb-12">
@@ -80,25 +78,26 @@ const comments = [
                                     <!-- user info -->
                                     <div class="flex justify-between items-center">
                                         <div class="flex items-center gap-2">
-                                            <img class="w-5 h-5" src="/img/home/profile-circle.svg" >
+                                            <img class="w-5 h-5" src="/img/home/profile-circle.svg">
                                             <span class="font-medium text-[14px] text-[#0F1114]">{{ data.name }}</span>
                                         </div>
 
                                         <div
                                             class="flex items-center justify-start gap-1 bg-[#0052B426] ps-1 pe-2 h-[26px] rounded-full">
-                                            <img :src="data.flag" class="w-[18px] h-[18px] rounded-full" >
+                                            <img :src="data.flag" class="w-[18px] h-[18px] rounded-full">
                                             <span class="text-sm font-semibold text-[#0F1114]">{{ data.country }}</span>
                                         </div>
                                     </div>
 
                                     <!-- comment text -->
-                                    <p class="text-[#33373D] text-sm leading-relaxed">«{{ data.comment }}.»</p>
+                                    <p class="text-[#33373D] text-sm leading-relaxed" v-html="`«${data.comment}.»`"></p>
+
                                 </div>
 
                                 <!-- audio player -->
                                 <div class="flex items-center gap-3 w-full">
                                     <audio controls class="w-full direction-ltr overflow-hidden">
-                                        <source :src="data.audio" type="audio/mpeg" >
+                                        <source :src="data.audio" type="audio/mpeg">
                                         مرورگر شما از پخش صوت پشتیبانی نمی‌کند.
                                     </audio>
                                 </div>
