@@ -1,8 +1,8 @@
 <template>
     <!-- services  -->
-    <div id="services" class="h-full flex flex-col items-center py-8 lg:pt-[96px] lg:pb-[120px] lg:px-16">
+    <div class="h-full flex flex-col items-center py-8 lg:pt-[96px] lg:pb-[120px] lg:px-24">
         <BaseContainer>
-            <h3 class="text-[#2626BF] text-[24px] text-center lg:text-[40px] mb-6 lg:mb-[80px] font-bold">
+            <h3 class="ps-6 lg:ps-0 text-[#2626BF] text-[24px] text-center lg:text-[40px] mb-6 lg:mb-[80px] font-bold">
                 تبادل ارز با پی‌جیب مناسب چه افرادی هست؟
             </h3>
             <div

@@ -2,7 +2,8 @@
 import { useSeoMeta } from '#app'
 
 useSeoMeta({
-  title: "پی جیب تبادل ارز سریع و امن با کمترین کارمزد",
+  title: "تبادل ارز سریع و امن با کمترین کارمزد",
+  titleTemplate: "پی جیب | %s",
 });
 </script>
 <template>

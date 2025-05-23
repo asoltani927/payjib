@@ -1,7 +1,8 @@
 <template>
   <!-- services  -->
-  <BaseContainer>
-    <div class="flex flex-col lg:items-center pt-10 pb-20 lg:py-8 lg:pt-[96px] lg:pb-[120px] lg:px-16">
+   <div class="pt-10 pb-20 lg:py-8 lg:pt-[96px] lg:pb-[120px] lg:px-24 w-full">
+<BaseContainer>
+    <div class="flex flex-col lg:items-center ">
       <h2 class="ms-6 lg:ms-0 text-[#2626BF] text-[24px] lg:text-center lg:text-[40px] mb-6 lg:mb-[80px] font-bold">
         امکاناتی که پی‌جیب در خدمات انتقال ارز به شما می‌دهد
       </h2>
@@ -66,4 +67,6 @@ class="w-full h-[220px] lg:h-[260px] rounded-xl bg-gray-400 mb-6"
       </div>
     </div>
   </BaseContainer>
+   </div>
+  
 </template>

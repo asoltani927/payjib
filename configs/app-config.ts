@@ -1,7 +1,7 @@
 export const appConfig = {
   head: {
     // title: "پی جیب تبادل ارز سریع و امن با کمترین کارمزد",
-    titleTemplate: "%s | پی جیب",
+    // titleTemplate: "%s | پی جیب",
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },

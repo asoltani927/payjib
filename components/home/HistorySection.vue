@@ -36,42 +36,42 @@ onMounted(() => {
           پی جیب در هفته‌ای که گذشت
         </span>
         <span class="text-white text-[13px] lg:text-[15px]">
-          آپدیت شده در 10/10/1372
+          آپدیت شده در <span class="">1404/03/03</span>
         </span>
-        <div class="mt-16 flex flex-col lg:flex-row gap-6 lg:gap-0 items-center">
-          <div class="w-[301px] h-[176px] flex flex-col items-center">
-            <img class="w-[70px] h-[70px]" src="/img/home/history1.svg" >
-            <span class="text-[#FFBF00] font-black text-[24px] lg:text-[33px] mt-4">
+        <div class="mt-16 flex flex-col lg:flex-row gap-8 lg:gap-8 items-center">
+          <div class="lg:w-[301px] lg:h-[176px] flex flex-col items-center lg:mt-4">
+            <img class="w-[70px] h-[70px] lg:w-[60px] lg:h-[60px]" src="/img/home/history1.svg" >
+            <span class="text-[#FFBF00] font-black text-[27px] lg:text-[33px] mt-3">
               <BaseAnimatedCounter
                 :to="registeredUsers"
                 suffix=" +"
                 :play="playAnimation"
               />
             </span>
-            <span class="text-[14px] lg:text-[22px] text-white">تعداد افراد ثبت نامی</span>
+            <span class="text-[14px] lg:text-xl text-white">تعداد افراد ثبت نامی</span>
           </div>
 
-          <div class="w-[301px] h-[208px] flex flex-col items-center">
-            <img class="w-[70px] h-[70px] lg:w-[110px] lg:h-[110px]" src="/img/home/history2.svg" >
-            <span class="text-[#FFBF00] font-black text-[24px] lg:text-[42px] mt-4">
+          <div class="lg:w-[301px] lg:h-[208px] flex flex-col items-center">
+            <img class="w-[80px] h-[80px] lg:w-[110px] lg:h-[110px]" src="/img/home/history2.svg" >
+            <span class="text-[#FFBF00] font-black text-[27px] lg:text-[42px] mt-1">
               <BaseAnimatedCounter
                 :to="completedTransactions"
                 :play="playAnimation"
               />
             </span>
-            <span class="text-[14px] lg:text-[22px] text-white">تعداد تراکنش‌های انجام شده</span>
+            <span class="text-[14px] lg:text-xl text-white">تعداد تراکنش‌های انجام شده</span>
           </div>
 
-          <div class="w-[301px] h-[176px] flex flex-col items-center">
-            <img class="w-[70px] h-[70px]" src="/img/home/history3.svg" >
-            <span class="text-[#FFBF00] font-black text-[24px] lg:text-[33px] mt-4">
+          <div class="lg:w-[301px] lg:h-[176px] flex flex-col items-center lg:mt-4">
+            <img  class="w-[70px] h-[70px] lg:w-[60px] lg:h-[60px]" src="/img/home/history3.svg" >
+            <span class="text-[#FFBF00] font-black text-[27px] lg:text-[33px] mt-3">
               <BaseAnimatedCounter
                 :to="requestedTransactions"
                 suffix=" +"
                 :play="playAnimation"
               />
             </span>
-            <span class="text-[14px] lg:text-[22px] text-white">تعداد درخواست تراکنش</span>
+            <span class="text-[14px] lg:text-xl text-white">تعداد درخواست تراکنش</span>
           </div>
         </div>
       </div>

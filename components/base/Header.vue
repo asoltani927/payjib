@@ -53,7 +53,7 @@ const isMobile = computed(() => false)
 
 <template>
   <div>
-    <div class="absolute top-0 z-[99] rtl w-full px-6 lg:px-16 bg-none border-b border-[#9999BF]">
+    <div class="absolute top-0 z-[99] rtl w-full px-6 lg:px-24 bg-none border-b border-[#9999BF]">
       <BaseContainer>
         <div class="flex justify-between items-center  h-[65px] lg:h-[105px] ">
           <!-- start of header -->
@@ -74,11 +74,11 @@ const isMobile = computed(() => false)
               <img src="/img/home/arrow-square-down.svg" class="group-hover:rotate-180" >
               <div class="absolute top-full pt-2 hidden group-hover:block w-full">
                 <div class=" text-[#2626BF]  bg-white rounded-xl shadow-lg px-4 p-3 text-sm  z-50 w-max">
-                  <a href="https://t.me/+989101369884" class="flex items-center gap-1 mb-4">
+                  <a id="btn-telegram" href="https://t.me/+989101369884" class="flex items-center gap-1 mb-4">
                     <img src="/img/telegram-2.svg" alt="telegram-icon" >
                     تلگرام
                   </a>
-                  <a href="https://wa.me/989101369884" class="flex items-center gap-1">
+                  <a id="btn-whatsapp" href="https://wa.me/989101369884" class="flex items-center gap-1">
                     <img src="/img/whatsapp2.svg" alt="whatsapp-icon" >
                     واتساپ
                   </a>

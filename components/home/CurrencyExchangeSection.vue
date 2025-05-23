@@ -47,13 +47,13 @@ onUnmounted(() => {
 
 
 <template>
-    <div class="w-full bg-[#f0f2f5]">
+    <div class="w-full bg-[#f0f2f5] py-[56px] lg:py-[126px] px-6 lg:px-24">
         <BaseContainer>
             <div
-                class="w-full grid grid-cols-3 lg:grid-cols-6 gap-x-4 gap-y-4 lg:gap-y-[55px] items-center py-[56px] lg:py-[126px] px-6 lg:px-16 ">
-                <div
-                    class="lg:ps-4 col-span-3 text-center lg:text-start lg:col-span-2 text-[#2626BF] text-[32px] lg:text-[40px] font-bold">
-                    حواله ارز از همه جا</div>
+                class="w-full grid grid-cols-3 lg:grid-cols-6 gap-x-4 gap-y-4 lg:gap-y-[55px] items-center  ">
+                <h2
+                    class="lg:ps-4 col-span-3 text-center lg:text-start lg:col-span-2 text-[#2626BF] text-[32px] lg:text-[40px] font-black">
+                    حواله ارز از همه جا</h2>
                 <nuxt-link
 v-for="(item, index) in countries" :key="`item-${index}`" :to="`/transfer-money-${item.slug}`"
                     class="flex lg:items-center gap-3.5 ">
@@ -62,10 +62,10 @@ class="w-6 h-6 lg:w-fit lg:h-auto transition-transform duration-[1000ms] ease-in
                         :class="animatingFlags.includes(index) ? 'scale-50' : 'scale-100'"
                         :src="`/img/home/${item.IMG_URL}`" >
 
-                    <div class="flex flex-col gap-0.5 text-xs lg:text-sm">
-                        <span class="text-[#0F1114] ">انتقال پول از/به</span>
+                    <h3 class="flex flex-col gap-0.5 text-xs lg:text-sm">
+                        <span class="text-[#0F1114] text-nowrap">انتقال پول از/به</span>
                         <span class="text-[#2626BF] font-black">{{ item.name }}</span>
-                    </div>
+                    </h3>
                 </nuxt-link>
 
             </div>

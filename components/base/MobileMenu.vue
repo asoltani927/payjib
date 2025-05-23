@@ -50,11 +50,11 @@ class="cursor-pointer flex items-center gap-2.5 text-white font-normal text-sm"
           <div
 v-if="isShowSubmenus"
             class="text-[#2626BF] bg-white rounded-xl shadow-lg px-4 p-3 mb-2 text-sm z-50 w-full">
-            <a :href="randomTelegramLink" class="flex items-center gap-1 mb-4">
+            <a id="btn-telegram" :href="randomTelegramLink" class="flex items-center gap-1 mb-4">
               <img src="/img/telegram-2.svg" alt="telegram-icon" >
               تلگرام
             </a>
-            <a :href="randomWhatsappLink" class="flex items-center gap-1">
+            <a id="btn-whatsapp" :href="randomWhatsappLink" class="flex items-center gap-1">
               <img src="/img/whatsapp2.svg" alt="whatsapp-icon" >
               واتساپ
             </a>

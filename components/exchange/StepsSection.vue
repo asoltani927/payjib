@@ -21,7 +21,7 @@ const props = defineProps({
                     صرفه‌جویی در زمان
                 </span>
                 <p class="text-sm leading-6 text-[#71757A] text-center">
-                    بدون مراجعه حضوری و فقط با چند کلیک انتقال ارز<br > شما انجام می‌شود
+                    بدون مراجعه حضوری و فقط با چند کلیک انتقال ارز<br > شما انجام می‌شود.
                 </p>
             </div>
             <div class="flex flex-col items-center gap-4 text-center">
@@ -31,7 +31,7 @@ const props = defineProps({
                 </span>
                 <p class="text-sm leading-6 text-[#71757A]">
                     شما و طرف مقابلتان نرخ تبادل ارز<br >
-                    را تعیین می‌کنید
+                    را تعیین می‌کنید.
                 </p>
             </div>
             <div class="flex flex-col items-center gap-4 text-center">

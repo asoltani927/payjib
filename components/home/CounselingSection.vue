@@ -22,13 +22,13 @@ const onSubmit = async (values: { fullName: string; phone: string }) => {
 };
 </script>
 <template>
-  <div class="bg-[#2626BF] w-full">
+  <div class="py-6 px-6 lg:px-24 bg-[#2626BF] w-full">
     <BaseContainer>
       <div
-        class="flex flex-col lg:flex-row items-center gap-6 py-6 px-6 lg:px-16 bg-[#2626BF]"
+        class="flex flex-col lg:flex-row items-center gap-10"
       >
         <img
-          class="hidden lg:block w-full lg:w-[367px] h-[112px]"
+          class="hidden lg:block w-full lg:w-[367px] h-[112px] -ms-2"
           src="/img/home/oneClick.svg"
         >
         <img
@@ -46,7 +46,7 @@ const onSubmit = async (values: { fullName: string; phone: string }) => {
               <div
                 class="w-full flex flex-col lg:flex-row flex-grow items-center gap-4"
               >
-                <div class="w-full lg:w-fit flex-grow flex flex-col lg:grid lg:grid-cols-2 gap-2">
+                <div class="w-full lg:w-fit flex-grow flex flex-col lg:grid lg:grid-cols-2 gap-4">
                   <UiInputText
                     name="fullName"
                     placeholder="نام و نام خانوادگی"
@@ -54,7 +54,7 @@ const onSubmit = async (values: { fullName: string; phone: string }) => {
                   <UiInputText name="phone" placeholder="شماره موبایل" />
                 </div>
                 <div class="w-full lg:w-[150px] flex justify-end">
-                  <UiButton :loading="isSubmitting" caption="ارسال" />
+                  <UiButton id="btn-submit" :loading="isSubmitting" caption="ارسال" />
                 </div>
               </div>
             </div>

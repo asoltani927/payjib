@@ -48,7 +48,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="h-20 lg:flex items-center mt-4 overflow-hidden w-[calc(5*2.75rem+4*1.5rem)]">
+  <div class="h-20 lg:flex items-center mt-2 overflow-hidden w-[calc(5*2.75rem+4*1.5rem)]">
     <Transition name="" mode="out-in">
       <div :key="startIndex" class="flex gap-6">
         <img

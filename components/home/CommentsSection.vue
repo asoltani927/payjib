@@ -1,5 +1,7 @@
 <!-- eslint-disable vue/no-v-html -->
 <script setup lang="ts">
+import { ref, onMounted, onBeforeUnmount } from 'vue'
+
 const comments = [
     {
         name: 'مرتضی',
@@ -45,6 +47,18 @@ const comments = [
     },
 ];
 
+const currentAudio = ref<HTMLAudioElement | null>(null)
+
+function handlePlay(event: Event) {
+    const target = event.target as HTMLAudioElement
+
+    if (currentAudio.value && currentAudio.value !== target) {
+        currentAudio.value.pause()
+        currentAudio.value.currentTime = 0
+    }
+
+    currentAudio.value = target
+}
 </script>
 
 
@@ -52,18 +66,18 @@ const comments = [
     <!-- comments  -->
 
     <div class="w-full bg-[#f0f2f5] ">
-        <div class="w-full flex flex-col items-center py-12 lg:py-[96px] lg:px-16">
+        <div class="w-full flex flex-col items-center py-12 lg:py-[96px] lg:px-24">
             <BaseContainer>
-                <div class="w-full  text-center text-[#2626BF] text-lg lg:text-[40px] mb-[80px] font-bold px-6 lg:px-0">
+                <h2
+                    class="w-full  text-center text-[#2626BF] text-lg lg:text-[40px] mb-[80px] font-bold px-6 lg:px-0 leading-relaxed">
                     دیگران راجع به سرویس انتقال ارز با پی‌جیب
                     <br>
-                    <div class="font-black text-[32px] lg:text-[55px] mt-4 lg:mt-10">
+                    <span class="font-black text-[32px] lg:text-[55px] mt-4 lg:mt-10">
                         چه می‌گویند؟
-                        <span class="font-black text-[32px] lg:text-[55px]">!
-                        </span>
-                    </div>
+                        !
+                    </span>
+                </h2>
 
-                </div>
                 <div class="w-full overflow-hidden">
                     <!-- <div class="w-[99%]  flex items-center mx-auto overflow-x-auto notShowScrollbar gap-4"> -->
                     <Carousel :value="comments" :num-visible="3" :num-scroll="1" :responsive-options="[
@@ -96,7 +110,7 @@ const comments = [
 
                                 <!-- audio player -->
                                 <div class="flex items-center gap-3 w-full">
-                                    <audio controls class="w-full direction-ltr overflow-hidden">
+                                    <audio controls @play="handlePlay" class="w-full direction-ltr overflow-hidden">
                                         <source :src="data.audio" type="audio/mpeg">
                                         مرورگر شما از پخش صوت پشتیبانی نمی‌کند.
                                     </audio>

@@ -3,8 +3,8 @@ import { ref, onMounted } from 'vue'
 import { string } from "yup";
 import { requiredErr, phoneErr, phoneRegex, stringErr } from "@/constants";
 import { postConselingRequest } from "~/api/conseling-request";
-const visible = ref(true)
 
+const visible = ref(false)
 
 const validationSchema = {
     fullName: string().required(stringErr),
@@ -26,14 +26,18 @@ const onSubmit = async (values: { fullName: string; phone: string }) => {
 };
 
 onMounted(() => {
-    const hasSeenDialog = sessionStorage.getItem('hasSeenDialog')
-
-    if (!hasSeenDialog) {
         setTimeout(() => {
             visible.value = true
             sessionStorage.setItem('hasSeenDialog', 'true')
-        }, 1000)
-    }
+        }, 10000)
+    // const hasSeenDialog = sessionStorage.getItem('hasSeenDialog')
+
+    // if (!hasSeenDialog) {
+    //     setTimeout(() => {
+    //         visible.value = true
+    //         sessionStorage.setItem('hasSeenDialog', 'true')
+    //     }, 1000)
+    // }
 })
 </script>
 
@@ -62,7 +66,7 @@ onMounted(() => {
                         <UiInputText name="phone" placeholder="شماره موبایل" />
 
                     </div>
-                    <UiButton :loading="isSubmitting" caption="ارسال" />
+                    <UiButton id="btn-submit" :loading="isSubmitting" caption="ارسال" />
                 </div>
             </UiForm>
 

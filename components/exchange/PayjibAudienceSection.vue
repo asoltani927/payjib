@@ -13,8 +13,9 @@ defineProps({
 </script>
 <template>
     <!-- services  -->
-    <BaseContainer>
-        <div id="services" class="flex flex-col lg:items-center pt-0 pb-20 lg:py-8 lg:pt-3 lg:pb-[120px] lg:px-16">
+     <div class="w-full pt-0 pb-20 lg:py-8 lg:pt-3 lg:pb-[120px] lg:px-24">
+           <BaseContainer>
+        <div class="flex flex-col lg:items-center ">
             <h2
                 class="ms-6 lg:ms-0 text-[#2626BF] text-[24px] lg:text-center lg:text-[40px] mb-6 lg:mb-[80px] font-bold">
                 سرویس پرداخت ارزی و تبادل ارز <br class="block lg:hidden" > پی‌جیب<br class="hidden lg:block" >
@@ -34,7 +35,7 @@ class="w-full h-[220px] lg:h-[260px] rounded-xl bg-gray-400 mb-6"
                         </div>
                     </div>
                     <h3 class="text-[#33373D] font-medium text-sm mt-3">
-                        افرادی که قصد انتقال پول از {{ countryName }} به ایران یا بالعکس را دارند
+                        افرادی که قصد انتقال پول از {{ countryName }} به ایران یا بالعکس را دارند.
                     </h3>
                 </div>
                 <!-- card 2  -->
@@ -49,7 +50,7 @@ class="w-full  h-[220px] lg:h-[260px] rounded-xl bg-gray-400 mb-6"
                         </div>
                     </div>
                     <h3 class="text-[#33373D] font-medium text-sm  mt-3">
-                        دانشجویان ایرانی در {{ countryName }} که نیاز به دریافت ارز دارند
+                        دانشجویان ایرانی در {{ countryName }} که نیاز به دریافت ارز دارند.
                     </h3>
                 </div>
                 <!-- card 3  -->
@@ -64,7 +65,7 @@ class="w-full  h-[220px] lg:h-[260px] rounded-xl bg-gray-400 mb-6"
                         </div>
                     </div>
                     <h3 class="font-medium text-[#33373D] text-sm  mt-3">
-                        فریلنسرهایی که از {{ countryName }} درآمد ارزی دارند
+                        فریلنسرهایی که از {{ countryName }} درآمد ارزی دارند.
                     </h3>
                 </div>
                 <!-- card 4  -->
@@ -86,5 +87,7 @@ class="w-full  h-[220px] lg:h-[260px] rounded-xl bg-gray-400 mb-6"
             </div>
         </div>
     </BaseContainer>
+     </div>
+ 
 
 </template>
