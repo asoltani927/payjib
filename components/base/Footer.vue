@@ -42,7 +42,8 @@
                                     <span class="text-[#71757A] text-[13px] ">info@payjib.ir</span>
                                 </a>
 
-                                <div to="#"
+                                <div 
+                                to="#"
                                     class="flex items-start lg:items-center gap-1 text-[14px] font-bold text-[#71757A]">
                                     <img class="" src="/img/home/Telegram3.svg">
                                     <div
@@ -88,7 +89,7 @@
                                         آباد
                                         -
                                         زرگنده - خیابان شهید سیامک شکرآبی - خیابان امام زاده -<br class="hidden lg:block"> پلاک : ۱۸ - طبقه
-                                        : ۲
+                                        :۲
                                     </div>
                                 </div>
                             </div>
@@ -109,7 +110,8 @@
                     <a 
                     referrerpolicy="origin" target="_blank"
                         href="https://trustseal.enamad.ir/?id=609124&amp;Code=lvXgGFcJrtROzjxwsLye02tmeTgO9fRq">
-                        <img width="125px" height="125px" referrerpolicy="origin" src="/img/enamad.png" alt=""
+                        <img 
+                        width="125px" height="125px" referrerpolicy="origin" src="/img/enamad.png" alt=""
                             code="lvXgGFcJrtROzjxwsLye02tmeTgO9fRq" style="cursor:pointer;" data-v-23c55edc="">
                     </a>
                 </div>

@@ -37,14 +37,14 @@ const isShowVideo = ref(false)
                     کنید.<br>تبریک! تراکنش شما با موفقیت انجام شد.</span>
             </div>
         </div>
-        <button @click="isShowVideo = true" class="hidden lg:flex items-center gap-2">
+        <button class="hidden lg:flex items-center gap-2" @click="isShowVideo = true" >
             <img src="/img/home/video-octagon.svg">
             <span class="text-lg font-bold text-[#2E2EE5]">مشاهده ویدئو</span>
         </button>
 
         <div class="block lg:hidden px-4">
             <video controls class=" rounded-xl h-[500px">
-                <source src="/video/video_2025-05-21_22-34-11.mp4" type="video/mp4" />
+                <source src="/video/video_2025-05-21_22-34-11.mp4" type="video/mp4">
                 مرورگر شما از پخش ویدیو پشتیبانی نمی‌کند.
             </video>
         </div>

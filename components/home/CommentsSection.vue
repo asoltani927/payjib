@@ -1,6 +1,6 @@
 <!-- eslint-disable vue/no-v-html -->
 <script setup lang="ts">
-import { ref, onMounted, onBeforeUnmount } from 'vue'
+import { ref } from 'vue'
 
 const comments = [
     {
@@ -80,7 +80,8 @@ function handlePlay(event: Event) {
 
                 <div class="w-full overflow-hidden">
                     <!-- <div class="w-[99%]  flex items-center mx-auto overflow-x-auto notShowScrollbar gap-4"> -->
-                    <Carousel :value="comments" :num-visible="3" :num-scroll="1" :responsive-options="[
+                    <Carousel 
+                    :value="comments" :num-visible="3" :num-scroll="1" :responsive-options="[
                         { breakpoint: '1400px', numVisible: 3, numScroll: 3 },
                         { breakpoint: '1024px', numVisible: 2, numScroll: 2 },
                         { breakpoint: '640px', numVisible: 1, numScroll: 1 }
@@ -104,13 +105,13 @@ function handlePlay(event: Event) {
                                     </div>
 
                                     <!-- comment text -->
-                                    <p class="text-[#33373D] text-sm leading-relaxed" v-html="`«${data.comment}.»`"></p>
+                                    <p class="text-[#33373D] text-sm leading-relaxed" v-html="`«${data.comment}.»`"/>
 
                                 </div>
 
                                 <!-- audio player -->
                                 <div class="flex items-center gap-3 w-full">
-                                    <audio controls @play="handlePlay" class="w-full direction-ltr overflow-hidden">
+                                    <audio controls class="w-full direction-ltr overflow-hidden"  @play="handlePlay">
                                         <source :src="data.audio" type="audio/mpeg">
                                         مرورگر شما از پخش صوت پشتیبانی نمی‌کند.
                                     </audio>

@@ -13,13 +13,13 @@ const props = defineProps({
 });
 
 const current = ref(0);
-const formattedValue = ref('۰ ریال');
+const formattedValue = ref('۰ تومان');
 
 const formatCurrency = (value) => {
   return `${new Intl.NumberFormat('fa-IR', {
     minimumFractionDigits: 0,
     maximumFractionDigits: 0,
-  }).format(value)} ریال`;
+  }).format(value)} تومان`;
 };
 
 const animate = () => {
