@@ -279,7 +279,7 @@ watch(
         </span> -->
         <UiLoaderSpinner v-if="loading" />
         <span class="text-[10px] lg:text-[12px]">
-          سهم پی‌جیب از این مبلغ تراکنش است.
+          سهم پی‌جیب از مبلغ این تراکنش است.
         </span>
       </div>
     </div>
