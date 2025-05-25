@@ -16,7 +16,7 @@ export function useApi() {
   ): Promise<T> => {
     try {
       const response = await $fetch<T>(url, {
-        baseURL: getApiBase("v1"),
+        baseURL: "https://pjb-staging.darkube.app/api/v1", //getApiBase("v1"),
         ...options,
       });
       // Optional: Only show success toast for non-GET methods

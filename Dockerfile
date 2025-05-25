@@ -3,7 +3,7 @@
 FROM node:22-alpine AS build
 WORKDIR /app
 
-ARG NUXT_PUBLIC_API_BASE
+ARG NUXT_PUBLIC_API_BASE="https://pjb-staging.darkube.app/api/"
 
 ENV NUXT_PUBLIC_API_BASE=${NUXT_PUBLIC_API_BASE}
 
