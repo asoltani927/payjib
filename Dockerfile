@@ -3,6 +3,10 @@
 FROM node:22-alpine AS build
 WORKDIR /app
 
+ARG NUXT_PUBLIC_API_BASE
+
+ENV NUXT_PUBLIC_API_BASE=${NUXT_PUBLIC_API_BASE}
+
 # Copy package.json and your lockfile, here we add yarn.lock for illustration
 COPY package.json yarn.lock ./
 
