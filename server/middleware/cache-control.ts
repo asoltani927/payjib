@@ -1,6 +1,6 @@
 // import { isProduction } from "~/utils/is-production.util";
 
-export default defineEventHandler((event) => {
+export default defineEventHandler((_event) => {
   // if (isProduction()) {
   //   setResponseHeader(
   //     event,

@@ -28,6 +28,7 @@ export function useApi() {
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (error: any) {
       console.error("API error:", error);
+      console.log(JSON.stringify(error, null, 2));
       // Display a meaningful error message
       const message =
         error?.data?.message || error?.message || "Something went wrong";
