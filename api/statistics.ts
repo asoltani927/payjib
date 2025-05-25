@@ -15,9 +15,10 @@ const currencyCache = new MemoryLRUCache<AppStats>({
 export const fetchAppStats = async (): Promise<
   AppStats | null | undefined
 > => {
+  return useApi().get<AppStats>("/weekly")
   // Check if data is in the cache
   return currencyCache.cache(
     () => useApi().get<AppStats>("/weekly"),
-    "articles"
+    "app_states"
   );
 };

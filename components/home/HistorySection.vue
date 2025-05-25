@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
 import { fetchAppStats } from '~/api/statistics';
 
 
@@ -7,11 +6,16 @@ const playAnimation = ref(false)
 
 const sectionRef = ref<HTMLElement | null>(null)
 
-const stats = await fetchAppStats()
-const registeredUsers = stats?.user_count ?? 0
-const completedTransactions = stats?.transaction_count ?? 0
-const requestedTransactions = stats?.requisition_count ?? 0
-onMounted(() => {
+const registeredUsers = ref(1000)
+const completedTransactions = ref(0)
+const requestedTransactions = ref(0)
+
+onMounted(async () => {
+  const stats = await fetchAppStats()
+  registeredUsers.value = stats?.user_count ?? 1000
+  completedTransactions.value = stats?.transaction_count ?? 0
+  requestedTransactions.value = stats?.requisition_count ?? 0
+
   const observer = new IntersectionObserver(
     ([entry]) => {
       if (entry.isIntersecting) {

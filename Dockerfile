@@ -28,6 +28,10 @@ WORKDIR /app
 # Only `.output` folder is needed from the build stage
 COPY --from=build /app/.output/ ./
 
+ARG NUXT_PUBLIC_API_BASE
+
+ENV NUXT_PUBLIC_API_BASE=${NUXT_PUBLIC_API_BASE}
+
 # Change the port and host
 ENV PORT 3000
 ENV HOST 0.0.0.0
