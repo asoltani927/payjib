@@ -4,6 +4,12 @@ import { useCurrencies } from "~/composables/useCurrencies";
 const isSelectOpen = ref(false);
 const currencies = await useCurrencies();
 
+const toEnglishDigits = (str) => {
+  if (!str) return "";
+  return str.replace(/[۰-۹]/g, (w) => String("۰۱۲۳۴۵۶۷۸۹".indexOf(w)));
+};
+
+
 const currenciesOptions = computed(() => {
   return (
     currencies.value?.map((c) => {
@@ -125,6 +131,15 @@ watch(
   },
   { immediate: true }
 );
+
+watch(transactionVolume, (val) => {
+  transactionVolume.value = toEnglishDigits(val);
+});
+
+watch(exchangeRate, (val) => {
+  exchangeRate.value = toEnglishDigits(val);
+});
+
 </script>
 
 <template>

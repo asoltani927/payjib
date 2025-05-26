@@ -6,6 +6,7 @@ import { postConselingRequest } from "~/api/conseling-request";
 
 const visible = ref(false)
 
+
 const validationSchema = {
     fullName: string().required(stringErr),
     phone: string().matches(phoneRegex, phoneErr).required(requiredErr),
@@ -16,9 +17,16 @@ const initialValues = {
     phone: "",
 };
 
+const toEnglishDigits = (str: string): string => {
+  return str.replace(/[۰-۹]/g, (d) => String("۰۱۲۳۴۵۶۷۸۹".indexOf(d)));
+};
+
+
 const isSubmitting = ref(false);
+
 const onSubmit = async (values: { fullName: string; phone: string }) => {
     isSubmitting.value = true;
+    values.phone = toEnglishDigits(values.phone);
     await postConselingRequest(values.fullName, values.phone)
     isSubmitting.value = false;
     visible.value = false;
