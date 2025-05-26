@@ -16,7 +16,7 @@ export function useApi() {
   ): Promise<T> => {
     try {
       const response = await $fetch<T>(url, {
-        baseURL: getApiBase("v1"),
+        baseURL: "https://pjb-staging.darkube.app/api/v1", //getApiBase("v1"),
         ...options,
       });
       // Optional: Only show success toast for non-GET methods
@@ -28,6 +28,7 @@ export function useApi() {
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (error: any) {
       console.error("API error:", error);
+      console.log(JSON.stringify(error, null, 2));
       // Display a meaningful error message
       const message =
         error?.data?.message || error?.message || "Something went wrong";

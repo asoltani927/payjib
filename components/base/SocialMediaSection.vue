@@ -7,7 +7,8 @@
                         class="w-[30px] h-auto lg:w-[35px] lg:h-auto"
                                 src="/img/home/social2.svg">
                         </a>
-                <a id="btn-whatsapp" href="https://wa.me/989101369884"> <img class="w-[30px] h-auto lg:w-[35px] lg:h-auto"
+                <a id="btn-whatsapp" href="https://wa.me/989101369884"> <img 
+                        class="w-[30px] h-auto lg:w-[35px] lg:h-auto"
                                 src="/img/home/social3.svg"></a>
         </div>
 </template>

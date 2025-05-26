@@ -42,7 +42,8 @@ onMounted(() => {
 </script>
 
 <template>
-    <Dialog v-model:visible="visible"
+    <Dialog 
+    v-model:visible="visible"
         class="!bg-[#2626BF] consultation-dialog pt-4 pb-2 px-2 rounded-none lg:rounded-3xl" modal :closable="false"
         dir="rtl" :dismissable-mask="true" :close-on-escape="true" :style="{ width: '740px' }">
         <div class="flex flex-col-reverse lg:flex-row justify-between">

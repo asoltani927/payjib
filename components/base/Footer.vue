@@ -42,7 +42,8 @@
                                     <span class="text-[#71757A] text-[13px] ">info@payjib.ir</span>
                                 </a>
 
-                                <div to="#"
+                                <div 
+                                to="#"
                                     class="flex items-start lg:items-center gap-1 text-[14px] font-bold text-[#71757A]">
                                     <img class="" src="/img/home/Telegram3.svg">
                                     <div
@@ -75,7 +76,7 @@
                                 <div class="flex items-center gap-1 text-[14px] font-bold text-[#71757A]">
                                     <img class="" src="/img/home/call.svg">
                                     <div class="flex items-center gap-2 text-[#71757A] text-[13px] font-bold ">
-                                        <a id="btn-tel" href="tel:02188129287" class="ltr">+98 21 8812 9287</a>
+                                        <a id="btn-tel" href="tel:02188129287" class="ltr">0 21 8812 9287</a>
                                     </div>
                                 </div>
 
@@ -88,7 +89,7 @@
                                         آباد
                                         -
                                         زرگنده - خیابان شهید سیامک شکرآبی - خیابان امام زاده -<br class="hidden lg:block"> پلاک : ۱۸ - طبقه
-                                        : ۲
+                                        :۲
                                     </div>
                                 </div>
                             </div>
@@ -109,7 +110,8 @@
                     <a 
                     referrerpolicy="origin" target="_blank"
                         href="https://trustseal.enamad.ir/?id=609124&amp;Code=lvXgGFcJrtROzjxwsLye02tmeTgO9fRq">
-                        <img width="125px" height="125px" referrerpolicy="origin" src="/img/enamad.png" alt=""
+                        <img 
+                        width="125px" height="125px" referrerpolicy="origin" src="/img/enamad.png" alt=""
                             code="lvXgGFcJrtROzjxwsLye02tmeTgO9fRq" style="cursor:pointer;" data-v-23c55edc="">
                     </a>
                 </div>

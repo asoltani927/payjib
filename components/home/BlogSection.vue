@@ -17,7 +17,8 @@ const articles = [
           <h3 class="text-[#0F1114] text-lg lg:text-[28px] font-bold">
             آخرین مطالب مجله پی‌جیب
           </h3>
-          <nuxt-link to="https://payjib.com/blog/"
+          <nuxt-link 
+          to="https://payjib.com/blog/"
             class="flex items-center gap-2 font-bold text-[14px] lg:text-lg cursor-pointer">
             <span class="text-[#2E2EE5]">ادامه در وبلاگ</span>
             <img src="/img/home/arrow-square-left.svg">
@@ -36,8 +37,8 @@ const articles = [
             <div class="flex w-full gap-3">
               <img class="w-[76px] h-[102px] rounded-lg me-3 bg-gray-400" :src="article.Img_Url">
               <div class="flex flex-col">
-                <h4 class="text-[#0F1114] font-semibold lg:text-lg mb-2" v-html="article.title">
-                </h4>
+                <!-- eslint-disable-next-line vue/html-self-closing -->
+                <h4 class="text-[#0F1114] font-semibold lg:text-lg mb-2" v-html="article.title"></h4>
                 <p class="text-[#0F1114] text-[12px] lg:text-sm">
                   {{ article.content }}
                 </p>
