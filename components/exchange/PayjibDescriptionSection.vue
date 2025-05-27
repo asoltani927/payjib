@@ -35,18 +35,18 @@ const isShowVideo = ref(false)
                             شما از ایران به {{ countryName }} یا از {{ countryName }} به ایران با اطمینان کامل انجام
                             می‌شود.</strong>
                     </p>
-                    <button @click="isShowVideo = true" class="hidden lg:flex items-center gap-2">
-                        <img src="/img/home/video-octagon.svg">
+                    <button  class="hidden lg:flex items-center gap-2" @click="isShowVideo = true">
+                        <img src="/home/img/home/video-octagon.svg">
                         <span class="text-lg font-semibold text-[#2E2EE5]">مشاهده ویدئو</span>
                     </button>
                     <div class="block lg:hidden">
                         <video controls class=" rounded-xl h-[500px">
-                            <source src="/video/video_2025-05-21_22-34-11.mp4" type="video/mp4" />
+                            <source src="/home/video/video_2025-05-21_22-34-11.mp4" type="video/mp4">
                             مرورگر شما از پخش ویدیو پشتیبانی نمی‌کند.
                         </video>
                     </div>
                 </div>
-                <img class="w-[35%]" src="/img/home/payjibSteps3.svg">
+                <img class="w-[35%]" src="/home/img/home/payjibSteps3.svg">
             </div>
         </BaseContainer>
     </div>

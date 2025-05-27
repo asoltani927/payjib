@@ -147,20 +147,25 @@ watch(exchangeRate, (val) => {
     class="bg-white h-fit w-full lg:w-[55%] lg:rounded-3xl shadow-lg lg:border-2 border-[#D5DDEA] p-8 pb-8 flex flex-col">
     <span class="text-[14px] lg:text-[22px]">می‌خواهم پولم را</span>
     <div class="w-full flex items-center gap-6 mb-4 mt-5">
-      <div class="cursor-pointer flex items-center gap-2 transition-all duration-1000"
+      <div 
+      class="cursor-pointer flex items-center gap-2 transition-all duration-1000"
         @click="onSelectOptionClick('receive')">
-        <div :class="{
+        <div
+         :class="{
           'bg-[#A5ABB2]': selectedOption !== 'receive',
           'bg-[#F0F2F5]': selectedOption === 'receive',
-        }" class="transition-all duration-1000 w-4 h-4 rounded-full flex items-center justify-center">
-          <div :class="{
+        }"
+         class="transition-all duration-1000 w-4 h-4 rounded-full flex items-center justify-center">
+          <div
+           :class="{
             'bg-white w-2 h-2': selectedOption !== 'receive',
             'bg-[#2626BF] w-3 h-3': selectedOption === 'receive',
           }" class="transition-all duration-1000 rounded-full">
             <!-- circle -->
           </div>
         </div>
-        <span :class="{
+        <span
+         :class="{
           'text-[14px] lg:text-[18px] font-medium text-[#A5ABB2]':
             selectedOption !== 'receive',
           'text-[14px] lg:text-[18px] text-[#2626BF] font-bold':
@@ -171,18 +176,21 @@ watch(exchangeRate, (val) => {
       </div>
       <div class="cursor-pointer flex items-center gap-2 transition-all duration-1000"
         @click="onSelectOptionClick('send')">
-        <div :class="{
+        <div 
+        :class="{
           'bg-[#A5ABB2]': selectedOption !== 'send',
           'bg-[#F0F2F5]': selectedOption === 'send',
         }" class="transition-all duration-1000 w-4 h-4 rounded-full flex items-center justify-center">
-          <div :class="{
+          <div 
+          :class="{
             'bg-white w-2 h-2': selectedOption !== 'send',
             'bg-[#2626BF] w-3 h-3': selectedOption === 'send',
           }" class="transition-all duration-1000 rounded-full">
             <!-- circle  -->
           </div>
         </div>
-        <span :class="{
+        <span
+         :class="{
           'text-[14px] lg:text-[18px] font-medium text-[#A5ABB2]':
             selectedOption !== 'send',
           'text-[14px] lg:text-[18px] text-[#2626BF] font-bold':
@@ -196,7 +204,7 @@ watch(exchangeRate, (val) => {
     <div class="mb-8 p-2 text-[10px] lg:text-[12px] bg-[#F0F2F5] text-[#2626BF] rounded-full w-full flex items-center">
       <transition name="fade" mode="out-in">
         <div :key="selectedOption" class="w-full flex items-center gap-2">
-          <img src="/img/home/blue-info.svg" />
+          <img src="/home/img/home/blue-info.svg">
           <span>
             {{
               selectedOption !== 'send'
@@ -226,7 +234,7 @@ watch(exchangeRate, (val) => {
             </option>
           </select>
           <img class="absolute top-1/2 left-4 -translate-y-1/2 pointer-events-none transition-transform duration-300"
-            :class="{ 'rotate-180': isSelectOpen }" src="/img/home/Vector.svg" />
+            :class="{ 'rotate-180': isSelectOpen }" src="/home/img/home/Vector.svg" />
         </div>
       </div>
       <!-- inputs  -->
@@ -237,7 +245,7 @@ watch(exchangeRate, (val) => {
           placeholder="حجم تراکنش"
           class="inputs-style borderborder-[#D5DDEA] rounded-xl bg-white h-[48px] ps-5 placeholder:text-[13px] placeholder:text-[#33373D] placeholder:font-medium  focus:border-gray-500 appearance-none focus:ring-0 focus:outline-none">
         <div class="flex items-center gap-1 text-[#71757A] text-[10px] mt-0.5 font-medium">
-          <img src="/img/home/gray-info.svg">
+          <img src="/home/img/home/gray-info.svg">
           مثلا ۱۰۰۰ تا
         </div>
       </div>
@@ -248,13 +256,13 @@ watch(exchangeRate, (val) => {
           placeholder="نرخ تبدیل پیشنهادی"
           class="inputs-style borderborder-[#D5DDEA] rounded-xl bg-white h-[48px] ps-5 placeholder:text-[13px] placeholder:text-[#33373D] placeholder:font-medium  focus:border-gray-500 appearance-none focus:ring-0 focus:outline-none">
         <div class="flex items-center gap-1 text-[#71757A] text-[10px] mt-0.5 font-medium">
-          <img src="/img/home/gray-info.svg">
+          <img src="/home/img/home/gray-info.svg">
           مثلا ۹۵.۰۰۰ تومان
         </div>
       </div>
     </div>
     <div class="mt-8 p-3 lg:p-2 text-xs bg-[#F0F2F5] text-[#2626BF] rounded-xl w-full flex items-center gap-3">
-      <img class="hidden lg:block" src="/img/home/credit-card-2icon.svg">
+      <img class="hidden lg:block" src="/home/img/home/credit-card-2icon.svg">
       <div class="w-[45%] lg:w-[30%] gap-1 lg:gap-0 flex flex-col justify-between">
         <span v-if="!loading" class="text-[14px] lg:text-lg font-bold">
           <BaseAnimatedRialCounter v-if="!loading" :to="invoiceAmount" />

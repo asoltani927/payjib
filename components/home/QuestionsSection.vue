@@ -75,14 +75,13 @@ const toggleAnswer = (index: number): void => {
                 <div class="w-full flex flex-col items-center">
                     <div v-for="(item, index) in questions" :key="index" class="w-full ">
                         <!-- Question -->
-                        <div class="cursor-pointer  border-[#F0F2F5] py-4 lg:py-6 px-6 flex gap-4 items-start lg:items-center"
+                        <div 
+                        class="cursor-pointer  border-[#F0F2F5] py-4 lg:py-6 px-6 flex gap-4 items-start lg:items-center"
                             :class="{ 'border-b-2': index !== isOpenAnswer }" @click="toggleAnswer(index)">
                             <img :class="[
                                 'transition-transform duration-700 ease-in-out',
                                 index === isOpenAnswer ? 'rotate-180' : 'rotate-0'
-                            ]" :src="index === isOpenAnswer ? '/img/home/minus-cirlce.svg' : '/img/home/plus-add.svg'" />
-
-
+                            ]" :src="index === isOpenAnswer ? '/home/img/home/minus-cirlce.svg' : '/home/img/home/plus-add.svg'">
 
                             <span class="lg:text-[21px] font-semibold text-[#0F1114]"
                                 :class="{ 'text-[#2E2EE5]': index === isOpenAnswer }">{{
