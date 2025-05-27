@@ -31,8 +31,8 @@ const onSubmit = async (values: { fullName: string; phone: string }) => {
   <div class="py-6 px-6 lg:px-24 bg-[#2626BF] w-full">
     <BaseContainer>
       <div class="flex flex-col lg:flex-row items-center gap-10">
-        <img class="hidden lg:block w-full lg:w-[367px] h-[112px] -ms-2" src="/img/home/oneClick.svg">
-        <img class="block lg:hidden w-full lg:w-[153px] h-[208px]" src="/img/home/oneClickMobile.svg">
+        <img class="hidden lg:block w-full lg:w-[367px] h-[112px] -ms-2" src="/home/img/home/oneClick.svg">
+        <img class="block lg:hidden w-full lg:w-[153px] h-[208px]" src="/home/img/home/oneClickMobile.svg">
         <div class="w-full rounded-xl bg-white flex flex-col p-6 gap-4">
           <span>برای مشاوره رایگان اطلاعات خود را وارد کنید</span>
           <UiForm :validation-schema="validationSchema" :initial-values="initialValues" @submit="onSubmit">

@@ -54,7 +54,7 @@ onUnmounted(() => {
         <img
           v-for="(flag, index) in visibleCountries"
           :key="`flag-${index}`"
-          :src="`/img/home/${flag.IMG_URL}`"
+          :src="`/home/img/home/${flag.IMG_URL}`"
           class="w-11 h-11"
         >
       </div>

@@ -44,7 +44,7 @@ onMounted(async () => {
         </span>
         <div class="mt-16 flex flex-col lg:flex-row gap-8 lg:gap-8 items-center">
           <div class="lg:w-[301px] lg:h-[176px] flex flex-col items-center lg:mt-4">
-            <img class="w-[70px] h-[70px] lg:w-[60px] lg:h-[60px]" src="/img/home/history1.svg" >
+            <img class="w-[70px] h-[70px] lg:w-[60px] lg:h-[60px]" src="/home/img/home/history1.svg" >
             <span class="text-[#FFBF00] font-black text-[27px] lg:text-[33px] mt-3">
               <BaseAnimatedCounter
                 :to="registeredUsers"
@@ -56,7 +56,7 @@ onMounted(async () => {
           </div>
 
           <div class="lg:w-[301px] lg:h-[208px] flex flex-col items-center">
-            <img class="w-[80px] h-[80px] lg:w-[110px] lg:h-[110px]" src="/img/home/history2.svg" >
+            <img class="w-[80px] h-[80px] lg:w-[110px] lg:h-[110px]" src="/home/img/home/history2.svg" >
             <span class="text-[#FFBF00] font-black text-[27px] lg:text-[42px] mt-1">
               <BaseAnimatedCounter
                 :to="completedTransactions"
@@ -67,7 +67,7 @@ onMounted(async () => {
           </div>
 
           <div class="lg:w-[301px] lg:h-[176px] flex flex-col items-center lg:mt-4">
-            <img  class="w-[70px] h-[70px] lg:w-[60px] lg:h-[60px]" src="/img/home/history3.svg" >
+            <img  class="w-[70px] h-[70px] lg:w-[60px] lg:h-[60px]" src="/home/img/home/history3.svg" >
             <span class="text-[#FFBF00] font-black text-[27px] lg:text-[33px] mt-3">
               <BaseAnimatedCounter
                 :to="requestedTransactions"

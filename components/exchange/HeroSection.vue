@@ -22,12 +22,12 @@ defineProps<{
   <!-- hero -->
   <div class="bg-[#2626BF]">
     <div
-      class="lg:px-24 items-center lg:items-start justify-between pb-12 lg:pb-[100px] gap-10 lg:gap-28 w-full h-full bg-[url(/img/home/hero-bg-2.png)] bg-cover bg-no-repeat pt-[120px] lg:pt-[200px]">
+      class="lg:px-24 items-center lg:items-start justify-between pb-12 lg:pb-[100px] gap-10 lg:gap-28 w-full h-full bg-[url(/home/img/home/hero-bg-2.png)] bg-cover bg-no-repeat pt-[120px] lg:pt-[200px]">
       <BaseContainer>
         <div class="flex flex-col lg:flex-row gap-12 lg:gap-24">
           <div class="lg:w-1/2 flex flex-col items-center lg:items-start text-[#E5E5E5]">
             <div class="flex flex-col text-white items-center lg:items-start gap-3.5">
-              <img class="w-[56px] h-[56px] lg:w-[72px] lg:h-[72px] mb-1" :src="`/img/home/${country.flag_url}.svg`">
+              <img class="w-[56px] h-[56px] lg:w-[72px] lg:h-[72px] mb-1" :src="`/home/img/home/${country.flag_url}.svg`">
               <span class="text-sm lg:text-3xl">انتقال ارز از/به</span>
               <span class="font-bold text-[36px] lg:text-[57px]">{{ country.country_name }}</span>
             </div>
@@ -45,8 +45,8 @@ defineProps<{
             <p class="flex text-center leading-8 mt-6 text-[14px]">{{ country.section.content1 }}</p>
             <p 
             class="flex text-center leading-8 mt-2 text-[14px]">{{ country.section.content2 }}</p>
-            <a 
-            id="btn-login-or-register" href="https://payjib.com/auth/login"
+            <a
+             id="btn-login-or-register" href="https://payjib.com/auth/login"
               class="flex items-center justify-center mt-4 mb-3 rounded-full w-[152px] h-[41px] bg-[#FFBF00] font-bold text-[#0F1114]">
               شروع ثبت نام
             </a>

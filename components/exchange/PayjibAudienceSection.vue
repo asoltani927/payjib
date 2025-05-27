@@ -27,7 +27,7 @@ defineProps({
                 <div class="shrink-0 ms-6 lg:ms-0 w-[312px] lg:w-full flex flex-col">
                     <img
 class="w-full h-[220px] lg:h-[260px] rounded-xl bg-gray-400 mb-6"
-                        src="/img/home/payjib-audience1.png">
+                        src="/home/img/home/payjib-audience1.png">
                     <div class="flex items-center gap-4">
 
                         <div class="text-[#0F1114] text-xl lg:text-[22px] font-semibold">
@@ -42,7 +42,7 @@ class="w-full h-[220px] lg:h-[260px] rounded-xl bg-gray-400 mb-6"
                 <div class="shrink-0 w-[312px] lg:w-full flex flex-col">
                     <img
 class="w-full  h-[220px] lg:h-[260px] rounded-xl bg-gray-400 mb-6"
-                        src="/img/home/payjib-audience2.png">
+                        src="/home/img/home/payjib-audience2.png">
                     <div class="flex items-center gap-4">
 
                         <div class="text-[#0F1114] text-xl lg:text-[22px] font-semibold">
@@ -57,7 +57,7 @@ class="w-full  h-[220px] lg:h-[260px] rounded-xl bg-gray-400 mb-6"
                 <div class="shrink-0 w-[312px] lg:w-full flex flex-col">
                     <img
 class="w-full  h-[220px] lg:h-[260px] rounded-xl bg-gray-400 mb-6"
-                        src="/img/home/payjib-audience3.png">
+                        src="/home/img/home/payjib-audience3.png">
                     <div class="flex items-center gap-4">
 
                         <div class="text-[#0F1114] text-xl lg:text-[22px] font-semibold">
@@ -72,7 +72,7 @@ class="w-full  h-[220px] lg:h-[260px] rounded-xl bg-gray-400 mb-6"
                 <div class="me-6 lg:me-0 shrink-0 w-[312px] lg:w-full flex flex-col">
                     <img
 class="w-full  h-[220px] lg:h-[260px] rounded-xl bg-gray-400 mb-6"
-                        src="/img/home/payjib-audience4.png">
+                        src="/home/img/home/payjib-audience4.png">
                     <div class="flex items-center gap-4">
 
                         <div class="text-[#0F1114] text-xl lg:text-[22px] font-semibold">

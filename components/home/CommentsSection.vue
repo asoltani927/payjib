@@ -1,4 +1,3 @@
-<!-- eslint-disable vue/no-v-html -->
 <script setup lang="ts">
 import { ref } from 'vue'
 
@@ -6,44 +5,44 @@ const comments = [
     {
         name: 'مرتضی',
         country: 'بلژیک',
-        flag: '/img/home/belgium.svg',
+        flag: '/home/img/home/belgium.svg',
         comment: 'انتقال ارز <strong>به سرعت</strong> انجام شد و <strong>خاطرجمع</strong> بودم',
-        audio: '/voice/morteza.ogg',
+        audio: '/home/voice/morteza.ogg',
     },
     {
         name: 'سمانه',
         country: 'آلمان',
-        flag: '/img/home/germany.svg',
+        flag: '/home/img/home/germany.svg',
         comment: 'اول تردید داشتم اما همه‌چی به موقع، <strong>بی‌استرس</strong> و با <strong>پشتیبانی خوب</strong> انجام شد',
-        audio: '/voice/samaneh.ogg',
+        audio: '/home/voice/samaneh.ogg',
     },
     {
         name: 'شیما',
         country: 'ایران',
-        flag: '/img/home/iran.svg',
+        flag: '/home/img/home/iran.svg',
         comment: 'حتما از پلتفرم شما بابت <strong>پاسخگویی</strong>، <strong>نظم</strong> و <strong>قابل اعتماد</strong> بودن دوباره استفاده می‌کنم',
-        audio: '/voice/shima.ogg',
+        audio: '/home/voice/shima.ogg',
     },
     {
         name: 'محدثه',
         country: 'آلمان',
-        flag: '/img/home/germany.svg',
+        flag: '/home/img/home/germany.svg',
         comment: 'راضی بودم،<strong> پول کامل</strong> به حساب واریز شد و در <strong>سریع‌ترین</strong> زمان ممکن',
-        audio: '/voice/mohadeseh.ogg',
+        audio: '/home/voice/mohadeseh.ogg',
     },
     {
         name: 'فیروزه',
         country: 'فرانسه',
-        flag: '/img/home/france.svg',
+        flag: '/home/img/home/france.svg',
         comment: 'حتما از پی‌جیب دوباره استفاده می‌کنم چون یک <strong>پلتفرم امن و سریع</strong> برای من بود',
-        audio: '/voice/firozeh.ogg',
+        audio: '/home/voice/firozeh.ogg',
     },
     {
         name: 'ماجده',
         country: 'آلمان',
-        flag: '/img/home/germany.svg',
+        flag: '/home/img/home/germany.svg',
         comment: 'پی‌جیب کارم رو ساده‌تر کرد و همه چی در این پلتفرم <strong>قابل پیگیریه</strong> و <strong>استرس نمی‌گیرم</strong>',
-        audio: '/voice/majedeh.ogg',
+        audio: '/home/voice/majedeh.ogg',
     },
 ];
 
@@ -93,7 +92,7 @@ function handlePlay(event: Event) {
                                     <!-- user info -->
                                     <div class="flex justify-between items-center">
                                         <div class="flex items-center gap-2">
-                                            <img class="w-5 h-5" src="/img/home/profile-circle.svg">
+                                            <img class="w-5 h-5" src="/home/img/home/profile-circle.svg">
                                             <span class="font-medium text-[14px] text-[#0F1114]">{{ data.name }}</span>
                                         </div>
 
@@ -111,7 +110,7 @@ function handlePlay(event: Event) {
 
                                 <!-- audio player -->
                                 <div class="flex items-center gap-3 w-full">
-                                    <audio controls class="w-full direction-ltr overflow-hidden"  @play="handlePlay">
+                                    <audio controls  class="w-full direction-ltr overflow-hidden" @play="handlePlay">
                                         <source :src="data.audio" type="audio/mpeg">
                                         مرورگر شما از پخش صوت پشتیبانی نمی‌کند.
                                     </audio>

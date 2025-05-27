@@ -13,15 +13,15 @@
                         class="block lg:hidden mt-2 mb-3 font-bold text-center lg:text-right text-[14px] lg:text-[28px]">در
                         پی‌جیب، با نرخ توافقی و مطمئن،<br>
                         از ایران پول دریافت یا به خارج از کشور ارسال کنید.</span>
-                    <img class="block lg:hidden w-full h-auto rounded-xl py-6" src="/img/home/support2.png">
+                    <img class="block lg:hidden w-full h-auto rounded-xl py-6" src="/home/img/home/support2.png">
                     <a 
                     id="btn-whatsapp" href="https://wa.me/989101369884"
                         class="w-[189px] h-[56px] text-lg font-bold text-[#2ED06E] border-2 border-[#2ED06E] bg-[#2ED06E1A] rounded-full flex items-center justify-start ps-2 gap-2">
-                        <img src="/img/home/whatsapp2.svg">
+                        <img src="/home/img/home/whatsapp2.svg">
                         پیام در واتساپ
                     </a>
                 </div>
-                <img class="hidden lg:block w-[536px] h-[337px] rounded-xl" src="/img/home/support2.png">
+                <img class="hidden lg:block w-[536px] h-[337px] rounded-xl" src="/home/img/home/support2.png">
             </div>
         </BaseContainer>
     </div>

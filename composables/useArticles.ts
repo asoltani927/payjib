@@ -10,7 +10,7 @@ export const useLatestArticles = async (): Promise<Ref<Article[]>> => {
       ? response.map((article) => ({
           ...article,
           content: summarizeText(stripHtmlTags(article.content), 60),
-          thumbnail: "/img/Rectangle 6304.png",
+          thumbnail: "/home/img/Rectangle 6304.png",
           link: "https://payjib.com/blog/",
         }))
       : null;

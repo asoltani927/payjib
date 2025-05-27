@@ -29,10 +29,10 @@ v-model:visible="visible" class="!bg-[#2626BF] text-white rounded-b-3xl" :show-c
       position="top" style="height: auto">
       <div class="flex items-center justify-between pb-6 mb-6 border-b">
         <nuxt-link to="/" class="mr-2 block lg:hidden">
-          <img src="/img/home/logo-mobile.svg" >
+          <img src="/home/img/home/logo-mobile.svg" >
         </nuxt-link>
         <div class="cursor-pointer" @click="visible = false">
-          <img src="/img/home/icon-close.svg" >
+          <img src="/home/img/home/icon-close.svg" >
         </div>
       </div>
 
@@ -45,17 +45,17 @@ v-model:visible="visible" class="!bg-[#2626BF] text-white rounded-b-3xl" :show-c
 class="cursor-pointer flex items-center gap-2.5 text-white font-normal text-sm"
             @click="isShowSubmenus = !isShowSubmenus">
             <span>پشتیبانی</span>
-            <img src="/img/home/arrow-square-down.svg" :class="isShowSubmenus ? 'rotate-180' : ''" >
+            <img src="/home/img/home/arrow-square-down.svg" :class="isShowSubmenus ? 'rotate-180' : ''" >
           </div>
           <div
 v-if="isShowSubmenus"
             class="text-[#2626BF] bg-white rounded-xl shadow-lg px-4 p-3 mb-2 text-sm z-50 w-full">
             <a id="btn-telegram" :href="randomTelegramLink" class="flex items-center gap-1 mb-4">
-              <img src="/img/telegram-2.svg" alt="telegram-icon" >
+              <img src="/home/img/telegram-2.svg" alt="telegram-icon" >
               تلگرام
             </a>
             <a id="btn-whatsapp" :href="randomWhatsappLink" class="flex items-center gap-1">
-              <img src="/img/whatsapp2.svg" alt="whatsapp-icon" >
+              <img src="/home/img/whatsapp2.svg" alt="whatsapp-icon" >
               واتساپ
             </a>
           </div>
@@ -64,6 +64,6 @@ v-if="isShowSubmenus"
         <a href="https://payjib.com/terms" class="px-3 py-2 text-white">قوانین پی‌جیب</a>
       </div>
     </Drawer>
-    <img src="/img/home/menu-burger-circle.svg" class="block lg:hidden" @click="visible = true" >
+    <img src="/home/img/home/menu-burger-circle.svg" class="block lg:hidden" @click="visible = true" >
   </div>
 </template>

@@ -60,7 +60,7 @@ v-for="(item, index) in countries" :key="`item-${index}`" :to="`/transfer-money-
                     <img
 class="w-6 h-6 lg:w-fit lg:h-auto transition-transform duration-[1000ms] ease-in-out"
                         :class="animatingFlags.includes(index) ? 'scale-50' : 'scale-100'"
-                        :src="`/img/home/${item.IMG_URL}`" >
+                        :src="`/home/img/home/${item.IMG_URL}`" >
 
                     <h3 class="flex flex-col gap-0.5 text-xs lg:text-sm">
                         <span class="text-[#0F1114] text-nowrap">انتقال پول از/به</span>
