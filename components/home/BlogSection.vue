@@ -2,9 +2,9 @@
 
 // const articles = await useLatestArticles();
 const articles = [
-  { id: 1, title: 'تفاوت دلار سفید و آبی چیست؟<br/> انواع ارز را بشناسید', content: 'دلار آبی و سبز موقع خرید تفاوتی ندارند ولی زمان فروش دلار سبز ارزان تر است...', Img_Url: '/img/home/blog-image-1.png' },
-  { id: 2, title: 'بانکداری نوین یا<br/> بانکداری سنتی؟!', content: 'جهان، روز به روز در حال پیشرفت است و همگان در پی یافتن راهی برای حل مشکلات...', Img_Url: '/img/home/blog-image-2.png' },
-  { id: 3, title: 'پرداخت دانشگاه‌های خارج<br/> از کشور', content: 'این روزها اهداف بسیاری از دانشجویان داخل ایران، سفر به کشوری دیگر برای...', Img_Url: '/img/home/blog-image-3.png' }
+  { id: 1, title: 'تفاوت دلار سفید و آبی چیست؟<br/> انواع ارز را بشناسید', content: 'دلار آبی و سبز موقع خرید تفاوتی ندارند ولی زمان فروش دلار سبز ارزان تر است...', Img_Url: '/home/img/home/blog-image-1.png' },
+  { id: 2, title: 'بانکداری نوین یا<br/> بانکداری سنتی؟!', content: 'جهان، روز به روز در حال پیشرفت است و همگان در پی یافتن راهی برای حل مشکلات...', Img_Url: '/home/img/home/blog-image-2.png' },
+  { id: 3, title: 'پرداخت دانشگاه‌های خارج<br/> از کشور', content: 'این روزها اهداف بسیاری از دانشجویان داخل ایران، سفر به کشوری دیگر برای...', Img_Url: '/home/img/home/blog-image-3.png' }
 ]
 </script>
 
@@ -21,7 +21,7 @@ const articles = [
           to="https://payjib.com/blog/"
             class="flex items-center gap-2 font-bold text-[14px] lg:text-lg cursor-pointer">
             <span class="text-[#2E2EE5]">ادامه در وبلاگ</span>
-            <img src="/img/home/arrow-square-left.svg">
+            <img src="/home/img/home/arrow-square-left.svg">
           </nuxt-link>
         </div>
 

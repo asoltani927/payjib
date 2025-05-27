@@ -16,7 +16,7 @@ const props = defineProps({
         </h2>
         <div class="flex flex-col lg:flex-row items-center gap-6 lg:gap-16">
             <div class="flex flex-col items-center gap-4">
-                <img class="w-[64px] h-[64px]" src="/img/home/whyCoose1.svg">
+                <img class="w-[64px] h-[64px]" src="/home/img/home/whyCoose1.svg">
                 <span class="text-[24px] lg:text-3xl text-wrap text-[#2626BF] font-bold text-center">
                     صرفه‌جویی در زمان
                 </span>
@@ -25,7 +25,7 @@ const props = defineProps({
                 </p>
             </div>
             <div class="flex flex-col items-center gap-4 text-center">
-                <img class="w-[64px] h-[64px]" src="/img/home/whyCoose2.svg">
+                <img class="w-[64px] h-[64px]" src="/home/img/home/whyCoose2.svg">
                 <span class="text-[24px] lg:text-3xl text-[#2626BF] font-bold">
                     نرخ توافقی
                 </span>
@@ -35,7 +35,7 @@ const props = defineProps({
                 </p>
             </div>
             <div class="flex flex-col items-center gap-4 text-center">
-                <img class="w-[64px] h-[64px]" src="/img/home/whyCoose3.svg">
+                <img class="w-[64px] h-[64px]" src="/home/img/home/whyCoose3.svg">
                 <span class="text-[24px] lg:text-3xl text-[#2626BF] font-bold">
                     بدون واسطه
                 </span>

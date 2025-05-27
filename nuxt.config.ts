@@ -53,6 +53,7 @@ export default defineNuxtConfig({
   ],
   app: {
     head: appConfig.head,
+    buildAssetsDir: '_nuxt-home'
   },
 
   css: ["~/assets/css/main.css"],

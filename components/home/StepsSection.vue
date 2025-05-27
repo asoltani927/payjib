@@ -15,7 +15,7 @@ const isShowVideo = ref(false)
         </h2>
         <div class="flex flex-col lg:flex-row items-center gap-6 lg:gap-16">
             <div class="flex flex-col items-center gap-4">
-                <img class="w-[64px] h-[64px]" src="/img/home/payjibSteos1.svg">
+                <img class="w-[64px] h-[64px]" src="/home/img/home/payjibSteos1.svg">
                 <span class="text-[24px] lg:text-3xl text-wrap text-[#2626BF] font-bold text-center">۱. ثبت‌نام<br
                         class="hidden lg:block">
                     سریع</span>
@@ -24,27 +24,29 @@ const isShowVideo = ref(false)
                 </span>
             </div>
             <div class="flex flex-col items-center gap-4 text-center">
-                <img class="w-[64px] h-[64px]" src="/img/home/payjibSteos2.svg">
+                <img class="w-[64px] h-[64px]" src="/home/img/home/payjibSteos2.svg">
                 <span class="text-[24px] lg:text-3xl text-[#2626BF] font-bold">۲. انتخاب پیشنهاد<br
                         class="hidden lg:block"> مناسب</span>
                 <span class="text-sm text-[#71757A]">بین پیشنهادهای موجود، مناسب‌ترین گزینه را<br> انتخاب کنید.</span>
             </div>
             <div class="flex flex-col items-center gap-4 text-center">
-                <img class="w-[64px] h-[64px]" src="/img/home/payjibSteps3.svg">
+                <img class="w-[64px] h-[64px]" src="/home/img/home/payjibSteps3.svg">
                 <span class="text-[24px] lg:text-3xl text-[#2626BF] font-bold">۳. تایید و<br class="hidden lg:block">
                     انتقال</span>
                 <span class="text-sm text-[#71757A]">مبلغ را واریز و رسید را آپلود
                     کنید.<br>تبریک! تراکنش شما با موفقیت انجام شد.</span>
             </div>
         </div>
-        <button class="hidden lg:flex items-center gap-2" @click="isShowVideo = true" >
-            <img src="/img/home/video-octagon.svg">
+        <button
+         class="hidden lg:flex items-center gap-2" @click="isShowVideo = true" 
+       >
+            <img src="/home/img/home/video-octagon.svg">
             <span class="text-lg font-bold text-[#2E2EE5]">مشاهده ویدئو</span>
         </button>
 
         <div class="block lg:hidden px-4">
             <video controls class=" rounded-xl h-[500px">
-                <source src="/video/video_2025-05-21_22-34-11.mp4" type="video/mp4">
+                <source src="/home/video/video_2025-05-21_22-34-11.mp4" type="video/mp4" />
                 مرورگر شما از پخش ویدیو پشتیبانی نمی‌کند.
             </video>
         </div>

@@ -82,21 +82,22 @@ const toggleAnswer = (index: number): void => {
                             :class="[
                                 'transition-transform duration-700 ease-in-out',
                                 index === isOpenAnswer ? 'rotate-180' : 'rotate-0'
-                            ]" :src="index === isOpenAnswer ? '/img/home/minus-cirlce.svg' : '/img/home/plus-add.svg'">
+                            ]" :src="index === isOpenAnswer ? '/home/img/home/minus-cirlce.svg' : '/home/img/home/plus-add.svg'">
 
-
-
-                            <span class="lg:text-[21px] font-semibold text-[#0F1114]"
+                            <span 
+                            class="lg:text-[21px] font-semibold text-[#0F1114]"
                                 :class="{ 'text-[#2E2EE5]': index === isOpenAnswer }">{{
                                     item.question }}</span>
                         </div>
 
                         <!-- Answer -->
-                        <Transition name="fade-toggle">
+                        <Transition 
+                        name="fade-toggle">
                             <div 
                             v-show="index === isOpenAnswer"
                                 class="border-b-2 border-[#F0F2F5] text-[#33373D] text-[14px] lg:text-[16px] pb-6 px-6">
-                                <p class="text-[#0F1114] font-medium text-justify">{{ item.answer }}</p>
+                                <p
+                                 class="text-[#0F1114] font-medium text-justify">{{ item.answer }}</p>
                             </div>
                         </Transition>
 

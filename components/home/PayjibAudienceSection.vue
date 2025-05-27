@@ -11,7 +11,7 @@
                 <div class="ms-6 lg:ms-0 w-[312px] lg:w-full shrink-0 flex flex-col">
                     <img
 class="w-full h-[220px] lg:h-[326px] rounded-xl bg-gray-400 mb-6"
-                        src="/img/home/Audience1.png">
+                        src="/home/img/home/Audience1.png">
                     <div class="flex items-center gap-4">
                         <div class="text-[#0F1114] text-xl lg:text-[28px] font-semibold">دانشجویان خارج از کشور</div>
                     </div>
@@ -21,7 +21,7 @@ class="w-full h-[220px] lg:h-[326px] rounded-xl bg-gray-400 mb-6"
                 <div class="w-[312px] lg:w-full shrink-0 flex flex-col">
                     <img
 class="w-full  h-[220px] lg:h-[326px] rounded-xl bg-gray-400 mb-6"
-                        src="/img/home/Audience2.png">
+                        src="/home/img/home/Audience2.png">
                     <div class="flex items-center gap-4">
                         <div class="text-[#0F1114] text-xl lg:text-[28px] font-semibold">افرادی که قصد فرستادن پول به
                             ایران
@@ -34,7 +34,7 @@ class="w-full  h-[220px] lg:h-[326px] rounded-xl bg-gray-400 mb-6"
                 <div class="w-[312px] lg:w-full shrink-0 flex flex-col">
                     <img
 class="w-full  h-[220px] lg:h-[326px] rounded-xl bg-gray-400 mb-6"
-                        src="/img/home/Audience3.png">
+                        src="/home/img/home/Audience3.png">
                     <div class="flex items-center gap-4">
                         <div class="text-[#0F1114] text-xl lg:text-[28px] font-semibold">فریلنسرها با درآمد ارزی</div>
                     </div>
@@ -44,7 +44,7 @@ class="w-full  h-[220px] lg:h-[326px] rounded-xl bg-gray-400 mb-6"
                 <div class="me-6 lg:me-0 w-[312px] lg:w-full shrink-0 flex flex-col lg:mb-2">
                     <img
 class="w-full  h-[220px] lg:h-[326px] rounded-xl bg-gray-400 mb-6"
-                        src="/img/home/Audience4.png">
+                        src="/home/img/home/Audience4.png">
                     <div class="flex items-center gap-4">
                         <div class="text-[#0F1114] text-xl lg:text-[28px] font-semibold">مسافران خارجی</div>
                     </div>

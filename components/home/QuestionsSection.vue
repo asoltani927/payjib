@@ -82,9 +82,7 @@ const toggleAnswer = (index: number): void => {
                             :class="[
                                 'transition-transform duration-700 ease-in-out',
                                 index === isOpenAnswer ? 'rotate-180' : 'rotate-0'
-                            ]" :src="index === isOpenAnswer ? '/img/home/minus-cirlce.svg' : '/img/home/plus-add.svg'">
-
-
+                            ]" :src="index === isOpenAnswer ? '/home/img/home/minus-cirlce.svg' : '/home/img/home/plus-add.svg'">
 
                             <span 
                             class="lg:text-[21px] font-semibold text-[#0F1114]"

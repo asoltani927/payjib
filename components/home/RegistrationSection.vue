@@ -1,7 +1,7 @@
 <template>
     <!-- register -->
     <div
-        class="bg-[#FFBF00] w-full flex items-center justify-center h-[212px] lg:h-[258px] bg-[url(/img/home/payjibExchange-mobile.svg)] lg:bg-[url(/img/home/payjibExchange.svg)] bg-cover bg-no-repeat px-6 lg:px-24">
+        class="bg-[#FFBF00] w-full flex items-center justify-center h-[212px] lg:h-[258px] bg-[url(/home/img/home/payjibExchange-mobile.svg)] lg:bg-[url(/home/img/home/payjibExchange.svg)] bg-cover bg-no-repeat px-6 lg:px-24">
         <BaseContainer>
             <div
                 class="w-full h-full flex flex-col lg:flex-row gap-4 lg:gap-0 items-center justify-center lg:items-end lg:justify-between ">

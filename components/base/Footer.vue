@@ -6,7 +6,7 @@
                 <div class=" w-full flex flex-col-reverse lg:flex-row gap-6 lg:gap-8">
                     <div class="flex flex-col justify-between gap-3 items-start">
                         <div class="flex flex-col gap-3 items-start">
-                            <nuxt-link to="/"> <img class="" src="/img/home/Logo2.svg"></nuxt-link>
+                            <nuxt-link to="/"> <img class="" src="/home/img/home/Logo2.svg"></nuxt-link>
                             <p class="font-bold text-justify lg:text-start leading-6 text-[13px] text-[#71757A]">
                                 در پی‌جیب می‌توانید مبلغ مورد نظرتان را به سرعت و<br class="hidden lg:block"> با
                                 کم‌ترین کارمزد، از ایران به اروپا،
@@ -16,7 +16,7 @@
                         </div>
 
                         <div class="flex items-center text-[10px] text-[#A0A1A3] gap-1">
-                            <img class="" src="/img/home/Group.svg">
+                            <img class="" src="/home/img/home/Group.svg">
                             <span>کلیه حقوق برای پی جیب محفوظ است.</span>
                         </div>
                     </div>
@@ -38,14 +38,14 @@
                                 <a 
                                 id="btn-mail" href="mailto:info@payjib.ir"
                                     class="flex items-center gap-1 text-[14px] font-bold text-[#71757A]">
-                                    <img class="" src="/img/home/sms.svg">
+                                    <img class="" src="/home/img/home/sms.svg">
                                     <span class="text-[#71757A] text-[13px] ">info@payjib.ir</span>
                                 </a>
 
                                 <div 
                                 to="#"
                                     class="flex items-start lg:items-center gap-1 text-[14px] font-bold text-[#71757A]">
-                                    <img class="" src="/img/home/Telegram3.svg">
+                                    <img class="" src="/home/img/home/Telegram3.svg">
                                     <div
                                         class="flex flex-col lg:flex-row items-center gap-1 lg:gap-2 text-[#71757A] text-[13px] font-bold">
                                         <a 
@@ -59,7 +59,7 @@
                                 <div 
                                 to="#"
                                     class="flex items-start lg:items-center gap-1 text-[14px] font-bold text-[#71757A]">
-                                    <img class="" src="/img/home/whatsapp.svg">
+                                    <img class="" src="/home/img/home/whatsapp.svg">
                                     <div
                                         class="flex flex-col lg:flex-row items-center gap-1 lg:gap-2 text-[#71757A] text-[13px] font-bold">
                                         <a id="btn-whatsapp" href="https://wa.me/989101369884" class="ltr">+98
@@ -74,14 +74,14 @@
 
                             <div class="flex flex-col items-start gap-3 mt-8 lg:mt-0">
                                 <div class="flex items-center gap-1 text-[14px] font-bold text-[#71757A]">
-                                    <img class="" src="/img/home/call.svg">
+                                    <img class="" src="/home/img/home/call.svg">
                                     <div class="flex items-center gap-2 text-[#71757A] text-[13px] font-bold ">
                                         <a id="btn-tel" href="tel:02188129287" class="ltr">0 21 8812 9287</a>
                                     </div>
                                 </div>
 
                                 <div to="#" class="flex items-start gap-1 text-[14px] font-bold text-[#71757A]">
-                                    <img class="" src="/img/home/location3.svg">
+                                    <img class="" src="/home/img/home/location3.svg">
                                     <div
                                         class="text-justify flex items-center gap-2 text-[#71757A] text-[13px] font-bold ">
                                         استان : تهران - شهرستان : تهران - بخش : مرکزی - شهر : تهران - محله<br
@@ -108,10 +108,9 @@
                 </div>
                 <div class="">
                     <a 
-                    referrerpolicy="origin" target="_blank"
+                        referrerpolicy="origin" target="_blank"
                         href="https://trustseal.enamad.ir/?id=609124&amp;Code=lvXgGFcJrtROzjxwsLye02tmeTgO9fRq">
-                        <img 
-                        width="125px" height="125px" referrerpolicy="origin" src="/img/enamad.png" alt=""
+                        <img width="125px" height="125px" referrerpolicy="origin" src="/home/img/enamad.png" alt=""
                             code="lvXgGFcJrtROzjxwsLye02tmeTgO9fRq" style="cursor:pointer;" data-v-23c55edc="">
                     </a>
                 </div>

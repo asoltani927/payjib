@@ -26,7 +26,7 @@
                 </a>
             </div>
             <div class="w-full h-auto bg-gray-200">
-                <img class="w-full h-full" src="/img/home/CurrencyExchange.png">
+                <img class="w-full h-full" src="/home/img/home/CurrencyExchange.png">
             </div>
         </div>
 
