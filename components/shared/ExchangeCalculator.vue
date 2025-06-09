@@ -6,6 +6,7 @@ const currencies = await useCurrencies();
 
 const toEnglishDigits = (str) => {
   if (!str) return "";
+  if (typeof str !== "string") str = str.toString();
   return str.replace(/[۰-۹]/g, (w) => String("۰۱۲۳۴۵۶۷۸۹".indexOf(w)));
 };
 
@@ -31,6 +32,8 @@ const selectedCurrency = ref();
 const transactionVolume = ref("");
 const exchangeRate = ref("");
 
+const transactionVolumeError = ref(null);
+
 const loading = ref(false);
 // const invoiceComissionRate = ref("");
 const invoiceComissionRate = ref(0);
@@ -39,8 +42,15 @@ const invoiceComissionRate = ref(0);
 const invoiceAmount = ref(0);
 
 const calculateExchangeRate = () => {
-  const volume = parseFloat(transactionVolume.value);
-  const rate = parseFloat(exchangeRate.value);
+  transactionVolumeError.value = null
+  const volume = parseFloat(toEnglishDigits(transactionVolume.value));
+  const rate = parseFloat(toEnglishDigits(exchangeRate.value));
+  if (volume >= 15000) {
+    transactionVolumeError.value =
+      "حجم ارز بالای ۱۵۰۰۰ در بیش از یک تراکنش قابل انجام است.";
+    loading.value = false;
+    return;
+  }
 
   if (!selectedCurrency.value || !currencies.value || !volume || !rate) {
     invoiceAmount.value = 0;
@@ -119,14 +129,6 @@ watch(
   },
   { immediate: true }
 );
-
-watch(transactionVolume, (val) => {
-  transactionVolume.value = toEnglishDigits(val);
-});
-
-watch(exchangeRate, (val) => {
-  exchangeRate.value = toEnglishDigits(val);
-});
 </script>
 
 <template>
@@ -208,7 +210,7 @@ watch(exchangeRate, (val) => {
     >
       <transition name="fade" mode="out-in">
         <div :key="selectedOption" class="w-full flex items-center gap-2">
-          <img src="/home/img/home/blue-info.svg" />
+          <img src="/home/img/home/blue-info.svg" >
           <span>
             {{
               selectedOption !== "send"
@@ -251,26 +253,31 @@ watch(exchangeRate, (val) => {
             class="absolute top-1/2 left-4 -translate-y-1/2 pointer-events-none transition-transform duration-300"
             :class="{ 'rotate-180': isSelectOpen }"
             src="/home/img/home/Vector.svg"
-          />
+          >
         </div>
       </div>
       <!-- inputs  -->
-      <div class="flex flex-col w-full lg:w-[35%]">
+      <div class="relative flex flex-col w-full lg:w-[35%]">
         <!-- <label for="transaction-volume" class="text-[#2626BF] text-base mb-2">حجم تراکنش</label> -->
         <!-- inputs-style w-full h-[48px] rounded-xl ps-5 placeholder:text-[#33373D] text-[#33373D] border border-[#D5DDEA] focus:border-[#D5DDEA] appearance-none focus:ring-0 focus:outline-none -->
-        <input
-          id="transaction-volume"
-          v-model="transactionVolume"
-          name="transaction-volume"
-          type="text"
-          placeholder="حجم تراکنش"
-          class="inputs-style borderborder-[#D5DDEA] rounded-xl bg-white h-[48px] ps-5 placeholder:text-[13px] placeholder:text-[#33373D] placeholder:font-medium focus:border-gray-500 appearance-none focus:ring-0 focus:outline-none"
-        />
-        <div
-          class="flex items-center gap-1 text-[#71757A] text-[10px] mt-0.5 font-medium"
-        >
-          <img src="/home/img/home/gray-info.svg" />
-          مثلا ۱۰۰۰ تا
+
+        <div class="relative">
+          <div>
+            <input
+              id="transaction-volume"
+              v-model="transactionVolume"
+              name="transaction-volume"
+              type="text"
+              placeholder="حجم تراکنش"
+              class="inputs-style borderborder-[#D5DDEA] rounded-xl w-full bg-white h-[48px] ps-5 placeholder:text-[13px] placeholder:text-[#33373D] placeholder:font-medium focus:border-gray-500 appearance-none focus:ring-0 focus:outline-none"
+            >
+            <div
+              class="flex items-center gap-1 text-[#71757A] text-[10px] mt-0.5 font-medium"
+            >
+              <img src="/home/img/home/gray-info.svg" >
+              مثلا ۱۰۰۰ تا
+            </div>
+          </div>
         </div>
       </div>
 
@@ -283,19 +290,28 @@ watch(exchangeRate, (val) => {
           type="text"
           placeholder="نرخ تبدیل پیشنهادی"
           class="inputs-style borderborder-[#D5DDEA] rounded-xl bg-white h-[48px] ps-5 placeholder:text-[13px] placeholder:text-[#33373D] placeholder:font-medium focus:border-gray-500 appearance-none focus:ring-0 focus:outline-none"
-        />
+        >
         <div
           class="flex items-center gap-1 text-[#71757A] text-[10px] mt-0.5 font-medium"
         >
-          <img src="/home/img/home/gray-info.svg" />
+          <img src="/home/img/home/gray-info.svg" >
           مثلا ۹۵.۰۰۰ تومان
         </div>
       </div>
     </div>
+    <div class="py-4 text-xs w-full gap-3">
+      <div>
+        <div
+          class="text-red-500 text-xs bg-white px-2"
+        >
+        {{ transactionVolumeError }}
+        </div>
+      </div>
+    </div>
     <div
-      class="mt-8 p-3 lg:p-2 text-xs bg-[#F0F2F5] text-[#2626BF] rounded-xl w-full flex items-center gap-3"
+      class="mt-3 p-3 lg:p-2 text-xs bg-[#F0F2F5] text-[#2626BF] rounded-xl w-full flex items-center gap-3"
     >
-      <img class="hidden lg:block" src="/home/img/home/credit-card-2icon.svg" />
+      <img class="hidden lg:block" src="/home/img/home/credit-card-2icon.svg" >
       <div
         class="w-[45%] lg:w-[30%] gap-1 lg:gap-0 flex flex-col justify-between"
       >
