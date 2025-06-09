@@ -2,6 +2,7 @@
 import { string } from "yup";
 import { requiredErr, phoneErr, phoneRegex, stringErr } from "@/constants";
 import { postConselingRequest } from "~/api/conseling-request";
+import { toEnglishDigits } from "~/utils/to-english-number.util"
 
 const validationSchema = {
   fullName: string().required(stringErr),
@@ -11,10 +12,6 @@ const validationSchema = {
 const initialValues = {
   fullName: "",
   phone: "",
-};
-
-const toEnglishDigits = (str: string): string => {
-  return str.replace(/[۰-۹]/g, (d) => String("۰۱۲۳۴۵۶۷۸۹".indexOf(d)));
 };
 
 const isSubmitting = ref(false);

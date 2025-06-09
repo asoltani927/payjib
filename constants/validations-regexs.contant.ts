@@ -1,5 +1,9 @@
-export const phoneRegex = new RegExp(/^09\d{9}$/)
-export const nationalIDRegex = new RegExp(/^[0-9]{10}$/)
+const persianDigits = '۰۱۲۳۴۵۶۷۸۹';
+const englishDigits = '0123456789';
+const digitPattern = `[${englishDigits}${persianDigits}]`;
+
+export const phoneRegex = new RegExp(`^09${digitPattern}{9}$`);
+export const nationalIDRegex = new RegExp(`^${digitPattern}{10}$`);
 
 export const ValidationsRegexs = {
     phoneRegex,

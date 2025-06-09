@@ -1,14 +1,9 @@
 <script setup>
 import { useCurrencies } from "~/composables/useCurrencies";
+import { toEnglishDigits } from "~/utils/to-english-number.util"
 
 const isSelectOpen = ref(false);
 const currencies = await useCurrencies();
-
-const toEnglishDigits = (str) => {
-  if (!str) return "";
-  if (typeof str !== "string") str = str.toString();
-  return str.replace(/[۰-۹]/g, (w) => String("۰۱۲۳۴۵۶۷۸۹".indexOf(w)));
-};
 
 const currenciesOptions = computed(() => {
   return (
@@ -302,7 +297,7 @@ watch(
     <div class="py-4 text-xs w-full gap-3">
       <div>
         <div
-          class="text-red-500 text-xs bg-white px-2"
+          class="text-red-500 text-xs px-2"
         >
         {{ transactionVolumeError }}
         </div>
