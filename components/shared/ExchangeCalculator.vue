@@ -45,7 +45,7 @@ const calculateExchangeRate = () => {
   transactionVolumeError.value = null
   const volume = parseFloat(toEnglishDigits(transactionVolume.value));
   const rate = parseFloat(toEnglishDigits(exchangeRate.value));
-  if (volume >= 15000) {
+  if (volume > 15000) {
     transactionVolumeError.value =
       "حجم ارز بالای ۱۵۰۰۰ در بیش از یک تراکنش قابل انجام است.";
     loading.value = false;
