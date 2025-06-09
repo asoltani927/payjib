@@ -34,10 +34,10 @@ const onSubmit = async (values: { fullName: string; phone: string }) => {
 };
 
 onMounted(() => {
-        setTimeout(() => {
-            visible.value = true
-            sessionStorage.setItem('hasSeenDialog', 'true')
-        }, 10000)
+        // setTimeout(() => {
+        //     visible.value = true
+        //     sessionStorage.setItem('hasSeenDialog', 'true')
+        // }, 10000)
     // const hasSeenDialog = sessionStorage.getItem('hasSeenDialog')
 
     // if (!hasSeenDialog) {
