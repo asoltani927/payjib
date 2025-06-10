@@ -6,7 +6,7 @@ import { toEnglishDigits } from "~/utils/to-english-number.util"
 
 const validationSchema = {
   fullName: string().required(stringErr),
-  phone: string().matches(phoneRegex, phoneErr).required(requiredErr),
+  phone: string().transform((value: string) => toEnglishDigits(value)).matches(phoneRegex, phoneErr).required(requiredErr),
 };
 
 const initialValues = {

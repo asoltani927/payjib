@@ -9,7 +9,7 @@ const visible = ref(false);
 
 const validationSchema = {
   fullName: string().required(stringErr),
-  phone: string().matches(phoneRegex, phoneErr).required(requiredErr),
+  phone: string().transform((value: string) => toEnglishDigits(value)).matches(phoneRegex, phoneErr).required(requiredErr),
 };
 
 const initialValues = {
