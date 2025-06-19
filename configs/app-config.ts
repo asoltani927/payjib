@@ -48,11 +48,11 @@ export const appConfig = {
         href: "https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css",
       },
     ],
-    script: [
-      {
-        hid: 'raychat',
-        src: '/js/raychat.js'
-      }
-    ]
+      script: [
+        {
+          hid: 'raychat',
+          src: '/js/raychat.js'
+        }
+      ]
   },
 };
