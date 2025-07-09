@@ -59,6 +59,12 @@ export const appConfig = {
           async: true,
           type: "text/javascript",
         },
+        {
+          hid: 'gtm',
+          src: '/js/gtm.js',
+          async: true,
+          type: 'text/javascript',
+        },
       ]
   },
 };
