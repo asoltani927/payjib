@@ -1,6 +1,6 @@
 <template>
   <div>
-    <!-- Google Tag Manager (noscript) -->
+    <!--  Google Tag Manager (noscript) -->
     <noscript>
       <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-54DCTNB3"
               height="0" width="0"
