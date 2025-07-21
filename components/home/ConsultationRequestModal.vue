@@ -1,15 +1,19 @@
 <script setup lang="ts">
-import { ref, onMounted } from "vue";
+import { ref, onMounted, onUnmounted } from "vue";
 import { string } from "yup";
 import { requiredErr, phoneErr, phoneRegex, stringErr } from "@/constants";
 import { postConselingRequest } from "~/api/conseling-request";
-import { toEnglishDigits } from "~/utils/to-english-number.util"
+import { toEnglishDigits } from "~/utils/to-english-number.util";
 
 const visible = ref(false);
+// const scrollCount = ref(0);
 
 const validationSchema = {
   fullName: string().required(stringErr),
-  phone: string().transform((value: string) => toEnglishDigits(value)).matches(phoneRegex, phoneErr).required(requiredErr),
+  phone: string()
+    .transform((value: string) => toEnglishDigits(value))
+    .matches(phoneRegex, phoneErr)
+    .required(requiredErr),
 };
 
 const initialValues = {
@@ -17,8 +21,8 @@ const initialValues = {
   phone: "",
 };
 
-
 const isSubmitting = ref(false);
+const hasShownDialog = ref(false);
 
 const onSubmit = async (values: { fullName: string; phone: string }) => {
   isSubmitting.value = true;
@@ -29,19 +33,24 @@ const onSubmit = async (values: { fullName: string; phone: string }) => {
   values = initialValues;
 };
 
-onMounted(() => {
-  setTimeout(() => {
-    visible.value = true;
-    sessionStorage.setItem("hasSeenDialog", "true");
-  }, 10000);
-  // const hasSeenDialog = sessionStorage.getItem('hasSeenDialog')
+const onScroll = () => {
+  const scrolledPixels = window.scrollY;
 
-  // if (!hasSeenDialog) {
-  //     setTimeout(() => {
-  //         visible.value = true
-  //         sessionStorage.setItem('hasSeenDialog', 'true')
-  //     }, 1000)
-  // }
+  // Trigger after scrolling 2 screen heights
+  const threshold = window.innerHeight * 1.5;
+
+  if (scrolledPixels >= threshold && !hasShownDialog.value) {
+    visible.value = true;
+    hasShownDialog.value = true;
+  }
+};
+
+onMounted(() => {
+  window.addEventListener("scroll", onScroll);
+});
+
+onUnmounted(() => {
+  window.removeEventListener("scroll", onScroll);
 });
 </script>
 

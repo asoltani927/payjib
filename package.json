@@ -19,6 +19,7 @@
     "@types/yup": "^0.32.0",
     "@vee-validate/nuxt": "^4.15.0",
     "eslint": "^9.0.0",
+    "jalaali-js": "^1.2.8",
     "nuxt": "^3.17.1",
     "nuxt-gtag": "3.0.2",
     "nuxt-lucide-icons": "1.0.5",
@@ -35,6 +36,7 @@
     "autoprefixer": "^10.4.21",
     "husky": "^9.1.7",
     "postcss": "^8.5.3",
-    "tailwindcss": "3"
+    "tailwindcss": "3",
+    "@types/jalaali-js": "^1.2.0"
   }
 }

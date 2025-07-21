@@ -35,7 +35,7 @@ defineProps<{
             <p class="hidden text-start leading-8 lg:flex mt-4">{{ country.section.content1 }}</p>
             <p class="hidden text-start leading-8 lg:flex mt-2">{{ country.section.content2 }}</p>
             <a 
-            id="btn-login-or-register" href="https://payjib.com/auth/login"
+            id="btn-login-or-register" href="https://payjib.com/auth/register"
               class="hidden lg:flex items-center justify-center mt-8 rounded-full w-[158px] h-[61px] bg-[#FFBF00] font-bold text-xl text-[#0F1114]">
               شروع ثبت نام
             </a>
@@ -46,7 +46,7 @@ defineProps<{
             <p 
             class="flex text-center leading-8 mt-2 text-[14px]">{{ country.section.content2 }}</p>
             <a
-             id="btn-login-or-register" href="https://payjib.com/auth/login"
+             id="btn-login-or-register" href="https://payjib.com/auth/register"
               class="flex items-center justify-center mt-4 mb-3 rounded-full w-[152px] h-[41px] bg-[#FFBF00] font-bold text-[#0F1114]">
               شروع ثبت نام
             </a>

@@ -49,50 +49,85 @@
 // const onChildClosed = () => {
 //   isMenuOpen.value = false
 // }
+
+window.addEventListener("scroll", () => {
+  const header = document.getElementById("header");
+  if (window.scrollY > 10) {
+    header.classList.add("bg-[#1A177D]");
+  } else {
+    header.classList.remove("bg-[#1A177D]");
+  }
+});
 </script>
 
 <template>
   <div>
-    <div class="absolute top-0 z-[99] rtl w-full px-6 lg:px-24 bg-none border-b border-[#9999BF]">
+    <div
+      class="absolute top-0 z-[99] rtl w-full px-6 lg:px-24 bg-none border-b border-[#9999BF]"
+    >
       <BaseContainer>
-        <div class="flex justify-between items-center  h-[65px] lg:h-[105px] ">
+        <div class="flex justify-between items-center h-[65px] lg:h-[105px]">
           <!-- start of header -->
           <div class="flex items-center justify-between">
             <nuxt-link to="/" class="ml-4 hidden lg:block">
-              <img src="/home/img/logos/ic-logo-new.svg" >
+              <img src="/home/img/logos/ic-logo-new.svg" />
             </nuxt-link>
             <BaseMobileMenu class="block lg:hidden" />
             <nuxt-link to="/" class="mr-3 block lg:hidden">
-              <img src="/home/img/home/logo-mobile.svg" >
+              <img src="/home/img/home/logo-mobile.svg" />
             </nuxt-link>
-            <nuxt-link :to="{ name: 'index' }" class="hidden lg:block mt-2 pb-1 active-item px-3 text-white">
+            <nuxt-link
+              :to="{ name: 'index' }"
+              class="hidden lg:block mt-2 pb-1 active-item px-3 text-white"
+            >
               خانه
             </nuxt-link>
             <div
-              class="relative  group cursor-pointer hidden lg:flex items-center gap-2.5 text-white font-normal text-sm px-3 ms-1">
+              class="relative group cursor-pointer hidden lg:flex items-center gap-2.5 text-white font-normal text-sm px-3 ms-1"
+            >
               <span>پشتیبانی</span>
-              <img src="/home/img/home/arrow-square-down.svg" class="group-hover:rotate-180" >
-              <div class="absolute top-full pt-2 hidden group-hover:block w-full">
-                <div class=" text-[#2626BF]  bg-white rounded-xl shadow-lg px-4 p-3 text-sm  z-50 w-max">
-                  <a id="btn-telegram" href="https://t.me/+989101369884" class="flex items-center gap-1 mb-4">
-                    <img src="/home/img/telegram-2.svg" alt="telegram-icon" >
+              <img
+                src="/home/img/home/arrow-square-down.svg"
+                class="group-hover:rotate-180"
+              />
+              <div
+                class="absolute top-full pt-2 hidden group-hover:block w-full"
+              >
+                <div
+                  class="text-[#2626BF] bg-white rounded-xl shadow-lg px-4 p-3 text-sm z-50 w-max"
+                >
+                  <a
+                    id="btn-telegram"
+                    href="https://t.me/+989101369884"
+                    class="flex items-center gap-1 mb-4"
+                  >
+                    <img src="/home/img/telegram-2.svg" alt="telegram-icon" />
                     تلگرام
                   </a>
-                  <a id="btn-whatsapp" href="https://wa.me/989101369884" class="flex items-center gap-1">
-                    <img src="/home/img/whatsapp2.svg" alt="whatsapp-icon" >
+                  <a
+                    id="btn-whatsapp"
+                    href="https://wa.me/989101369884"
+                    class="flex items-center gap-1"
+                  >
+                    <img src="/home/img/whatsapp2.svg" alt="whatsapp-icon" />
                     واتساپ
                   </a>
                 </div>
               </div>
-
             </div>
           </div>
           <!-- end of header -->
           <div class="flex justify-start items-center gap-6">
-            <a href="https://payjib.com/terms" class="hidden lg:block text-white font-normal text-sm">
+            <a
+              href="https://payjib.com/terms"
+              class="hidden lg:block text-white font-normal text-sm"
+            >
               قوانین پی‌جیب
             </a>
-            <a href="https://payjib.com/blog/" class="hidden lg:block text-white font-normal text-sm">
+            <a
+              href="https://payjib.com/blog/"
+              class="hidden lg:block text-white font-normal text-sm"
+            >
               وبلاگ
             </a>
             <ul v-if="user" class="user-info pa-0">
@@ -115,12 +150,31 @@
               </li>
             </ul>
 
-            <a
-v-else id="btn-login-or-register" href="https://payjib.com/auth/login" to="/" outlined
-              :x-small="isMobile" :small="!isMobile"
-              class="login-btn font-normal border-[#EBEDF0] border rounded-[48px] flex items-center justify-center text-sm w-[118px] h-[41px] text-white">
-              ورود یا ثبت نام
-            </a>
+            <div v-else class="flex justify-center items-center gap-2">
+              <a
+                id="btn-login-or-register"
+                href="https://payjib.com/auth/login"
+                to="/"
+                outlined
+                :x-small="isMobile"
+                :small="!isMobile"
+                class="login-btn font-bold border-[#EBEDF0] border rounded-[48px] flex items-center justify-center text-sm w-[73px] h-[41px] text-white"
+              >
+                ورود
+              </a>
+
+              <a
+                id="btn-login-or-register"
+                href="https://payjib.com/auth/register"
+                to="/"
+                outlined
+                :x-small="isMobile"
+                :small="!isMobile"
+                class="login-btn font-bold rounded-[48px] flex items-center justify-center text-sm w-[80px] h-[41px] bg-[#FFBF00] text-[#0F1114]"
+              >
+                ثبت نام
+              </a>
+            </div>
           </div>
         </div>
       </BaseContainer>

@@ -26,7 +26,7 @@
             </div>
             <a
               id="btn-login-or-register-home-page"
-              href="https://payjib.com/auth/login"
+              href="https://payjib.com/auth/register"
               class="hidden lg:flex items-center justify-center mt-8 rounded-full w-[158px] h-[61px] bg-[#FFBF00] font-black text-[22px] text-[#0F1114]"
             >
               ثبت نام کنید
@@ -43,7 +43,7 @@
             <span class="flex mt-6"> از هر جای دنیا که هستید </span>
             <a
               id="btn-login-or-register-home-page"
-              href="https://payjib.com/auth/login"
+              href="https://payjib.com/auth/register"
               class="flex items-center justify-center mt-5 mb-5 rounded-full w-[152px] h-[41px] bg-[#FFBF00] font-bold text-[#0F1114]"
             >
               ثبت نام کنید
