@@ -48,5 +48,23 @@ export const appConfig = {
         href: "https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css",
       },
     ],
+      script: [
+        {
+          hid: 'raychat',
+          src: '/js/raychat.js'
+        },
+        {
+          hid: "mediaad",
+          src: "https://s1.mediaad.org/serve/109075/retargeting.js",
+          async: true,
+          type: "text/javascript",
+        },
+        {
+          hid: 'gtm',
+          src: '/js/gtm.js',
+          async: true,
+          type: 'text/javascript',
+        },
+      ]
   },
 };

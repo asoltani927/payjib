@@ -89,6 +89,19 @@ const calculateExchangeRate = () => {
   loading.value = false;
 };
 
+const computedInvoiceAmount = computed(() => {
+  const base = invoiceAmount.value;
+  const commission = invoiceComissionRate.value;
+
+  if (selectedOption.value === "send") {
+    return base + commission;
+  } else if (selectedOption.value === "receive") {
+    return base - commission;
+  }
+
+  return base;
+})
+
 const validPercentage = computed(() => {
   const total = invoiceAmount.value;
   if (!total || total === 0) return "0";
@@ -311,7 +324,7 @@ watch(
         class="w-[45%] lg:w-[30%] gap-1 lg:gap-0 flex flex-col justify-between"
       >
         <span v-if="!loading" class="text-[14px] lg:text-lg font-bold">
-          <BaseAnimatedRialCounter v-if="!loading" :to="invoiceAmount" />
+          <BaseAnimatedRialCounter v-if="!loading" :to="computedInvoiceAmount" />
           <!-- {{
             invoiceAmount
           }} -->

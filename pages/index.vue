@@ -10,7 +10,9 @@ useSeoMeta({
   <div class="w-full h-full overflow-x-hidden">
     <div class="rtl w-full">
       <HomeHeroSection />
+<!--      <HomeBannerSection />-->
       <BaseSocialMediaSection />
+      <HomeCurrencyExchangeSection />
       <HomeStepsSection />
       <HomeServicesSection />
       <HomeCommentsSection />
@@ -21,7 +23,6 @@ useSeoMeta({
       <HomeSupportSection />
       <HomeCounselingSection />
       <HomeBlogSection />
-      <HomeCurrencyExchangeSection />
       <HomeSecondRegistrationSection />
       <HomeQuestionsSection />
     </div>

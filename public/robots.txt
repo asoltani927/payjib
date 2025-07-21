@@ -1,2 +1,8 @@
-User-Agent: *
-Disallow:
+User-agent: *
+Disallow: /login
+Disallow: /register
+Disallow: /dashboard
+Disallow: /account
+Disallow: /profile
+Disallow: /wp-admin/
+Allow: /
