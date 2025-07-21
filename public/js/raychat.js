@@ -1,4 +1,4 @@
-window.RAYCHAT_TOKEN = 'fac9d92d-e2c2-4855-b071-9b19588aacd9';
+window.RAYCHAT_TOKEN = '21239ac3-fb6f-40d9-81d7-67b46f19cbc1';
 (function () {
     const d = document
     const s = d.createElement('script')
