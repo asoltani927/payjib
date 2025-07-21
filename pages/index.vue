@@ -12,8 +12,8 @@ useSeoMeta({
       <HomeHeroSection />
 <!--      <HomeBannerSection />-->
       <BaseSocialMediaSection />
-      <HomeCurrencyExchangeSection />
       <HomeStepsSection />
+      <HomeCurrencyExchangeSection />
       <HomeServicesSection />
       <HomeCommentsSection />
       <HomePayjibAudienceSection class="flex lg:hidden" />

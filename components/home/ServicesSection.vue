@@ -1,4 +1,4 @@
-<script lang="ts">
+<script setup lang="ts">
 const cards = [
   {
     img: "/home/img/home/why-payjib1.png",
@@ -61,29 +61,31 @@ const cards = [
             :show-navigators="true"
             class="w-full h-full"
             dir="rtl"
+            content-class="flex gap-6"
           >
+            >
             <template #item="{ data }">
-              <div
-                class="shrink-0 ms-6 lg:ms-0 w-[312px] lg:w-full flex flex-col"
-              >
-                <img
-                  class="w-full h-[220px] lg:h-[326px] rounded-xl bg-gray-400 mb-6"
-                  :src="data.img"
-                />
-                <div class="flex items-center gap-5">
+              <div class="px-3">
+                <div class="shrink-0 w-[312px] lg:w-full flex flex-col">
                   <img
-                    class="w-8 h-8 lg:w-fit lg:h-auto animate-triangle-motion"
-                    :src="data.icon"
+                    class="w-full h-[220px] lg:h-[326px] rounded-xl bg-gray-400 mb-6"
+                    :src="data.img"
                   />
-                  <h3
-                    class="text-[#0F1114] text-xl lg:text-[28px] font-semibold"
-                  >
-                    {{ data.title }}
-                  </h3>
+                  <div class="flex items-center gap-5">
+                    <img
+                      class="w-8 h-8 lg:w-fit lg:h-auto animate-triangle-motion"
+                      :src="data.icon"
+                    />
+                    <h3
+                      class="text-[#0F1114] text-xl lg:text-[28px] font-semibold"
+                    >
+                      {{ data.title }}
+                    </h3>
+                  </div>
+                  <p class="text-[#33373D] font-medium text-sm lg:text-lg mt-3">
+                    {{ data.description }}
+                  </p>
                 </div>
-                <p class="text-[#33373D] font-medium text-sm lg:text-lg mt-3">
-                  {{ data.description }}
-                </p>
               </div>
             </template>
           </Carousel>

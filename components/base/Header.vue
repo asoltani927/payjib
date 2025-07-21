@@ -1,4 +1,4 @@
-<script>
+<script setup lang="ts">
 // import { ref, computed } from "vue";
 
 // const props = defineProps<Props>()
@@ -14,7 +14,7 @@
 
 // const isLoggedIn = computed(() => false)
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-// const isMobile = computed(() => false)
+const isMobile = computed(() => false);
 // const articles = computed(() => [])
 // const user = computed(() => null)
 // const userIsVerified = computed(() => false)
@@ -50,20 +50,55 @@
 //   isMenuOpen.value = false
 // }
 
-window.addEventListener("scroll", () => {
-  const header = document.getElementById("header");
-  if (window.scrollY > 10) {
-    header.classList.add("bg-[#1A177D]");
-  } else {
-    header.classList.remove("bg-[#1A177D]");
+const headerRef = ref<HTMLElement | null>(null);
+
+const scroll = () => {
+  try {
+    const header = document.getElementById("header") || headerRef.value;
+    if(header === null) return;
+    if (window.scrollY > 10) {
+      header?.classList.add("bg-[#2626BF]");
+      header?.classList.toggle("border-b", false);
+      header?.classList.toggle("absolute", false);
+      header?.classList.toggle("fixed", true);
+      header?.classList.toggle("shadaw", true);
+      header?.classList.toggle("top-0", true);
+      header?.classList.toggle("left-0", true);
+      header?.classList.toggle("right-0", true);
+      header?.classList.toggle("top-0", true);
+      header?.classList.toggle("z-[99]", true);
+      header?.classList.toggle("z-[99]", true);
+    } else {
+      header?.classList.remove("bg-[#2626BF]");
+      header?.classList.toggle("absolute", true);
+      header?.classList.toggle("fixed", false);
+      header?.classList.toggle("shadaw", false);
+      header?.classList.toggle("top-0", false);
+      header?.classList.toggle("left-0", false);
+      header?.classList.toggle("right-0", false);
+      header?.classList.toggle("top-0", false);
+      header?.classList.toggle("z-[99]", false);
+      header?.classList.toggle("border-b", true);
+    }
+  } catch (error) {
+    console.error("Error in scroll function:", error);
   }
+};
+onMounted(() => {
+  if (typeof window === "undefined") return;
+  scroll();
+  window.addEventListener("scroll", () => {
+    scroll();
+  });
 });
 </script>
 
 <template>
   <div>
     <div
-      class="absolute top-0 z-[99] rtl w-full px-6 lg:px-24 bg-none border-b border-[#9999BF]"
+  id="header"
+  ref="headerRef"
+      class="absolute top-0 z-[99] rtl w-full px-6 transition-colors duration-300 lg:px-24 bg-none border-b border-[#9999BF]"
     >
       <BaseContainer>
         <div class="flex justify-between items-center h-[65px] lg:h-[105px]">
@@ -187,5 +222,9 @@ window.addEventListener("scroll", () => {
 <style>
 .active-item {
   border-bottom: 4px solid #ebedf0;
+}
+
+.shadaw {
+  box-shadow: 10px 5px 4px rgba(0, 0, 0, 0.1);
 }
 </style>
