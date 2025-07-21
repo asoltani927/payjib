@@ -100,7 +100,7 @@ export default defineNuxtConfig({
   },
 
   gtag: isProduction() ? {
-    id: 'G-2DF34W9FX3'
+    id: 'GTM-54DCTNB3'
   } : undefined,
 
   router: {

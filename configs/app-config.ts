@@ -52,7 +52,19 @@ export const appConfig = {
         {
           hid: 'raychat',
           src: '/js/raychat.js'
-        }
+        },
+        {
+          hid: "mediaad",
+          src: "https://s1.mediaad.org/serve/109075/retargeting.js",
+          async: true,
+          type: "text/javascript",
+        },
+        {
+          hid: 'gtm',
+          src: '/js/gtm.js',
+          async: true,
+          type: 'text/javascript',
+        },
       ]
   },
 };
