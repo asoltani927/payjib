@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed } from 'vue'
+import { computed } from 'vue'
 
 interface User {
   fullName: string
@@ -7,28 +7,22 @@ interface User {
   createdAt: string
 }
 
-const users = ref<User[]>([])
-for (let i = 1; i <= 50; i++) {
-  users.value.push({
-    fullName: `کاربر ${i}`,
-    phone: `+9891234${i.toString().padStart(5, '0')}`,
-    createdAt: `1404/06/${(20 + (i % 10)).toString().padStart(2, '0')}`
-  })
-}
+const emit = defineEmits(['update:currentPage'])
 
-const currentPage = ref(1)
-const itemsPerPage = 5
-
-const totalItems = computed(() => users.value.length)
+const props = defineProps<{
+  users: User[]
+  currentPage: number
+  itemsPerPage: number
+  totalItems: number
+}>()
 
 const paginatedUsers = computed(() => {
-  const start = (currentPage.value - 1) * itemsPerPage
-  return users.value.slice(start, start + itemsPerPage)
+  const start = (props.currentPage - 1) * props.itemsPerPage
+  return props.users.slice(start, start + props.itemsPerPage)
 })
 </script>
 
 <template>
-  <!-- Table -->
   <div class="overflow-x-auto mt-10">
     <table class="w-full text-right">
       <thead>
@@ -39,11 +33,8 @@ const paginatedUsers = computed(() => {
         </tr>
       </thead>
       <tbody>
-        <tr
-          v-for="(user, index) in paginatedUsers"
-          :key="index"
-          :class="[index % 2 === 0 ? 'bg-white' : 'bg-[#F5F7FA]', 'text-[#1A1A1A] h-[48px] text-[10px] font-semibold']"
-        >
+        <tr v-for="(user, index) in paginatedUsers" :key="index"
+          :class="[index % 2 === 0 ? 'bg-white' : 'bg-[#F5F7FA]', 'text-[#1A1A1A] h-[48px] text-[10px] font-semibold']">
           <td class="px-6 py-2">{{ user.fullName }}</td>
           <td class="px-6 py-2">{{ user.phone }}</td>
           <td class="px-6 py-2">{{ user.createdAt }}</td>
@@ -52,10 +43,6 @@ const paginatedUsers = computed(() => {
     </table>
   </div>
 
-  <!-- Pagination -->
-  <UiPagination
-    v-model:currentPage="currentPage"
-    :itemsPerPage="itemsPerPage"
-    :totalItems="totalItems"
-  />
+  <UiPagination v-model:currentPage="props.currentPage" :itemsPerPage="props.itemsPerPage"
+    :totalItems="props.totalItems" @update:currentPage="(val) => emit('update:currentPage', val)" />
 </template>
