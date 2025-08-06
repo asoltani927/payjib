@@ -1,4 +1,3 @@
-
 @import "./fontface.css";
 
 @tailwind base;
@@ -6,13 +5,14 @@
 @tailwind utilities;
 
 body {
-   font-family: IRANSansFaNum, IRANSans, serif !important;
+    font-family: IRANSansFaNum, IRANSans, serif !important;
 
     background-color: #ffffff;
     color: #0F1114;
     direction: rtl !important;
 }
-input{
+
+input {
     background-color: #ffffff;
 }
 
@@ -59,6 +59,48 @@ input{
 .notShowScrollbar::-webkit-scrollbar {
     display: none;
 }
-.custom-lineHeight{
+
+.custom-lineHeight {
     line-height: 40px;
+}
+
+.p-inputtext.p-component.p-datepicker-input {
+    background-color: #fff;
+    border-color: #fff;
+    color: #0F1114 !important;
+    border-radius: 8px;
+    height: 48px;
+    font-size: 14px;
+}
+
+.p-inputtext.p-component.p-datepicker-input::placeholder {
+    color: #0F1114 !important;
+}
+
+.p-inputtext.p-component.p-datepicker-input:hover {
+    background-color: #fff;
+    border-color: #fff;
+}
+
+.p-datepicker-panel.p-component {
+    background-color: #EAEEF5;
+    color: #0F1114 !important;
+}
+
+.p-datepicker-day {
+    color: #33373D !important;
+}
+
+.p-datepicker-day:hover {
+    color: #fff !important;
+    background-color: #FFBF00 !important;
+}
+
+.p-datepicker-today>.p-datepicker-day {
+    background-color: #FFBF00 !important;
+    color: #fff !important;
+}
+
+.p-datepicker-header {
+    background-color: #FFBF00 !important;
 }

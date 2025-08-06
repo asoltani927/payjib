@@ -2,14 +2,20 @@
   <div>
     <!--  Google Tag Manager (noscript) -->
     <noscript>
-      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-54DCTNB3"
-              height="0" width="0"
-              style="display:none;visibility:hidden"></iframe>
+      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-54DCTNB3" height="0" width="0"
+        style="display:none;visibility:hidden"></iframe>
     </noscript>
     <!-- End Google Tag Manager (noscript) -->
 
     <BaseToast />
-    <NuxtLayout />
+    <template v-if="$route.meta.layout !== false">
+      <NuxtLayout>
+        <NuxtPage />
+      </NuxtLayout>
+    </template>
+    <template v-else>
+      <NuxtPage />
+    </template>
   </div>
 </template>
 
@@ -26,4 +32,3 @@ useHead({
   },
 });
 </script>
-

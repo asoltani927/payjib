@@ -117,10 +117,13 @@ export default defineNuxtConfig({
     options: {
       theme: {
         preset: Aura,
+        options: {
+          dark: false
+        }
       },
     },
     components: {
-      include: ["Button", "DataTable", "Dialog", "Carousel", "Drawer"],
+      include: ["Button", "DataTable", "Dialog", "Carousel", "Drawer", "Checkbox"],
     },
   },
   build: {
